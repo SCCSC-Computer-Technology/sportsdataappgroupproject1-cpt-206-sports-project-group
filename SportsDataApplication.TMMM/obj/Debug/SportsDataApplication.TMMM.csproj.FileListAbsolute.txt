@@ -1,0 +1,11 @@
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.exe.config
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.exe
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.pdb
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.AssemblyReference.cache
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.BasketBallStats.resources
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.Properties.Resources.resources
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.SignInForm.resources
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.GenerateResource.cache
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.CoreCompileInputs.cache
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.exe
+C:\Users\jbmoo\source\repos\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.pdb
