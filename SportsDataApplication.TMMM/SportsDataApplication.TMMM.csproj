@@ -52,6 +52,12 @@
     <Compile Include="BasketBallStats.Designer.cs">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="FootballStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FootballStats.Designer.cs">
+      <DependentUpon>FootballStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BasketBallStats.resx">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FootballStats.resx">
+      <DependentUpon>FootballStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +84,7 @@
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".gitignore" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
