@@ -17,7 +17,6 @@ namespace SportsDataApplication.TMMM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SignInForm());
-
         }
     }
 }

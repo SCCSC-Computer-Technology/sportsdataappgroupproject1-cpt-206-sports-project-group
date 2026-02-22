@@ -1,38 +1,33 @@
-﻿# Visual Studio temporary files
-.vs/
-*.user
-*.suo
-*.log       # ignores log files
-*.vsconfig  # ignores VS configuration files
- 
-# Build results
+# Visual Studio Build Results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
 bin/
 obj/
  
-# Rider / ReSharper cache
-_ReSharper*/
-*.DotSettings.user
+# Visual Studio 2015/2017/2019/2022 cache and settings
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
  
-# Visual Studio Code settings (if using VS Code)
-.vscode/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
  
-# Logs and database cache
-*.log
-*.cache
-*.db
- 
-# NuGet packages (restore automatically)
+# NuGet Packages
 *.nupkg
-packages/
+**/packages/*
+!**/packages/build/
  
-# Others
-*.tmp
-*.bak
-*.swp
+# Log files
+*.log
  
-# Comment line
-# Do not remove this file! This is important!
-
-
-
-
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
