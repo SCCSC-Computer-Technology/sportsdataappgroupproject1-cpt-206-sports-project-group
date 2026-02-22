@@ -29,6 +29,8 @@ namespace SportsDataApplication.TMMM
         {
             // TODO: This line of code loads data into the 'sign_InDataSet.Credentials' table. You can move, or remove it, as needed.
             this.credentialsTableAdapter.Fill(this.sign_InDataSet.Credentials);
+            // TODO: This line of code loads data into the 'sign_InDataSet.Credentials' table. You can move, or remove it, as needed.
+            this.credentialsTableAdapter.Fill(this.sign_InDataSet.Credentials);
             userNameTextBox.Text = "";
             passwordTextBox.Text = "";
         }
@@ -74,6 +76,14 @@ namespace SportsDataApplication.TMMM
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void credentialsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.credentialsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.sign_InDataSet);
+
         }
     }
 }

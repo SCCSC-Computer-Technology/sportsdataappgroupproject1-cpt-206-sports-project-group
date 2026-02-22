@@ -810,7 +810,7 @@ SELECT Users, UserName, Password FROM Credentials WHERE (Users = @Users)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SportsDataApplication.TMMM.Properties.Settings.Default.Sign_InConnectionString;
+            this._connection.ConnectionString = global::SportsDataApplication.TMMM.Properties.Settings.Default.Sign_InConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -823,9 +823,9 @@ SELECT Users, UserName, Password FROM Credentials WHERE (Users = @Users)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO Credentials\r\n                         (UserName, Password)\r\nVALUES   " +
-                "     (@UserName,@Password); \r\nSELECT Users, UserName, Password FROM Credentials " +
-                "WHERE (Users = SCOPE_IDENTITY())";
+            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[Credentials] ([UserName], [Password]) VALUES (@UserName, @Pass" +
+                "word);\r\nSELECT Users, UserName, Password FROM Credentials WHERE (Users = SCOPE_I" +
+                "DENTITY())";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.Char, 50, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.Char, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

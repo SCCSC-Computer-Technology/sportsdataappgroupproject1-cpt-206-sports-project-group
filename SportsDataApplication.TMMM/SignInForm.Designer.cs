@@ -130,7 +130,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCreateUser);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign In - Sports Data Application";
