@@ -48,16 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Reference Include="System" />
-=======
     <Reference Include="NFLTeamStandingData">
       <HintPath>..\..\..\..\source\repos\NFLTeamStandingData\NFLTeamStandingData\obj\Debug\NFLTeamStandingData.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
->>>>>>> Stashed changes
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+ main
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
