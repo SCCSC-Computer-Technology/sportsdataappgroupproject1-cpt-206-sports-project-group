@@ -21,3 +21,15 @@ C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-gr
 C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.CoreCompileInputs.cache
 C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.exe
 C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.pdb
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.AssemblyReference.cache
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.BasketBallStats.resources
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.FootballStats.resources
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.Properties.Resources.resources
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.SignInForm.resources
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.GenerateResource.cache
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.csproj.CoreCompileInputs.cache
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.exe
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\obj\Debug\SportsDataApplication.TMMM.pdb
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.exe.config
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.exe
+C:\Users\caleb\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\SportsDataApplication.TMMM\bin\Debug\SportsDataApplication.TMMM.pdb
