@@ -2,10 +2,8 @@
 .vs/
 *.user
 *.suo
-<<<<<<< Updated upstream
 *.log       # ignores log files
 *.vsconfig  # ignores VS configuration files
-=======
  
 # Build results
 bin/
@@ -34,4 +32,7 @@ packages/
  
 # Comment line
 # Do not remove this file! This is important!
->>>>>>> Stashed changes
+
+
+
+
