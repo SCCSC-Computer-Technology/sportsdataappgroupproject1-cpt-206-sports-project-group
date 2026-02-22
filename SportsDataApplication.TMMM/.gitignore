@@ -3,3 +3,7 @@ bin/
 obj/
 *.user
 *.suo
+*.log       # ignores log files
+*.vsconfig  # ignores VS configuration files
+
+# Do not remove this file! This is important!
