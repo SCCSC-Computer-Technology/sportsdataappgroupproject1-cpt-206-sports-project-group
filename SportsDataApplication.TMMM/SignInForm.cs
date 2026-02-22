@@ -16,5 +16,64 @@ namespace SportsDataApplication.TMMM
         {
             InitializeComponent();
         }
+
+        private void credentialsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.credentialsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.sign_InDataSet);
+
+        }
+
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sign_InDataSet.Credentials' table. You can move, or remove it, as needed.
+            this.credentialsTableAdapter.Fill(this.sign_InDataSet.Credentials);
+            userNameTextBox.Text = "";
+            passwordTextBox.Text = "";
+        }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (userNameTextBox.Text != "")
+                {
+                    credentialsTableAdapter.CreateUser(userNameTextBox.Text.Trim(), passwordTextBox.Text.Trim());
+                    MessageBox.Show("User created successfully. You can now login.");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a username and password.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please make sure that the username and password are less than 50 characters. If they are then this username is already taken please enter another one.");
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int result = (int)credentialsTableAdapter.LoginValidation(userNameTextBox.Text.Trim(), passwordTextBox.Text.Trim());
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Login Successful.");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password. Pleases try again.");
+                }
+            }
+            catch (Exception ex)
+            {
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }
