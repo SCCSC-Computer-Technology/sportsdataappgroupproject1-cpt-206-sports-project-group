@@ -18,6 +18,7 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
+*.htm
  
 # NuGet Packages
 *.nupkg
