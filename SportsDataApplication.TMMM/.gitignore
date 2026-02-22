@@ -1,9 +1,38 @@
-﻿.vs/
-bin/
-obj/
+﻿# Visual Studio temporary files
+.vs/
 *.user
 *.suo
 *.log       # ignores log files
 *.vsconfig  # ignores VS configuration files
-
+ 
+# Build results
+bin/
+obj/
+ 
+# Rider / ReSharper cache
+_ReSharper*/
+*.DotSettings.user
+ 
+# Visual Studio Code settings (if using VS Code)
+.vscode/
+ 
+# Logs and database cache
+*.log
+*.cache
+*.db
+ 
+# NuGet packages (restore automatically)
+*.nupkg
+packages/
+ 
+# Others
+*.tmp
+*.bak
+*.swp
+ 
+# Comment line
 # Do not remove this file! This is important!
+
+
+
+
