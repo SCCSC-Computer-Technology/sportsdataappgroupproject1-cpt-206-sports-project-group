@@ -27,10 +27,21 @@ namespace SportsDataApplication.TMMM.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=\"Sign In\";Integrated Security=" +
-            "True;Encrypt=True")]
+            "True;Encrypt=False")]
         public string Sign_InConnectionString {
             get {
                 return ((string)(this["Sign_InConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\Sign In.mdf\"" +
+            ";Integrated Security=True;Connect Timeout=30")]
+        public string Sign_InConnectionString1 {
+            get {
+                return ((string)(this["Sign_InConnectionString1"]));
             }
         }
     }
