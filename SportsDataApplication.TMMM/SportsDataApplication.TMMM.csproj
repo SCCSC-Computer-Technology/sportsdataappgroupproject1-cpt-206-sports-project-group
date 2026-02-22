@@ -66,12 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< Updated upstream
+
     <Compile Include="Sign_InDataSet.cs">
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
-=======
->>>>>>> Stashed changes
+
     <Compile Include="Sign_InDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
