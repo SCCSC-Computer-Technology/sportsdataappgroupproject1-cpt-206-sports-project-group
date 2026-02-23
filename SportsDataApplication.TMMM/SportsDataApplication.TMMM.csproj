@@ -76,6 +76,12 @@
     <Compile Include="BasketBallStats.Designer.cs">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDatabase.Designer.cs">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="NFLTeamStandingsForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="BasketBallStats.resx">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseDatabase.resx">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
