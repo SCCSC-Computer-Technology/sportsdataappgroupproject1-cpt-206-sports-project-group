@@ -102,6 +102,16 @@
     <Compile Include="ChooseDatabase.Designer.cs">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Group_Project_1_Sports_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Group_Project_1_Sports_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NBAMatchResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +129,16 @@
     </Compile>
     <Compile Include="NBAUpcomingGames.Designer.cs">
       <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBA_NFL_Match_Results_DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NBA_NFL_Match_Results_DataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="NFLMatchResults.cs">
       <SubType>Form</SubType>
@@ -163,8 +183,20 @@
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NBAMatchResults.resx">
+      <DependentUpon>NBAMatchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAUpcomingGames.resx">
+      <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLMatchResults.resx">
+      <DependentUpon>NFLMatchResults.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLUpcomingGames.resx">
+      <DependentUpon>NFLUpcomingGames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +211,50 @@
       <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".gitignore" />
+    <None Include="Group_Project_1_Sports_DatabaseDataSet.xsc">
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Group_Project_1_Sports_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Group_Project_1_Sports_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Group_Project_1_Sports_DatabaseDataSet.xss">
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Group_Project_1_Sports_DatabaseDataSet1.xsc">
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Group_Project_1_Sports_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Group_Project_1_Sports_DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Group_Project_1_Sports_DatabaseDataSet1.xss">
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet.xsc">
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NBA_NFL_Match_Results_DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet.xss">
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet1.xsc">
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NBA_NFL_Match_Results_DataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NBA_NFL_Match_Results_DataDataSet1.xss">
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -216,6 +292,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Group Project 1 Sports Database.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NBA_NFL Match Results Data.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="NFL-NBA-Team-Standings.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

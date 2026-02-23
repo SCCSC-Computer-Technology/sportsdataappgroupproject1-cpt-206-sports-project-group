@@ -16,5 +16,20 @@ namespace SportsDataApplication.TMMM
         {
             InitializeComponent();
         }
+
+        private void nFL_Match_Results_DataBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.nFL_Match_Results_DataBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nBA_NFL_Match_Results_DataDataSet);
+
+        }
+
+        private void NFLMatchResults_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'nBA_NFL_Match_Results_DataDataSet.NFL_Match_Results_Data' table. You can move, or remove it, as needed.
+            this.nFL_Match_Results_DataTableAdapter.Fill(this.nBA_NFL_Match_Results_DataDataSet.NFL_Match_Results_Data);
+
+        }
     }
 }

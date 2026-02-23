@@ -64,6 +64,8 @@ namespace SportsDataApplication.TMMM
                 if (result == 1)
                 {
                     MessageBox.Show("Login Successful.");
+                    ChooseDatabase chooseDatabase = new ChooseDatabase();
+                    chooseDatabase.ShowDialog();
                 }
                 else
                 {
