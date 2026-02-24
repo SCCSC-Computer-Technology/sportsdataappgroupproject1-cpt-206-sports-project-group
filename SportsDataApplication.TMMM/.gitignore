@@ -18,6 +18,10 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
+Updated upstream
+*.htm
+
+Stashed changes
  
 # NuGet Packages
 *.nupkg
@@ -26,6 +30,14 @@ obj/
  
 # Log files
 *.log
+Updated upstream
+
+ 
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+Stashed changes
  
 # Operating System Files
 Thumbs.db

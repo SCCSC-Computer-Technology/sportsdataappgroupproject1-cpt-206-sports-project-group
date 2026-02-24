@@ -37,7 +37,6 @@
             this.ClientSize = new System.Drawing.Size(800, 315);
             this.Name = "NFLTeamStandingsForm1";
             this.Text = "NFLTeamStandingsForm1";
-            this.Load += new System.EventHandler(this.NFLTeamStandingsForm1_Load);
             this.ResumeLayout(false);
 
         }
