@@ -104,11 +104,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="BasketBallStats.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BasketBallStats.Designer.cs">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
+=======
+    <Compile Include="ChooseDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDatabase.Designer.cs">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group_Project_1_Sports_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Group_Project_1_Sports_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NBAMatchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAMatchResults.Designer.cs">
+      <DependentUpon>NBAMatchResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBAPlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAPlayerStats.Designer.cs">
+      <DependentUpon>NBAPlayerStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBAUpcomingGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAUpcomingGames.Designer.cs">
+      <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBA_NFL_Match_Results_DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NBA_NFL_Match_Results_DataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NFLMatchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLMatchResults.Designer.cs">
+      <DependentUpon>NFLMatchResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFLPlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLPlayerStats.Designer.cs">
+      <DependentUpon>NFLPlayerStats.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="ChooseDatabase.cs">
       <SubType>Form</SubType>
@@ -191,8 +249,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <EmbeddedResource Include="BasketBallStats.resx">
       <DependentUpon>BasketBallStats.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="ChooseDatabase.resx">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAMatchResults.resx">
+      <DependentUpon>NBAMatchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAUpcomingGames.resx">
+      <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLMatchResults.resx">
+      <DependentUpon>NFLMatchResults.cs</DependentUpon>
+>>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
