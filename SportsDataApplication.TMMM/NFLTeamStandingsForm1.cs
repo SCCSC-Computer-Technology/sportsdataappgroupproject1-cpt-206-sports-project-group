@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.IO;
-using NFLTeamStandingData; // This links to your class library
+// using NFLTeamStandingData; // This links to your class library
 
 namespace SportsDataApplication.TMMM
 {
@@ -25,7 +25,7 @@ namespace SportsDataApplication.TMMM
                 string dbPath = Path.Combine(executablePath, "NFL-NBA-Team-Standings.accdb");
 
                 // Initialize the manager from your library
-                NFLStandingsManager manager = new NFLStandingsManager(dbPath);
+                // NFLStandingsManager manager = new NFLStandingsManager(dbPath);
 
                 // Fills the grid with the specific table name
 //                dataGridView1.DataSource = manager.GetTableData("NFL_Standings");
