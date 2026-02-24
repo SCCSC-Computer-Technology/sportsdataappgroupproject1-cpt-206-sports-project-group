@@ -39,5 +39,10 @@ namespace SportsDataApplication.TMMM
                 MessageBox.Show("Sync Error: " + ex.Message);
             }
         }
+
+        private void NFLTeamStandingsForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

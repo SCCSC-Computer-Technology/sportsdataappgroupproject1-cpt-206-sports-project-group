@@ -73,8 +73,8 @@ namespace SportsDataApplication.TMMM
                     }
                     else if (comboBoxDatabase.SelectedIndex == 1)
                     {
-                        BasketBallStats basketBallStats = new BasketBallStats();
-                        basketBallStats.ShowDialog();
+                        //BasketBallStats basketBallStats = new BasketBallStats();
+                        //basketBallStats.ShowDialog();
                     }
                     else if (comboBoxDatabase.SelectedIndex == 2)
                     {
