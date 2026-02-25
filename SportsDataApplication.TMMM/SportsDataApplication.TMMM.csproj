@@ -104,6 +104,12 @@
     <Compile Include="NBAPlayerStats.Designer.cs">
       <DependentUpon>NBAPlayerStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="NBATeamStandings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBATeamStandings.Designer.cs">
+      <DependentUpon>NBATeamStandings.cs</DependentUpon>
+    </Compile>
     <Compile Include="NBAUpcomingGames.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NBAMatchResults.resx">
       <DependentUpon>NBAMatchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBATeamStandings.resx">
+      <DependentUpon>NBATeamStandings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NBAUpcomingGames.resx">
       <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
