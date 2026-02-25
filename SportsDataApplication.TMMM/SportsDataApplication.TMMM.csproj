@@ -92,12 +92,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NBAMatchResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NBAMatchResults.Designer.cs">
-      <DependentUpon>NBAMatchResults.cs</DependentUpon>
-    </Compile>
     <Compile Include="NBAPlayerStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +104,11 @@
     <Compile Include="NBATeamStandings.Designer.cs">
       <DependentUpon>NBATeamStandings.cs</DependentUpon>
     </Compile>
-    <Compile Include="NBAUpcomingGames.cs">
+    <Compile Include="NBA_UpcomingGames_MatchResults.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NBAUpcomingGames.Designer.cs">
-      <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
+    <Compile Include="NBA_UpcomingGames_MatchResults.Designer.cs">
+      <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
     </Compile>
     <Compile Include="NBA_NFL_Match_Results_DataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,12 +119,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NFLMatchResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NFLMatchResults.Designer.cs">
-      <DependentUpon>NFLMatchResults.cs</DependentUpon>
     </Compile>
     <Compile Include="NFLPlayerStats.cs">
       <SubType>Form</SubType>
@@ -144,11 +132,11 @@
     <Compile Include="NFLTeamStandingsForm1.Designer.cs">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NFLUpcomingGames.cs">
+    <Compile Include="NFL_UpcomingGames_MatchResults.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NFLUpcomingGames.Designer.cs">
-      <DependentUpon>NFLUpcomingGames.cs</DependentUpon>
+    <Compile Include="NFL_UpcomingGames_MatchResults.Designer.cs">
+      <DependentUpon>NFL_UpcomingGames_MatchResults.cs</DependentUpon>
     </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
@@ -166,23 +154,17 @@
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NBAMatchResults.resx">
-      <DependentUpon>NBAMatchResults.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NBATeamStandings.resx">
       <DependentUpon>NBATeamStandings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NBAUpcomingGames.resx">
-      <DependentUpon>NBAUpcomingGames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NFLMatchResults.resx">
-      <DependentUpon>NFLMatchResults.cs</DependentUpon>
+    <EmbeddedResource Include="NBA_UpcomingGames_MatchResults.resx">
+      <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NFLUpcomingGames.resx">
-      <DependentUpon>NFLUpcomingGames.cs</DependentUpon>
+    <EmbeddedResource Include="NFL_UpcomingGames_MatchResults.resx">
+      <DependentUpon>NFL_UpcomingGames_MatchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
