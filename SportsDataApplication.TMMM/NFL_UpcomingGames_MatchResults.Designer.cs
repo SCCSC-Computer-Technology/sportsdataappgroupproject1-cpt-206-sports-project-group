@@ -56,6 +56,8 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).BeginInit();
@@ -112,7 +114,7 @@
             this.credentialsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.credentialsBindingNavigator.Name = "credentialsBindingNavigator";
             this.credentialsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.credentialsBindingNavigator.Size = new System.Drawing.Size(583, 27);
+            this.credentialsBindingNavigator.Size = new System.Drawing.Size(812, 27);
             this.credentialsBindingNavigator.TabIndex = 0;
             this.credentialsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -241,7 +243,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.nFL_Upcoming_GamesDataGridView.DataSource = this.nFL_Upcoming_GamesBindingSource;
-            this.nFL_Upcoming_GamesDataGridView.Location = new System.Drawing.Point(12, 42);
+            this.nFL_Upcoming_GamesDataGridView.Location = new System.Drawing.Point(12, 341);
             this.nFL_Upcoming_GamesDataGridView.Name = "nFL_Upcoming_GamesDataGridView";
             this.nFL_Upcoming_GamesDataGridView.RowHeadersWidth = 51;
             this.nFL_Upcoming_GamesDataGridView.RowTemplate.Height = 24;
@@ -280,14 +282,34 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
-            // NFLUpcomingGames
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "NFL - Upcoming Games";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 313);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "NFL - Match Results";
+            // 
+            // NFL_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 349);
+            this.ClientSize = new System.Drawing.Size(812, 573);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nFL_Upcoming_GamesDataGridView);
             this.Controls.Add(this.credentialsBindingNavigator);
-            this.Name = "NFLUpcomingGames";
+            this.Name = "NFL_UpcomingGames_MatchResults";
             this.Text = "NFLUpcomingGames";
             this.Load += new System.EventHandler(this.NFLUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).EndInit();
@@ -331,5 +353,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
