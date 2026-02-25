@@ -56,7 +56,7 @@ namespace SportsDataApplication.TMMM
                     }
                     else if (comboBoxDatabase.SelectedIndex == 3)
                     {
-                        NFLUpcomingGames nflUpcomingGames = new NFLUpcomingGames();
+                        NFL_UpcomingGames_MatchResults nflUpcomingGames = new NFL_UpcomingGames_MatchResults();
                         nflUpcomingGames.ShowDialog();
                     }
                     else
@@ -83,7 +83,7 @@ namespace SportsDataApplication.TMMM
                     }
                     else if (comboBoxDatabase.SelectedIndex == 3)
                     {
-                        NBAUpcomingGames nbaUpcomingGames = new NBAUpcomingGames();
+                        NBA_UpcomingGames_MatchResults nbaUpcomingGames = new NBA_UpcomingGames_MatchResults();
                         nbaUpcomingGames.ShowDialog();
                     }
                     else
