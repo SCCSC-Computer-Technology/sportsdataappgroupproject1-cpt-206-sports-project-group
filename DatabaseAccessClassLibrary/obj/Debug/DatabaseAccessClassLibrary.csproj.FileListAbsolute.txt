@@ -1,0 +1,6 @@
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\bin\Debug\DatabaseAccessClassLibrary.dll
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\bin\Debug\DatabaseAccessClassLibrary.pdb
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\obj\Debug\DatabaseAccessClassLibrary.csproj.AssemblyReference.cache
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\obj\Debug\DatabaseAccessClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\obj\Debug\DatabaseAccessClassLibrary.dll
+C:\Users\jbmoo\source\repos\sportsdataappgroupproject1-cpt-206-sports-project-group\DatabaseAccessClassLibrary\obj\Debug\DatabaseAccessClassLibrary.pdb
