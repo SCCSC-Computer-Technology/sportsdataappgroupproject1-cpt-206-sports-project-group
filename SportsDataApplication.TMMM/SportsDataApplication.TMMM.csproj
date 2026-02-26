@@ -221,5 +221,11 @@
       <DependentUpon>Sign In.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccessClassLibrary\DatabaseAccessClassLibrary.csproj">
+      <Project>{aacc3a4c-23bf-4f21-856c-0c9ebcb3b935}</Project>
+      <Name>DatabaseAccessClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
