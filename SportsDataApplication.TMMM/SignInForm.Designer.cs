@@ -69,7 +69,7 @@
             // btnCreateUser
             // 
             this.btnCreateUser.Location = new System.Drawing.Point(120, 173);
-            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(100, 59);
             this.btnCreateUser.TabIndex = 0;
@@ -80,7 +80,7 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(228, 173);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 59);
             this.btnLogin.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             this.userNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.credentialsBindingSource, "UserName", true));
             this.userNameTextBox.Location = new System.Drawing.Point(243, 53);
-            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(132, 22);
             this.userNameTextBox.TabIndex = 6;
@@ -121,13 +121,14 @@
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.credentialsBindingSource, "Password", true));
             this.passwordTextBox.Location = new System.Drawing.Point(243, 85);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(132, 22);
             this.passwordTextBox.TabIndex = 8;
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(336, 173);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
@@ -135,6 +136,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // SignInForm
             // 

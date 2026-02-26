@@ -3,6 +3,7 @@
     <Platform Name="Any CPU" />
     <Platform Name="x64" />
   </Configurations>
+  <Project Path="../DatabaseAccessClassLibrary/DatabaseAccessClassLibrary.csproj" Id="31b50b06-d4f0-45bd-a6ea-35ac2d8efaac" />
   <Project Path="SportsDataApplication.TMMM.csproj" Id="501d029d-89ba-490d-aa7d-ff410311d796">
     <Platform Solution="*|x64" Project="x64" />
   </Project>

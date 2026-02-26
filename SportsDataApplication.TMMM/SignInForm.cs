@@ -87,5 +87,11 @@ namespace SportsDataApplication.TMMM
             this.tableAdapterManager.UpdateAll(this.sign_InDataSet);
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // Close sign in form
+            this.Close();
+        }
     }
 }
