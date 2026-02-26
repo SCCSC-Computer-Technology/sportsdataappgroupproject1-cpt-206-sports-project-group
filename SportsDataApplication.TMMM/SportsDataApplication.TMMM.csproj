@@ -138,6 +138,12 @@
     <Compile Include="NFLTeamStandingsForm1.Designer.cs">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NFLTeamStandingsHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLTeamStandingsHelpForm.Designer.cs">
+      <DependentUpon>NFLTeamStandingsHelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NFLUpcomingGames.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLTeamStandingsHelpForm.resx">
+      <DependentUpon>NFLTeamStandingsHelpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NFLUpcomingGames.resx">
       <DependentUpon>NFLUpcomingGames.cs</DependentUpon>

@@ -15,6 +15,23 @@ namespace SportsDataApplication.TMMM
         public NFLTeamStandingsHelpForm()
         {
             InitializeComponent();
+            pnlNFLTeamStandings.Visible = false;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
