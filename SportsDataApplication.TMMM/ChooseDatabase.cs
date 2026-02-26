@@ -52,8 +52,9 @@ namespace SportsDataApplication.TMMM
                     }
                     else if (comboBoxDatabase.SelectedIndex == 2)
                     {
-                        NFLMatchResults nflMatchResults = new NFLMatchResults();
-                        nflMatchResults.ShowDialog();
+                        //this needs to be fixed once we have data in the database for match results
+                        //NFLMatchResults nflMatchResults = new NFLMatchResults();
+                        //nflMatchResults.ShowDialog();
                     }
                     else if (comboBoxDatabase.SelectedIndex == 3)
                     {
@@ -79,8 +80,9 @@ namespace SportsDataApplication.TMMM
                     }
                     else if (comboBoxDatabase.SelectedIndex == 2)
                     {
-                        NBAMatchResults nbaMatchResults = new NBAMatchResults();
-                        nbaMatchResults.ShowDialog();
+                        //this needs to be fixed once we have data in the database for match results
+                        //NBAMatchResults nbaMatchResults = new NBAMatchResults();
+                        //nbaMatchResults.ShowDialog();
                     }
                     else if (comboBoxDatabase.SelectedIndex == 3)
                     {

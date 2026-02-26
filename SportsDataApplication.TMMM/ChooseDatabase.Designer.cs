@@ -41,15 +41,10 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(60, 7);
+            this.lblWelcome.Location = new System.Drawing.Point(19, 9);
             this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(410, 26);
-
-            this.lblWelcome.Location = new System.Drawing.Point(80, 9);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(529, 32);
- 
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome to the Sports Statics Database!";
             // 
@@ -57,14 +52,10 @@
             // 
             this.lblInstruction.AutoSize = true;
             this.lblInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction.Location = new System.Drawing.Point(112, 51);
+            this.lblInstruction.Location = new System.Drawing.Point(80, 52);
             this.lblInstruction.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInstruction.Name = "lblInstruction";
             this.lblInstruction.Size = new System.Drawing.Size(295, 20);
-            this.lblInstruction.Location = new System.Drawing.Point(149, 63);
-            this.lblInstruction.Name = "lblInstruction";
-            this.lblInstruction.Size = new System.Drawing.Size(364, 25);
- 
             this.lblInstruction.TabIndex = 1;
             this.lblInstruction.Text = "Please Select the Sport you want to view";
             // 
@@ -72,56 +63,38 @@
             // 
             this.comboBoxSport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSport.FormattingEnabled = true;
-            this.comboBoxSport.Location = new System.Drawing.Point(116, 84);
-            this.comboBoxSport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSport.Location = new System.Drawing.Point(48, 98);
+            this.comboBoxSport.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSport.Name = "comboBoxSport";
-            this.comboBoxSport.Size = new System.Drawing.Size(270, 28);
-
-            this.comboBoxSport.Location = new System.Drawing.Point(154, 104);
-            this.comboBoxSport.Name = "comboBoxSport";
-            this.comboBoxSport.Size = new System.Drawing.Size(359, 33);
- 
+            this.comboBoxSport.Size = new System.Drawing.Size(359, 28);
             this.comboBoxSport.TabIndex = 2;
             // 
             // comboBoxDatabase
             // 
             this.comboBoxDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDatabase.FormattingEnabled = true;
-            this.comboBoxDatabase.Location = new System.Drawing.Point(116, 214);
-            this.comboBoxDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDatabase.Location = new System.Drawing.Point(48, 211);
+            this.comboBoxDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDatabase.Name = "comboBoxDatabase";
-            this.comboBoxDatabase.Size = new System.Drawing.Size(270, 28);
-
-            this.comboBoxDatabase.Location = new System.Drawing.Point(154, 263);
-            this.comboBoxDatabase.Name = "comboBoxDatabase";
-            this.comboBoxDatabase.Size = new System.Drawing.Size(359, 33);
-
+            this.comboBoxDatabase.Size = new System.Drawing.Size(359, 28);
             this.comboBoxDatabase.TabIndex = 4;
             // 
             // lblInstruction2
             // 
             this.lblInstruction2.AutoSize = true;
             this.lblInstruction2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction2.Location = new System.Drawing.Point(134, 180);
+            this.lblInstruction2.Location = new System.Drawing.Point(100, 159);
             this.lblInstruction2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInstruction2.Name = "lblInstruction2";
             this.lblInstruction2.Size = new System.Drawing.Size(245, 20);
-
-            this.lblInstruction2.Location = new System.Drawing.Point(179, 222);
-            this.lblInstruction2.Name = "lblInstruction2";
-            this.lblInstruction2.Size = new System.Drawing.Size(303, 25);
             this.lblInstruction2.TabIndex = 3;
             this.lblInstruction2.Text = "Please Select the Database Type";
             // 
             // btnDatabase
             // 
             this.btnDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatabase.Location = new System.Drawing.Point(116, 258);
-            this.btnDatabase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDatabase.Name = "btnDatabase";
-            this.btnDatabase.Size = new System.Drawing.Size(104, 51);
-
-            this.btnDatabase.Location = new System.Drawing.Point(154, 317);
+            this.btnDatabase.Location = new System.Drawing.Point(60, 322);
+            this.btnDatabase.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatabase.Name = "btnDatabase";
             this.btnDatabase.Size = new System.Drawing.Size(108, 63);
             this.btnDatabase.TabIndex = 5;
@@ -133,10 +106,10 @@
             // 
             this.btnExit2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit2.Location = new System.Drawing.Point(304, 258);
-            this.btnExit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit2.Location = new System.Drawing.Point(274, 322);
+            this.btnExit2.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit2.Name = "btnExit2";
-            this.btnExit2.Size = new System.Drawing.Size(81, 51);
+            this.btnExit2.Size = new System.Drawing.Size(112, 63);
             this.btnExit2.TabIndex = 6;
             this.btnExit2.Text = "E&xit";
             this.btnExit2.UseVisualStyleBackColor = true;
@@ -148,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit2;
-            this.ClientSize = new System.Drawing.Size(495, 311);
+            this.ClientSize = new System.Drawing.Size(453, 422);
             this.Controls.Add(this.btnExit2);
             this.Controls.Add(this.btnDatabase);
             this.Controls.Add(this.comboBoxDatabase);
@@ -156,7 +129,7 @@
             this.Controls.Add(this.comboBoxSport);
             this.Controls.Add(this.lblInstruction);
             this.Controls.Add(this.lblWelcome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChooseDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Database";
