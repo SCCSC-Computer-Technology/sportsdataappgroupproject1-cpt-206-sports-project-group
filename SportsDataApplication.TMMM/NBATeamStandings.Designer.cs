@@ -31,12 +31,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxKeyword = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefreshData = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,13 +70,13 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // textBox1
+            // txtBoxKeyword
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(15, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtBoxKeyword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxKeyword.Location = new System.Drawing.Point(15, 31);
+            this.txtBoxKeyword.Name = "txtBoxKeyword";
+            this.txtBoxKeyword.Size = new System.Drawing.Size(187, 22);
+            this.txtBoxKeyword.TabIndex = 3;
             // 
             // btnSearch
             // 
@@ -91,7 +91,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnRefreshData);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtBoxKeyword);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Location = new System.Drawing.Point(25, 330);
             this.groupBox1.Name = "groupBox1";
@@ -109,31 +109,31 @@
             this.btnRefreshData.Text = "Re&fresh Data";
             this.btnRefreshData.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnHelp
             // 
-            this.button1.Location = new System.Drawing.Point(12, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "&Help (?)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHelp.Location = new System.Drawing.Point(12, 466);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(93, 31);
+            this.btnHelp.TabIndex = 6;
+            this.btnHelp.Text = "&Help (?)";
+            this.btnHelp.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnExit
             // 
-            this.button2.Location = new System.Drawing.Point(656, 466);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 31);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "E&xit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(656, 466);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(92, 31);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // NBATeamStandings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 509);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
@@ -153,11 +153,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxKeyword;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRefreshData;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnExit;
     }
 }
