@@ -148,6 +148,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SportsStatsDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SportsStatsDBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +200,17 @@
     </None>
     <None Include="Sign_InDataSet.xss">
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsStatsDBDataSet.xsc">
+      <DependentUpon>SportsStatsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsStatsDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SportsStatsDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SportsStatsDBDataSet.xss">
+      <DependentUpon>SportsStatsDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
