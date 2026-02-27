@@ -310,7 +310,7 @@
             this.Controls.Add(this.nFL_Upcoming_GamesDataGridView);
             this.Controls.Add(this.credentialsBindingNavigator);
             this.Name = "NFL_UpcomingGames_MatchResults";
-            this.Text = "NFLUpcomingGames";
+            this.Text = "NFL - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NFLUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).EndInit();

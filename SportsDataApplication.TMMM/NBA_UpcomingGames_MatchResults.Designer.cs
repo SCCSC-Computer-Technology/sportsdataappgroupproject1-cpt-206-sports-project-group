@@ -108,7 +108,7 @@
             this.nBA_Upcoming_GamesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.nBA_Upcoming_GamesBindingNavigator.Name = "nBA_Upcoming_GamesBindingNavigator";
             this.nBA_Upcoming_GamesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.nBA_Upcoming_GamesBindingNavigator.Size = new System.Drawing.Size(767, 31);
+            this.nBA_Upcoming_GamesBindingNavigator.Size = new System.Drawing.Size(767, 27);
             this.nBA_Upcoming_GamesBindingNavigator.TabIndex = 0;
             this.nBA_Upcoming_GamesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -118,7 +118,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -284,7 +284,7 @@
             this.Controls.Add(this.nBA_Upcoming_GamesDataGridView);
             this.Controls.Add(this.nBA_Upcoming_GamesBindingNavigator);
             this.Name = "NBA_UpcomingGames_MatchResults";
-            this.Text = "NBAUpcomingGames";
+            this.Text = "NBA - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NBAUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).EndInit();

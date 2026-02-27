@@ -44,5 +44,17 @@ namespace SportsDataApplication.TMMM
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // close NFL team standings form
+            this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // Exit application
+            Application.Exit();
+        }
     }
 }
