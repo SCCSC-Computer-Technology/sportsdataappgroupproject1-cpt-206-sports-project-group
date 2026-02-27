@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using System.IO;
-// using NFLTeamStandingData; // This links to your class library
 
 namespace SportsDataApplication.TMMM
 {
