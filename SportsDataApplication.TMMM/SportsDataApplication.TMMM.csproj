@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,7 +49,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,11 +73,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasketBallStats.cs">
+    <Compile Include="ChooseDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BasketBallStats.Designer.cs">
-      <DependentUpon>BasketBallStats.cs</DependentUpon>
+    <Compile Include="ChooseDatabase.Designer.cs">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBAPlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAPlayerStats.Designer.cs">
+      <DependentUpon>NBAPlayerStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBATeamStandings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBATeamStandings.Designer.cs">
+      <DependentUpon>NBATeamStandings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBA_UpcomingGames_MatchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBA_UpcomingGames_MatchResults.Designer.cs">
+      <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFLPlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLPlayerStats.Designer.cs">
+      <DependentUpon>NFLPlayerStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFLTeamStandingsForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLTeamStandingsForm1.Designer.cs">
+      <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFL_UpcomingGames_MatchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFL_UpcomingGames_MatchResults.Designer.cs">
+      <DependentUpon>NFL_UpcomingGames_MatchResults.cs</DependentUpon>
     </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
@@ -79,11 +127,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SportsProjectDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>

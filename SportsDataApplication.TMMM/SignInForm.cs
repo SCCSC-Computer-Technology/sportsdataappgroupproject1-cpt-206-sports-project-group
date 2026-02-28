@@ -64,6 +64,8 @@ namespace SportsDataApplication.TMMM
                 if (result == 1)
                 {
                     MessageBox.Show("Login Successful.");
+                    ChooseDatabase chooseDatabase = new ChooseDatabase();
+                    chooseDatabase.ShowDialog();
                 }
                 else
                 {
@@ -84,6 +86,12 @@ namespace SportsDataApplication.TMMM
             this.credentialsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.sign_InDataSet);
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // Close sign in form
+            this.Close();
         }
     }
 }
