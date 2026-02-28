@@ -44,5 +44,38 @@ namespace SportsDataApplication.TMMM.Properties {
                 return ((string)(this["Sign_InConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Group Project 1 Sp" +
+            "orts Database.accdb\"")]
+        public string Group_Project_1_Sports_DatabaseConnectionString {
+            get {
+                return ((string)(this["Group_Project_1_Sports_DatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\NBA_NFL Match Resu" +
+            "lts Data.accdb\"")]
+        public string NBA_NFL_Match_Results_DataConnectionString {
+            get {
+                return ((string)(this["NBA_NFL_Match_Results_DataConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SportsProject" +
+            "DB.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string SportsProjectDBConnectionString {
+            get {
+                return ((string)(this["SportsProjectDBConnectionString"]));
+            }
+        }
     }
 }

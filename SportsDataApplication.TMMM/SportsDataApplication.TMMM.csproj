@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -80,8 +80,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BasketBallStats.resx">
-      <DependentUpon>BasketBallStats.cs</DependentUpon>
+    <Compile Include="SportsProjectDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChooseDatabase.resx">
+      <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAPlayerStats.resx">
+      <DependentUpon>NBAPlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBATeamStandings.resx">
+      <DependentUpon>NBATeamStandings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBA_UpcomingGames_MatchResults.resx">
+      <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLPlayerStats.resx">
+      <DependentUpon>NFLPlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
+      <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFL_UpcomingGames_MatchResults.resx">
+      <DependentUpon>NFL_UpcomingGames_MatchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +139,17 @@
     <None Include="Sign_InDataSet.xss">
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </None>
+    <None Include="SportsProjectDBDataSet.xsc">
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsProjectDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SportsProjectDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SportsProjectDBDataSet.xss">
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -139,6 +173,13 @@
     <Content Include="Sign In_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Sign In.mdf</DependentUpon>
+    </Content>
+    <Content Include="SportsProjectDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SportsProjectDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SportsProjectDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
