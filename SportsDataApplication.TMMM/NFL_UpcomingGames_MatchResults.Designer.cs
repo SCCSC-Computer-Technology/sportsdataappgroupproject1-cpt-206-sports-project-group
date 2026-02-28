@@ -44,10 +44,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.group_Project_1_Sports_DatabaseDataSet = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSet();
             this.nFL_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nFL_Upcoming_GamesTableAdapter = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter();
-            this.tableAdapterManager1 = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -61,10 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).BeginInit();
             this.credentialsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // sign_InDataSet
@@ -185,23 +180,16 @@
             // 
             // group_Project_1_Sports_DatabaseDataSet
             // 
-            this.group_Project_1_Sports_DatabaseDataSet.DataSetName = "Group_Project_1_Sports_DatabaseDataSet";
-            this.group_Project_1_Sports_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nFL_Upcoming_GamesBindingSource
             // 
             this.nFL_Upcoming_GamesBindingSource.DataMember = "NFL Upcoming Games";
-            this.nFL_Upcoming_GamesBindingSource.DataSource = this.group_Project_1_Sports_DatabaseDataSet;
             // 
             // nFL_Upcoming_GamesTableAdapter
             // 
-            this.nFL_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager1
             // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.NFL_Upcoming_GamesTableAdapter = this.nFL_Upcoming_GamesTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // label1
             // 
@@ -310,10 +298,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).EndInit();
             this.credentialsBindingNavigator.ResumeLayout(false);
             this.credentialsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,10 +321,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private Group_Project_1_Sports_DatabaseDataSet group_Project_1_Sports_DatabaseDataSet;
         private System.Windows.Forms.BindingSource nFL_Upcoming_GamesBindingSource;
-        private Group_Project_1_Sports_DatabaseDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter nFL_Upcoming_GamesTableAdapter;
-        private Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;

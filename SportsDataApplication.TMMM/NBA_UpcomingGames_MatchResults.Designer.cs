@@ -30,10 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NBA_UpcomingGames_MatchResults));
-            this.group_Project_1_Sports_DatabaseDataSet1 = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSet1();
             this.nBA_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nBA_Upcoming_GamesTableAdapter = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSet1TableAdapters.NBA_Upcoming_GamesTableAdapter();
-            this.tableAdapterManager = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSet1TableAdapters.TableAdapterManager();
             this.nBA_Upcoming_GamesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -52,34 +49,29 @@
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
+<<<<<<< Updated upstream
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
+=======
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
             this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // group_Project_1_Sports_DatabaseDataSet1
             // 
-            this.group_Project_1_Sports_DatabaseDataSet1.DataSetName = "Group_Project_1_Sports_DatabaseDataSet1";
-            this.group_Project_1_Sports_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nBA_Upcoming_GamesBindingSource
             // 
             this.nBA_Upcoming_GamesBindingSource.DataMember = "NBA Upcoming Games";
-            this.nBA_Upcoming_GamesBindingSource.DataSource = this.group_Project_1_Sports_DatabaseDataSet1;
             // 
             // nBA_Upcoming_GamesTableAdapter
             // 
-            this.nBA_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.NBA_Upcoming_GamesTableAdapter = this.nBA_Upcoming_GamesTableAdapter;
-            this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // nBA_Upcoming_GamesBindingNavigator
             // 
@@ -279,13 +271,11 @@
             this.Name = "NBA_UpcomingGames_MatchResults";
             this.Text = "NBA - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NBAUpcomingGames_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).EndInit();
             this.nBA_Upcoming_GamesBindingNavigator.ResumeLayout(false);
             this.nBA_Upcoming_GamesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,10 +283,7 @@
 
         #endregion
 
-        private Group_Project_1_Sports_DatabaseDataSet1 group_Project_1_Sports_DatabaseDataSet1;
         private System.Windows.Forms.BindingSource nBA_Upcoming_GamesBindingSource;
-        private Group_Project_1_Sports_DatabaseDataSet1TableAdapters.NBA_Upcoming_GamesTableAdapter nBA_Upcoming_GamesTableAdapter;
-        private Group_Project_1_Sports_DatabaseDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator nBA_Upcoming_GamesBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
