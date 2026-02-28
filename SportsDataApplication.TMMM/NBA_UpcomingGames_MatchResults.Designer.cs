@@ -49,7 +49,6 @@
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
             this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
