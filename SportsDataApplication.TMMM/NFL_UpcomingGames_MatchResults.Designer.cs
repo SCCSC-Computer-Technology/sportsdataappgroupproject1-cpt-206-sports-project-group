@@ -48,11 +48,6 @@
             this.nFL_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nFL_Upcoming_GamesTableAdapter = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter();
             this.tableAdapterManager1 = new SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager();
-            this.nFL_Upcoming_GamesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -67,8 +62,8 @@
             this.credentialsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // sign_InDataSet
@@ -207,55 +202,6 @@
             this.tableAdapterManager1.NFL_Upcoming_GamesTableAdapter = this.nFL_Upcoming_GamesTableAdapter;
             this.tableAdapterManager1.UpdateOrder = SportsDataApplication.TMMM.Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // nFL_Upcoming_GamesDataGridView
-            // 
-            this.nFL_Upcoming_GamesDataGridView.AutoGenerateColumns = false;
-            this.nFL_Upcoming_GamesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nFL_Upcoming_GamesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.nFL_Upcoming_GamesDataGridView.DataSource = this.nFL_Upcoming_GamesBindingSource;
-            this.nFL_Upcoming_GamesDataGridView.Location = new System.Drawing.Point(26, 321);
-            this.nFL_Upcoming_GamesDataGridView.Name = "nFL_Upcoming_GamesDataGridView";
-            this.nFL_Upcoming_GamesDataGridView.RowHeadersWidth = 51;
-            this.nFL_Upcoming_GamesDataGridView.RowTemplate.Height = 24;
-            this.nFL_Upcoming_GamesDataGridView.Size = new System.Drawing.Size(734, 220);
-            this.nFL_Upcoming_GamesDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Home Team";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Home Team";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Away Team";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Away Team";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Game Date";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Game Date";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Game Time";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Game Time";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -343,7 +289,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nFL_Upcoming_GamesDataGridView);
             this.Controls.Add(this.credentialsBindingNavigator);
             this.Name = "NFL_UpcomingGames_MatchResults";
             this.Text = "NFL - Upcoming Games / Match Results";
@@ -355,8 +300,8 @@
             this.credentialsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,11 +327,6 @@
         private System.Windows.Forms.BindingSource nFL_Upcoming_GamesBindingSource;
         private Group_Project_1_Sports_DatabaseDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter nFL_Upcoming_GamesTableAdapter;
         private Group_Project_1_Sports_DatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.DataGridView nFL_Upcoming_GamesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
