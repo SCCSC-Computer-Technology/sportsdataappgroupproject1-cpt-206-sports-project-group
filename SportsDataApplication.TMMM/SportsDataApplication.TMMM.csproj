@@ -79,16 +79,6 @@
     <Compile Include="ChooseDatabase.Designer.cs">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Group_Project_1_Sports_DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Group_Project_1_Sports_DatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Group_Project_1_Sports_DatabaseDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NBAPlayerStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,16 +96,6 @@
     </Compile>
     <Compile Include="NBA_UpcomingGames_MatchResults.Designer.cs">
       <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NBA_NFL_Match_Results_DataDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NBA_NFL_Match_Results_DataDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NBA_NFL_Match_Results_DataDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NBA_NFL_Match_Results_DataDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="NFLPlayerStats.cs">
       <SubType>Form</SubType>

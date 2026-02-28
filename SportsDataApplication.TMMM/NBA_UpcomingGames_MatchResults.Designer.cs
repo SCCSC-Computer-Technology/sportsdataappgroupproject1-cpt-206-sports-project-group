@@ -44,21 +44,21 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.nBA_Upcoming_GamesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnTeamSort = new System.Windows.Forms.Button();
+            this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
+            this.btnMonthSort = new System.Windows.Forms.Button();
+            this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
             this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // group_Project_1_Sports_DatabaseDataSet1
@@ -177,55 +177,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // nBA_Upcoming_GamesDataGridView
-            // 
-            this.nBA_Upcoming_GamesDataGridView.AutoGenerateColumns = false;
-            this.nBA_Upcoming_GamesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nBA_Upcoming_GamesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.nBA_Upcoming_GamesDataGridView.DataSource = this.nBA_Upcoming_GamesBindingSource;
-            this.nBA_Upcoming_GamesDataGridView.Location = new System.Drawing.Point(50, 299);
-            this.nBA_Upcoming_GamesDataGridView.Name = "nBA_Upcoming_GamesDataGridView";
-            this.nBA_Upcoming_GamesDataGridView.RowHeadersWidth = 51;
-            this.nBA_Upcoming_GamesDataGridView.RowTemplate.Height = 24;
-            this.nBA_Upcoming_GamesDataGridView.Size = new System.Drawing.Size(663, 220);
-            this.nBA_Upcoming_GamesDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Home Team";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Home Team";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Away Team";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Away Team";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Game Date";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Game Date";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Game Time";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Game Time";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -266,16 +217,64 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnTeamSort
+            // 
+            this.btnTeamSort.Location = new System.Drawing.Point(398, 566);
+            this.btnTeamSort.Name = "btnTeamSort";
+            this.btnTeamSort.Size = new System.Drawing.Size(112, 35);
+            this.btnTeamSort.TabIndex = 13;
+            this.btnTeamSort.Text = "Sort by &Team";
+            this.btnTeamSort.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxTeamSort
+            // 
+            this.comboBoxTeamSort.FormattingEnabled = true;
+            this.comboBoxTeamSort.Location = new System.Drawing.Point(329, 536);
+            this.comboBoxTeamSort.Name = "comboBoxTeamSort";
+            this.comboBoxTeamSort.Size = new System.Drawing.Size(235, 24);
+            this.comboBoxTeamSort.TabIndex = 12;
+            // 
+            // btnMonthSort
+            // 
+            this.btnMonthSort.Location = new System.Drawing.Point(115, 566);
+            this.btnMonthSort.Name = "btnMonthSort";
+            this.btnMonthSort.Size = new System.Drawing.Size(114, 35);
+            this.btnMonthSort.TabIndex = 11;
+            this.btnMonthSort.Text = "Sort by &Month";
+            this.btnMonthSort.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxMonthSort
+            // 
+            this.comboBoxMonthSort.FormattingEnabled = true;
+            this.comboBoxMonthSort.Location = new System.Drawing.Point(50, 536);
+            this.comboBoxMonthSort.Name = "comboBoxMonthSort";
+            this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
+            this.comboBoxMonthSort.TabIndex = 10;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(50, 299);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(663, 212);
+            this.dataGridView2.TabIndex = 14;
+            // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 619);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.btnTeamSort);
+            this.Controls.Add(this.comboBoxTeamSort);
+            this.Controls.Add(this.btnMonthSort);
+            this.Controls.Add(this.comboBoxMonthSort);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.nBA_Upcoming_GamesDataGridView);
             this.Controls.Add(this.nBA_Upcoming_GamesBindingNavigator);
             this.Name = "NBA_UpcomingGames_MatchResults";
             this.Text = "NBA - Upcoming Games / Match Results";
@@ -285,8 +284,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).EndInit();
             this.nBA_Upcoming_GamesBindingNavigator.ResumeLayout(false);
             this.nBA_Upcoming_GamesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,14 +307,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.DataGridView nBA_Upcoming_GamesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnTeamSort;
+        private System.Windows.Forms.ComboBox comboBoxTeamSort;
+        private System.Windows.Forms.Button btnMonthSort;
+        private System.Windows.Forms.ComboBox comboBoxMonthSort;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
