@@ -49,6 +49,7 @@
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
             this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
@@ -238,22 +239,11 @@
             this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxMonthSort.TabIndex = 10;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(50, 299);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(663, 212);
-            this.dataGridView2.TabIndex = 14;
-            // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 619);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnTeamSort);
             this.Controls.Add(this.comboBoxTeamSort);
             this.Controls.Add(this.btnMonthSort);
@@ -297,6 +287,5 @@
         private System.Windows.Forms.ComboBox comboBoxTeamSort;
         private System.Windows.Forms.Button btnMonthSort;
         private System.Windows.Forms.ComboBox comboBoxMonthSort;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
