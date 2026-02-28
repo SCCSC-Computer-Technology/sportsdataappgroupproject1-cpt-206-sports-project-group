@@ -151,11 +151,17 @@
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NBAPlayerStats.resx">
+      <DependentUpon>NBAPlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NBATeamStandings.resx">
       <DependentUpon>NBATeamStandings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NBA_UpcomingGames_MatchResults.resx">
       <DependentUpon>NBA_UpcomingGames_MatchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLPlayerStats.resx">
+      <DependentUpon>NFLPlayerStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NFLTeamStandingsForm1.resx">
       <DependentUpon>NFLTeamStandingsForm1.cs</DependentUpon>
