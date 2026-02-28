@@ -49,11 +49,8 @@
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
-<<<<<<< Updated upstream
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
-=======
->>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
             this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
