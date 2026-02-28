@@ -53,6 +53,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnTeamSort = new System.Windows.Forms.Button();
+            this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
+            this.btnMonthSort = new System.Windows.Forms.Button();
+            this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.group_Project_1_Sports_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
@@ -266,11 +270,49 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnTeamSort
+            // 
+            this.btnTeamSort.Location = new System.Drawing.Point(398, 566);
+            this.btnTeamSort.Name = "btnTeamSort";
+            this.btnTeamSort.Size = new System.Drawing.Size(112, 35);
+            this.btnTeamSort.TabIndex = 13;
+            this.btnTeamSort.Text = "Sort by &Team";
+            this.btnTeamSort.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxTeamSort
+            // 
+            this.comboBoxTeamSort.FormattingEnabled = true;
+            this.comboBoxTeamSort.Location = new System.Drawing.Point(329, 536);
+            this.comboBoxTeamSort.Name = "comboBoxTeamSort";
+            this.comboBoxTeamSort.Size = new System.Drawing.Size(235, 24);
+            this.comboBoxTeamSort.TabIndex = 12;
+            // 
+            // btnMonthSort
+            // 
+            this.btnMonthSort.Location = new System.Drawing.Point(115, 566);
+            this.btnMonthSort.Name = "btnMonthSort";
+            this.btnMonthSort.Size = new System.Drawing.Size(114, 35);
+            this.btnMonthSort.TabIndex = 11;
+            this.btnMonthSort.Text = "Sort by &Month";
+            this.btnMonthSort.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxMonthSort
+            // 
+            this.comboBoxMonthSort.FormattingEnabled = true;
+            this.comboBoxMonthSort.Location = new System.Drawing.Point(50, 536);
+            this.comboBoxMonthSort.Name = "comboBoxMonthSort";
+            this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
+            this.comboBoxMonthSort.TabIndex = 10;
+            // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 619);
+            this.Controls.Add(this.btnTeamSort);
+            this.Controls.Add(this.comboBoxTeamSort);
+            this.Controls.Add(this.btnMonthSort);
+            this.Controls.Add(this.comboBoxMonthSort);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -317,5 +359,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnTeamSort;
+        private System.Windows.Forms.ComboBox comboBoxTeamSort;
+        private System.Windows.Forms.Button btnMonthSort;
+        private System.Windows.Forms.ComboBox comboBoxMonthSort;
     }
 }
