@@ -56,7 +56,6 @@
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.btnTeamSort = new System.Windows.Forms.Button();
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).BeginInit();
@@ -277,22 +276,11 @@
             this.comboBoxTeamSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxTeamSort.TabIndex = 8;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(26, 321);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(734, 209);
-            this.dataGridView2.TabIndex = 10;
-            // 
             // NFL_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 643);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnTeamSort);
             this.Controls.Add(this.comboBoxTeamSort);
             this.Controls.Add(this.btnMonthSort);
@@ -347,6 +335,5 @@
         private System.Windows.Forms.Button btnMonthSort;
         private System.Windows.Forms.Button btnTeamSort;
         private System.Windows.Forms.ComboBox comboBoxTeamSort;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
