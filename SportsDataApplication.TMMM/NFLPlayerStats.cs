@@ -16,5 +16,11 @@ namespace SportsDataApplication.TMMM
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // close NFL player stats form
+            this.Close();
+        }
     }
 }
