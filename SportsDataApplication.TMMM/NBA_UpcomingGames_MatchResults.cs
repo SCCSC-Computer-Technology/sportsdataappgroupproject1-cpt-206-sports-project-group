@@ -19,6 +19,8 @@ namespace SportsDataApplication.TMMM
 
         private void NBAUpcomingGames_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sportsProjectDBDataSet.NBA_Match_Results_Data' table. You can move, or remove it, as needed.
+            this.nBA_Match_Results_DataTableAdapter.Fill(this.sportsProjectDBDataSet.NBA_Match_Results_Data);
             // Load form data from database
         }
 

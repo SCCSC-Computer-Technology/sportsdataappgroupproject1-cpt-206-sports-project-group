@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NBA_UpcomingGames_MatchResults));
-            this.nBA_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nBA_Upcoming_GamesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -49,120 +37,30 @@
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).BeginInit();
-            this.nBA_Upcoming_GamesBindingNavigator.SuspendLayout();
+            this.nBA_Match_Results_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nBA_Match_Results_DataTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.NBA_Match_Results_DataTableAdapter();
+            this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
+            this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
+            this.nBA_Match_Results_DataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nBA_Match_Results_DataDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // group_Project_1_Sports_DatabaseDataSet1
-            // 
-            // 
-            // nBA_Upcoming_GamesBindingSource
-            // 
-            this.nBA_Upcoming_GamesBindingSource.DataMember = "NBA Upcoming Games";
-            // 
-            // nBA_Upcoming_GamesTableAdapter
-            // 
-            // 
-            // tableAdapterManager
-            // 
-            // 
-            // nBA_Upcoming_GamesBindingNavigator
-            // 
-            this.nBA_Upcoming_GamesBindingNavigator.AddNewItem = null;
-            this.nBA_Upcoming_GamesBindingNavigator.BindingSource = this.nBA_Upcoming_GamesBindingSource;
-            this.nBA_Upcoming_GamesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.nBA_Upcoming_GamesBindingNavigator.DeleteItem = null;
-            this.nBA_Upcoming_GamesBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.nBA_Upcoming_GamesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.nBA_Upcoming_GamesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.nBA_Upcoming_GamesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.nBA_Upcoming_GamesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.nBA_Upcoming_GamesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.nBA_Upcoming_GamesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.nBA_Upcoming_GamesBindingNavigator.Name = "nBA_Upcoming_GamesBindingNavigator";
-            this.nBA_Upcoming_GamesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.nBA_Upcoming_GamesBindingNavigator.Size = new System.Drawing.Size(767, 27);
-            this.nBA_Upcoming_GamesBindingNavigator.TabIndex = 0;
-            this.nBA_Upcoming_GamesBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // label2
             // 
@@ -238,22 +136,186 @@
             this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxMonthSort.TabIndex = 10;
             // 
-            // dataGridView2
+            // nBA_Match_Results_DataTableAdapter
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(50, 299);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(663, 212);
-            this.dataGridView2.TabIndex = 14;
+            this.nBA_Match_Results_DataTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Defense_Stats_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager.Defense_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Kick_Punt_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Kick_Punt_StatsTableAdapter = null;
+            this.tableAdapterManager.Kickoff_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager.Kickoff_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.NBA_Eastern_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager.NBA_Eastern_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager.NBA_Match_Results_DataTableAdapter = this.nBA_Match_Results_DataTableAdapter;
+            this.tableAdapterManager.nba_playerstats_2024TableAdapter = null;
+            this.tableAdapterManager.NBA_Upcoming_GamesTableAdapter = null;
+            this.tableAdapterManager.NBA_Western_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager.NBA_Western_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_Match_Results_DataTableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_Upcoming_GamesTableAdapter = null;
+            this.tableAdapterManager.Passing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Passing_statsTableAdapter = null;
+            this.tableAdapterManager.PlayerStatistics_ImportErrorsTableAdapter = null;
+            this.tableAdapterManager.Punting_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Punting_statsTableAdapter = null;
+            this.tableAdapterManager.Receiving_statsTableAdapter = null;
+            this.tableAdapterManager.Recieving_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Rushing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Rushing_statsTableAdapter = null;
+            this.tableAdapterManager.Scoring_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Scoring_StatsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // sportsProjectDBDataSet
+            // 
+            this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
+            this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nBA_Match_Results_DataBindingSource1
+            // 
+            this.nBA_Match_Results_DataBindingSource1.DataMember = "NBA Match Results Data";
+            this.nBA_Match_Results_DataBindingSource1.DataSource = this.sportsProjectDBDataSet;
+            // 
+            // nBA_Match_Results_DataDataGridView
+            // 
+            this.nBA_Match_Results_DataDataGridView.AutoGenerateColumns = false;
+            this.nBA_Match_Results_DataDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nBA_Match_Results_DataDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.nBA_Match_Results_DataDataGridView.DataSource = this.nBA_Match_Results_DataBindingSource1;
+            this.nBA_Match_Results_DataDataGridView.Location = new System.Drawing.Point(50, 299);
+            this.nBA_Match_Results_DataDataGridView.Name = "nBA_Match_Results_DataDataGridView";
+            this.nBA_Match_Results_DataDataGridView.RowHeadersWidth = 51;
+            this.nBA_Match_Results_DataDataGridView.RowTemplate.Height = 24;
+            this.nBA_Match_Results_DataDataGridView.Size = new System.Drawing.Size(680, 220);
+            this.nBA_Match_Results_DataDataGridView.TabIndex = 13;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "gameId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "gameId";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "gameDateTimeEst";
+            this.dataGridViewTextBoxColumn2.HeaderText = "gameDateTimeEst";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "hometeamName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "hometeamName";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "awayteamName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "awayteamName";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "homeScore";
+            this.dataGridViewTextBoxColumn5.HeaderText = "homeScore";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "awayScore";
+            this.dataGridViewTextBoxColumn6.HeaderText = "awayScore";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "winner";
+            this.dataGridViewTextBoxColumn7.HeaderText = "winner";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "attendance";
+            this.dataGridViewTextBoxColumn8.HeaderText = "attendance";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "arenaName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "arenaName";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "arenaCity";
+            this.dataGridViewTextBoxColumn10.HeaderText = "arenaCity";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "arenaState";
+            this.dataGridViewTextBoxColumn11.HeaderText = "arenaState";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "officials";
+            this.dataGridViewTextBoxColumn12.HeaderText = "officials";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
             // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 619);
-            this.Controls.Add(this.dataGridView2);
+            this.ClientSize = new System.Drawing.Size(775, 639);
+            this.Controls.Add(this.nBA_Match_Results_DataDataGridView);
             this.Controls.Add(this.btnTeamSort);
             this.Controls.Add(this.comboBoxTeamSort);
             this.Controls.Add(this.btnMonthSort);
@@ -262,33 +324,20 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.nBA_Upcoming_GamesBindingNavigator);
             this.Name = "NBA_UpcomingGames_MatchResults";
             this.Text = "NBA - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NBAUpcomingGames_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingNavigator)).EndInit();
-            this.nBA_Upcoming_GamesBindingNavigator.ResumeLayout(false);
-            this.nBA_Upcoming_GamesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource nBA_Upcoming_GamesBindingSource;
-        private System.Windows.Forms.BindingNavigator nBA_Upcoming_GamesBindingNavigator;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -297,6 +346,23 @@
         private System.Windows.Forms.ComboBox comboBoxTeamSort;
         private System.Windows.Forms.Button btnMonthSort;
         private System.Windows.Forms.ComboBox comboBoxMonthSort;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource nBA_Match_Results_DataBindingSource;
+        private SportsProjectDBDataSetTableAdapters.NBA_Match_Results_DataTableAdapter nBA_Match_Results_DataTableAdapter;
+        private SportsProjectDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private SportsProjectDBDataSet sportsProjectDBDataSet;
+        private System.Windows.Forms.BindingSource nBA_Match_Results_DataBindingSource1;
+        private System.Windows.Forms.DataGridView nBA_Match_Results_DataDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }

@@ -128,6 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SportsProjectDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SportsProjectDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +186,28 @@
     </None>
     <None Include="Sign_InDataSet.xss">
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsProjectDBDataSet.xsc">
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsProjectDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SportsProjectDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SportsProjectDBDataSet.xss">
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SportsProjectDBDataSet1.xsc">
+      <DependentUpon>SportsProjectDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SportsProjectDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SportsProjectDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SportsProjectDBDataSet1.xss">
+      <DependentUpon>SportsProjectDBDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
