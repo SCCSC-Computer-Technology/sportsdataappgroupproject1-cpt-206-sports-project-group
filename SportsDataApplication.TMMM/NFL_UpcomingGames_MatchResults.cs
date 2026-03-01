@@ -21,6 +21,8 @@ namespace SportsDataApplication.TMMM
 
         private void NFLUpcomingGames_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sportsProjectDBDataSet.NFL_Match_Results_Data' table. You can move, or remove it, as needed.
+            this.nFL_Match_Results_DataTableAdapter.Fill(this.sportsProjectDBDataSet.NFL_Match_Results_Data);
             // TODO: This line of code loads data into the 'sportsProjectDBDataSet.NFL_Upcoming_Games' table. You can move, or remove it, as needed.
             this.nFL_Upcoming_GamesTableAdapter.Fill(this.sportsProjectDBDataSet.NFL_Upcoming_Games);
             // Load form data form database
@@ -83,6 +85,14 @@ namespace SportsDataApplication.TMMM
         {
             // Close Upcoming Games / Match Results form
             this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // Search button for Match Results table
+            // filter function only works for teamVS and matchDate columns
+            string matchResultsSearch = txtBoxSearch.Text.Trim();
+            nFL_Match_Results_DataBindingSource.Filter = "teamVS like '%" + matchResultsSearch + "%' OR CONVERT (matchDate, 'System.String') like '%" + matchResultsSearch + "%'";
         }
     }
 }
