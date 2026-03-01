@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,6 +42,13 @@
             this.btnDisplay = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbConfDiv = new System.Windows.Forms.ComboBox();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipSearch = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipRefresh = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDisplay = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipTextSearch = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNFLStandings)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -54,6 +62,7 @@
             this.btnExit.Size = new System.Drawing.Size(69, 25);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "E&xit";
+            this.toolTipExit.SetToolTip(this.btnExit, "Closes Application");
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -65,7 +74,9 @@
             this.btnHelp.Size = new System.Drawing.Size(70, 25);
             this.btnHelp.TabIndex = 12;
             this.btnHelp.Text = "&Help (?)";
+            this.toolTipHelp.SetToolTip(this.btnHelp, "Displays Help/Tips and Information");
             this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // groupBox1
             // 
@@ -89,6 +100,7 @@
             this.btnRefreshData.Size = new System.Drawing.Size(81, 25);
             this.btnRefreshData.TabIndex = 6;
             this.btnRefreshData.Text = "Re&fresh Data";
+            this.toolTipRefresh.SetToolTip(this.btnRefreshData, "Refreshes Data Grid");
             this.btnRefreshData.UseVisualStyleBackColor = true;
             this.btnRefreshData.Click += new System.EventHandler(this.btnRefreshData_Click);
             // 
@@ -100,6 +112,7 @@
             this.txtbxSearch.Name = "txtbxSearch";
             this.txtbxSearch.Size = new System.Drawing.Size(207, 20);
             this.txtbxSearch.TabIndex = 3;
+            this.toolTipTextSearch.SetToolTip(this.txtbxSearch, "Enter Keyword to Search");
             // 
             // btnSearch
             // 
@@ -109,6 +122,7 @@
             this.btnSearch.Size = new System.Drawing.Size(81, 25);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "&Search";
+            this.toolTipSearch.SetToolTip(this.btnSearch, "Searches Database from Keyword entered");
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -120,6 +134,7 @@
             this.btnBack.Size = new System.Drawing.Size(69, 25);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "&Back";
+            this.toolTipBack.SetToolTip(this.btnBack, "Navigates to the previous form");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -164,6 +179,7 @@
             this.btnDisplay.Size = new System.Drawing.Size(75, 23);
             this.btnDisplay.TabIndex = 2;
             this.btnDisplay.Text = "&Display";
+            this.toolTipDisplay.SetToolTip(this.btnDisplay, "Displays selected Conference or Division");
             this.btnDisplay.UseVisualStyleBackColor = true;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
@@ -233,5 +249,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbConfDiv;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.ToolTip toolTipRefresh;
+        private System.Windows.Forms.ToolTip toolTipTextSearch;
+        private System.Windows.Forms.ToolTip toolTipSearch;
+        private System.Windows.Forms.ToolTip toolTipHelp;
+        private System.Windows.Forms.ToolTip toolTipDisplay;
+        private System.Windows.Forms.ToolTip toolTipBack;
+        private System.Windows.Forms.ToolTip toolTipExit;
     }
 }
