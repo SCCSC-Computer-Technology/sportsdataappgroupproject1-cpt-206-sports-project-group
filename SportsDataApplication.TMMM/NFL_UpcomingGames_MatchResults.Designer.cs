@@ -53,12 +53,22 @@
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.btnTeamSort = new System.Windows.Forms.Button();
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
+            this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
+            this.nFL_Upcoming_GamesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nFL_Upcoming_GamesTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter();
+            this.tableAdapterManager1 = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
+            this.homeTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.awayTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).BeginInit();
             this.credentialsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // sign_InDataSet
@@ -143,7 +153,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -177,18 +186,9 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // group_Project_1_Sports_DatabaseDataSet
-            // 
-            // 
             // nFL_Upcoming_GamesBindingSource
             // 
             this.nFL_Upcoming_GamesBindingSource.DataMember = "NFL Upcoming Games";
-            // 
-            // nFL_Upcoming_GamesTableAdapter
-            // 
-            // 
-            // tableAdapterManager1
-            // 
             // 
             // label1
             // 
@@ -212,7 +212,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.homeTeamDataGridViewTextBoxColumn,
+            this.awayTeamDataGridViewTextBoxColumn,
+            this.gameDateDataGridViewTextBoxColumn,
+            this.gameTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.nFL_Upcoming_GamesBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(26, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -264,6 +271,91 @@
             this.comboBoxTeamSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxTeamSort.TabIndex = 8;
             // 
+            // sportsProjectDBDataSet
+            // 
+            this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
+            this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nFL_Upcoming_GamesBindingSource1
+            // 
+            this.nFL_Upcoming_GamesBindingSource1.DataMember = "NFL Upcoming Games";
+            this.nFL_Upcoming_GamesBindingSource1.DataSource = this.sportsProjectDBDataSet;
+            // 
+            // nFL_Upcoming_GamesTableAdapter
+            // 
+            this.nFL_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Defense_Stats_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager1.Defense_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager1.Kick_Punt_PlayoffsTableAdapter = null;
+            this.tableAdapterManager1.Kick_Punt_StatsTableAdapter = null;
+            this.tableAdapterManager1.Kickoff_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager1.Kickoff_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager1.NBA_Eastern_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager1.NBA_Eastern_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager1.NBA_Match_Results_DataTableAdapter = null;
+            this.tableAdapterManager1.nba_playerstats_2024TableAdapter = null;
+            this.tableAdapterManager1.NBA_Upcoming_GamesTableAdapter = null;
+            this.tableAdapterManager1.NBA_Western_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager1.NBA_Western_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager1.NFL_AFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_AFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_AFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_AFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_Match_Results_DataTableAdapter = null;
+            this.tableAdapterManager1.NFL_NFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_NFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_NFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_NFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager1.NFL_Upcoming_GamesTableAdapter = this.nFL_Upcoming_GamesTableAdapter;
+            this.tableAdapterManager1.Passing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager1.Passing_statsTableAdapter = null;
+            this.tableAdapterManager1.PlayerStatistics_ImportErrorsTableAdapter = null;
+            this.tableAdapterManager1.Punting_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager1.Punting_statsTableAdapter = null;
+            this.tableAdapterManager1.Receiving_statsTableAdapter = null;
+            this.tableAdapterManager1.Recieving_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager1.Rushing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager1.Rushing_statsTableAdapter = null;
+            this.tableAdapterManager1.Scoring_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager1.Scoring_StatsTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // homeTeamDataGridViewTextBoxColumn
+            // 
+            this.homeTeamDataGridViewTextBoxColumn.DataPropertyName = "Home Team";
+            this.homeTeamDataGridViewTextBoxColumn.HeaderText = "Home Team";
+            this.homeTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homeTeamDataGridViewTextBoxColumn.Name = "homeTeamDataGridViewTextBoxColumn";
+            this.homeTeamDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // awayTeamDataGridViewTextBoxColumn
+            // 
+            this.awayTeamDataGridViewTextBoxColumn.DataPropertyName = "Away Team";
+            this.awayTeamDataGridViewTextBoxColumn.HeaderText = "Away Team";
+            this.awayTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.awayTeamDataGridViewTextBoxColumn.Name = "awayTeamDataGridViewTextBoxColumn";
+            this.awayTeamDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gameDateDataGridViewTextBoxColumn
+            // 
+            this.gameDateDataGridViewTextBoxColumn.DataPropertyName = "Game Date";
+            this.gameDateDataGridViewTextBoxColumn.HeaderText = "Game Date";
+            this.gameDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gameDateDataGridViewTextBoxColumn.Name = "gameDateDataGridViewTextBoxColumn";
+            this.gameDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gameTimeDataGridViewTextBoxColumn
+            // 
+            this.gameTimeDataGridViewTextBoxColumn.DataPropertyName = "Game Time";
+            this.gameTimeDataGridViewTextBoxColumn.HeaderText = "Game Time";
+            this.gameTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gameTimeDataGridViewTextBoxColumn.Name = "gameTimeDataGridViewTextBoxColumn";
+            this.gameTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
             // NFL_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +380,8 @@
             this.credentialsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +412,13 @@
         private System.Windows.Forms.Button btnMonthSort;
         private System.Windows.Forms.Button btnTeamSort;
         private System.Windows.Forms.ComboBox comboBoxTeamSort;
+        private SportsProjectDBDataSet sportsProjectDBDataSet;
+        private System.Windows.Forms.BindingSource nFL_Upcoming_GamesBindingSource1;
+        private SportsProjectDBDataSetTableAdapters.NFL_Upcoming_GamesTableAdapter nFL_Upcoming_GamesTableAdapter;
+        private SportsProjectDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn homeTeamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn awayTeamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gameDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gameTimeDataGridViewTextBoxColumn;
     }
 }
