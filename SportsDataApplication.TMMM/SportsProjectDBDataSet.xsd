@@ -1465,7 +1465,308 @@ SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore
               <Mapping SourceColumn="Game Date" DataSetColumn="Game Date" />
               <Mapping SourceColumn="Game Time" DataSetColumn="Game Time" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByAH" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAH" GeneratorSourceName="SortByAH" GetMethodModifier="Public" GetMethodName="GetDataByAH" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAH" UserSourceName="SortByAH">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Atlanta Hawks' OR [Away Team] = 'Atlanta Hawks';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByApril" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByApril" GeneratorSourceName="SortByApril" GetMethodModifier="Public" GetMethodName="GetDataByApril" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByApril" UserSourceName="SortByApril">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByBC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBC" GeneratorSourceName="SortByBC" GetMethodModifier="Public" GetMethodName="GetDataByBC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBC" UserSourceName="SortByBC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Boston Celtics' OR [Away Team] = 'Boston Celtics';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByBN" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBN" GeneratorSourceName="SortByBN" GetMethodModifier="Public" GetMethodName="GetDataByBN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBN" UserSourceName="SortByBN">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Brooklyn Nets' OR [Away Team] = 'Brooklyn Nets';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByCB" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCB" GeneratorSourceName="SortByCB" GetMethodModifier="Public" GetMethodName="GetDataByCB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCB" UserSourceName="SortByCB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Chicago Bulls' OR [Away Team] = 'Chicago Bulls';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByCC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCC" GeneratorSourceName="SortByCC" GetMethodModifier="Public" GetMethodName="GetDataByCC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCC" UserSourceName="SortByCC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Cleveland Cavaliers' OR [Away Team] = 'Cleveland Cavaliers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByCH" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCH" GeneratorSourceName="SortByCH" GetMethodModifier="Public" GetMethodName="GetDataByCH" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCH" UserSourceName="SortByCH">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Charlotte Hornets' OR [Away Team] = 'Charlotte Hornets';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDM" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDM" GeneratorSourceName="SortByDM" GetMethodModifier="Public" GetMethodName="GetDataByDM" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDM" UserSourceName="SortByDM">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Dallas Mavericks' OR [Away Team] = 'Dallas Mavericks';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDN" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDN" GeneratorSourceName="SortByDN" GetMethodModifier="Public" GetMethodName="GetDataByDN" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDN" UserSourceName="SortByDN">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Denver Nuggets' OR [Away Team] = 'Denver Nuggets';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDP" GeneratorSourceName="SortByDP" GetMethodModifier="Public" GetMethodName="GetDataByDP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDP" UserSourceName="SortByDP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Detroit Pistons' OR [Away Team] = 'Detroit Pistons';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByFebruary" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFebruary" GeneratorSourceName="SortByFebruary" GetMethodModifier="Public" GetMethodName="GetDataByFebruary" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFebruary" UserSourceName="SortByFebruary">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByGSW" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGSW" GeneratorSourceName="SortByGSW" GetMethodModifier="Public" GetMethodName="GetDataByGSW" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGSW" UserSourceName="SortByGSW">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Golden State Warriors' OR [Away Team] = 'Golden State Warriors';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByHR" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHR" GeneratorSourceName="SortByHR" GetMethodModifier="Public" GetMethodName="GetDataByHR" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHR" UserSourceName="SortByHR">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Houston Rockets' OR [Away Team] = 'Houston Rockets';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByIP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIP" GeneratorSourceName="SortByIP" GetMethodModifier="Public" GetMethodName="GetDataByIP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIP" UserSourceName="SortByIP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Indiana Pacers' OR [Away Team] = 'Indiana Pacers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByJanuary" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByJanuary" GeneratorSourceName="SortByJanuary" GetMethodModifier="Public" GetMethodName="GetDataByJanuary" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByJanuary" UserSourceName="SortByJanuary">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByLAC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLAC" GeneratorSourceName="SortByLAC" GetMethodModifier="Public" GetMethodName="GetDataByLAC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLAC" UserSourceName="SortByLAC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'LA Clippers' OR [Away Team] = 'LA Clippers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByLAL" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLAL" GeneratorSourceName="SortByLAL" GetMethodModifier="Public" GetMethodName="GetDataByLAL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLAL" UserSourceName="SortByLAL">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Los Angeles Lakers' OR [Away Team] = 'Los Angeles Lakers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMarch" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMarch" GeneratorSourceName="SortByMarch" GetMethodModifier="Public" GetMethodName="GetDataByMarch" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMarch" UserSourceName="SortByMarch">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMB" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMB" GeneratorSourceName="SortByMB" GetMethodModifier="Public" GetMethodName="GetDataByMB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMB" UserSourceName="SortByMB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Milwaukee Bucks' OR [Away Team] = 'Milwaukee Bucks';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMG" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMG" GeneratorSourceName="SortByMG" GetMethodModifier="Public" GetMethodName="GetDataByMG" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMG" UserSourceName="SortByMG">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Memphis Grizzlies' OR [Away Team] = 'Memphis Grizzlies';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMH" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMH" GeneratorSourceName="SortByMH" GetMethodModifier="Public" GetMethodName="GetDataByMH" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMH" UserSourceName="SortByMH">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Miami Heat' OR [Away Team] = 'Miami Heat';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMT" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMT" GeneratorSourceName="SortByMT" GetMethodModifier="Public" GetMethodName="GetDataByMT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMT" UserSourceName="SortByMT">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Minnesota Timberwolves' OR [Away Team] = 'Minnesota Timberwolves';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNOP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNOP" GeneratorSourceName="SortByNOP" GetMethodModifier="Public" GetMethodName="GetDataByNOP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNOP" UserSourceName="SortByNOP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'New Orleans Pelicans' OR [Away Team] = 'New Orleans Pelicans';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNovember" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNovember" GeneratorSourceName="SortByNovember" GetMethodModifier="Public" GetMethodName="GetDataByNovember" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNovember" UserSourceName="SortByNovember">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 11</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNYK" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNYK" GeneratorSourceName="SortByNYK" GetMethodModifier="Public" GetMethodName="GetDataByNYK" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNYK" UserSourceName="SortByNYK">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'New York Knicks' OR [Away Team] = 'New York Knicks';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByOCT" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOCT" GeneratorSourceName="SortByOCT" GetMethodModifier="Public" GetMethodName="GetDataByOCT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOCT" UserSourceName="SortByOCT">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Oklahoma City Thunder' OR [Away Team] = 'Oklahoma City Thunder';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByOctober" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOctober" GeneratorSourceName="SortByOctober" GetMethodModifier="Public" GetMethodName="GetDataByOctober" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOctober" UserSourceName="SortByOctober">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
+FROM [NBA Upcoming Games]
+WHERE MONTH(CONVERT(date, [Game Date], 101)) = 10</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByOM" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOM" GeneratorSourceName="SortByOM" GetMethodModifier="Public" GetMethodName="GetDataByOM" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOM" UserSourceName="SortByOM">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Orlando Magic' OR [Away Team] = 'Orlando Magic';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByP76" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByP76" GeneratorSourceName="SortByP76" GetMethodModifier="Public" GetMethodName="GetDataByP76" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByP76" UserSourceName="SortByP76">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Philadelphia 76ers' OR [Away Team] = 'Philadelphia 76ers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByPS" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPS" GeneratorSourceName="SortByPS" GetMethodModifier="Public" GetMethodName="GetDataByPS" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPS" UserSourceName="SortByPS">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Phoenix Suns' OR [Away Team] = 'Phoenix Suns';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByPTB" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPTB" GeneratorSourceName="SortByPTB" GetMethodModifier="Public" GetMethodName="GetDataByPTB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPTB" UserSourceName="SortByPTB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Portland Trail Blazers' OR [Away Team] = 'Portland Trail Blazers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortBySAS" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySAS" GeneratorSourceName="SortBySAS" GetMethodModifier="Public" GetMethodName="GetDataBySAS" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySAS" UserSourceName="SortBySAS">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'San Antonio Spurs' OR [Away Team] = 'San Antonio Spurs';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortBySK" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySK" GeneratorSourceName="SortBySK" GetMethodModifier="Public" GetMethodName="GetDataBySK" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySK" UserSourceName="SortBySK">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Sacramento Kings' OR [Away Team] = 'Sacramento Kings';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByTR" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTR" GeneratorSourceName="SortByTR" GetMethodModifier="Public" GetMethodName="GetDataByTR" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTR" UserSourceName="SortByTR">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Toronto Raptors' OR [Away Team] = 'Toronto Raptors';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByUJ" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUJ" GeneratorSourceName="SortByUJ" GetMethodModifier="Public" GetMethodName="GetDataByUJ" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUJ" UserSourceName="SortByUJ">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Utah Jazz' OR [Away Team] = 'Utah Jazz';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByWW" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByWW" GeneratorSourceName="SortByWW" GetMethodModifier="Public" GetMethodName="GetDataByWW" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByWW" UserSourceName="SortByWW">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NBA Upcoming Games] WHERE [Home Team] = 'Washington Wizards' OR [Away Team] = 'Washington Wizards';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NBA Western Conference 24-25TableAdapter" GeneratorDataComponentClassName="NBA_Western_Conference_24_25TableAdapter" Name="NBA Western Conference 24-25" UserDataComponentName="NBA Western Conference 24-25TableAdapter">
             <MainSource>
@@ -2789,12 +3090,92 @@ SELECT ID, [NFC WEST], W, L, T, PCT, PF, PA, [Net Pts], Home, Road, Div, Pct1, C
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByAtlantaFalcons" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAtlantaFalcons" GeneratorSourceName="SortByAtlantaFalcons" GetMethodModifier="Public" GetMethodName="GetDataByAtlantaFalcons" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAtlantaFalcons" UserSourceName="SortByAtlantaFalcons">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Atlanta Falcons' OR [Away Team] = 'Atlanta Falcons';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByBaltimoreRavens" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBaltimoreRavens" GeneratorSourceName="SortByBaltimoreRavens" GetMethodModifier="Public" GetMethodName="GetDataByBaltimoreRavens" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBaltimoreRavens" UserSourceName="SortByBaltimoreRavens">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Baltimore Ravens' OR [Away Team] = 'Baltimore Ravens';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByBuffaloBills" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBuffaloBills" GeneratorSourceName="SortByBuffaloBills" GetMethodModifier="Public" GetMethodName="GetDataByBuffaloBills" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBuffaloBills" UserSourceName="SortByBuffaloBills">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Buffalo Bills' OR [Away Team] = 'Buffalo Bills';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByCarolinaPanthers" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCarolinaPanthers" GeneratorSourceName="SortByCarolinaPanthers" GetMethodModifier="Public" GetMethodName="GetDataByCarolinaPanthers" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCarolinaPanthers" UserSourceName="SortByCarolinaPanthers">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Carolina Panthers' OR [Away Team] = 'Carolina Panthers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByChicagoBears" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByChicagoBears" GeneratorSourceName="SortByChicagoBears" GetMethodModifier="Public" GetMethodName="GetDataByChicagoBears" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByChicagoBears" UserSourceName="SortByChicagoBears">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Chicago Bears' OR [Away Team] = 'Chicago Bears';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByCincinnatiBengals" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCincinnatiBengals" GeneratorSourceName="SortByCincinnatiBengals" GetMethodModifier="Public" GetMethodName="GetDataByCincinnatiBengals" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCincinnatiBengals" UserSourceName="SortByCincinnatiBengals">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Cincinnati Bengals' OR [Away Team] = 'Cincinnati Bengals';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByClBr" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByClBr" GeneratorSourceName="SortByClBr" GetMethodModifier="Public" GetMethodName="GetDataByClBr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByClBr" UserSourceName="SortByClBr">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Cleveland Browns' OR [Away Team] = 'Cleveland Browns';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDB" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDB" GeneratorSourceName="SortByDB" GetMethodModifier="Public" GetMethodName="GetDataByDB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDB" UserSourceName="SortByDB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Denver Broncos' OR [Away Team] = 'Denver Broncos';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDC" GeneratorSourceName="SortByDC" GetMethodModifier="Public" GetMethodName="GetDataByDC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDC" UserSourceName="SortByDC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Dallas Cowboys' OR [Away Team] = 'Dallas Cowboys';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDecember" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDecember" GeneratorSourceName="SortByDecember" GetMethodModifier="Public" GetMethodName="GetDataByDecember" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDecember" UserSourceName="SortByDecember">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
 FROM [NFL Upcoming Games]
 WHERE MONTH(CONVERT(date, [Game Date], 101)) = 12</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDL" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDL" GeneratorSourceName="SortByDL" GetMethodModifier="Public" GetMethodName="GetDataByDL" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDL" UserSourceName="SortByDL">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Detroit Lions' OR [Away Team] = 'Detroit Lions';</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -2809,12 +3190,108 @@ WHERE MONTH(CONVERT(date, [Game Date], 101)) = 2</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByGDP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGDP" GeneratorSourceName="SortByGDP" GetMethodModifier="Public" GetMethodName="GetDataByGDP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGDP" UserSourceName="SortByGDP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Green Bay Packers' OR [Away Team] = 'Green Bay Packers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByHT" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByHT" GeneratorSourceName="SortByHT" GetMethodModifier="Public" GetMethodName="GetDataByHT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByHT" UserSourceName="SortByHT">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Houston Texans' OR [Away Team] = 'Houston Texans';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByIC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIC" GeneratorSourceName="SortByIC" GetMethodModifier="Public" GetMethodName="GetDataByIC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIC" UserSourceName="SortByIC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Indianapolis Colts' OR [Away Team] = 'Indianapolis Colts';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortbyJanuary" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByJanuary" GeneratorSourceName="SortbyJanuary" GetMethodModifier="Public" GetMethodName="GetDataByJanuary" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByJanuary" UserSourceName="SortbyJanuary">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
 FROM [NFL Upcoming Games]
 WHERE MONTH(CONVERT(date, [Game Date], 101)) = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByJJ" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByJJ" GeneratorSourceName="SortByJJ" GetMethodModifier="Public" GetMethodName="GetDataByJJ" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByJJ" UserSourceName="SortByJJ">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Jacksonville Jaguars' OR [Away Team] = 'Jacksonville Jaguars';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByKCC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKCC" GeneratorSourceName="SortByKCC" GetMethodModifier="Public" GetMethodName="GetDataByKCC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKCC" UserSourceName="SortByKCC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Kansas City Chiefs' OR [Away Team] = 'Kansas City Chiefs';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByLAC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLAC" GeneratorSourceName="SortByLAC" GetMethodModifier="Public" GetMethodName="GetDataByLAC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLAC" UserSourceName="SortByLAC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Los Angeles Chargers' OR [Away Team] = 'Los Angeles Chargers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByLAR" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLAR" GeneratorSourceName="SortByLAR" GetMethodModifier="Public" GetMethodName="GetDataByLAR" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLAR" UserSourceName="SortByLAR">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Los Angeles Rams' OR [Away Team] = 'Los Angeles Rams';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByLVR" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLVR" GeneratorSourceName="SortByLVR" GetMethodModifier="Public" GetMethodName="GetDataByLVR" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLVR" UserSourceName="SortByLVR">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Las Vegas Raiders' OR [Away Team] = 'Las Vegas Raiders';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMD" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMD" GeneratorSourceName="SortByMD" GetMethodModifier="Public" GetMethodName="GetDataByMD" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMD" UserSourceName="SortByMD">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Miami Dolphins' OR [Away Team] = 'Miami Dolphins';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMV" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMV" GeneratorSourceName="SortByMV" GetMethodModifier="Public" GetMethodName="GetDataByMV" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMV" UserSourceName="SortByMV">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Minnesota Vikings' OR [Away Team] = 'Minnesota Vikings';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNEP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNEP" GeneratorSourceName="SortByNEP" GetMethodModifier="Public" GetMethodName="GetDataByNEP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNEP" UserSourceName="SortByNEP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'New England Patriots' OR [Away Team] = 'New England Patriots';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNOS" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNOS" GeneratorSourceName="SortByNOS" GetMethodModifier="Public" GetMethodName="GetDataByNOS" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNOS" UserSourceName="SortByNOS">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'New Orleans Saints' OR [Away Team] = 'New Orleans Saints';</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -2829,6 +3306,22 @@ WHERE MONTH(CONVERT(date, [Game Date], 101)) = 11</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNYG" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNYG" GeneratorSourceName="SortByNYG" GetMethodModifier="Public" GetMethodName="GetDataByNYG" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNYG" UserSourceName="SortByNYG">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'New York Giants' OR [Away Team] = 'New York Giants';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNYJ" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNYJ" GeneratorSourceName="SortByNYJ" GetMethodModifier="Public" GetMethodName="GetDataByNYJ" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNYJ" UserSourceName="SortByNYJ">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'New York Jets' OR [Away Team] = 'New York Jets';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByOctober" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOctober" GeneratorSourceName="SortByOctober" GetMethodModifier="Public" GetMethodName="GetDataByOctober" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOctober" UserSourceName="SortByOctober">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -2839,12 +3332,68 @@ WHERE MONTH(CONVERT(date, [Game Date], 101)) = 10</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByPE" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPE" GeneratorSourceName="SortByPE" GetMethodModifier="Public" GetMethodName="GetDataByPE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPE" UserSourceName="SortByPE">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Philadelphia Eagles' OR [Away Team] = 'Philadelphia Eagles';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByPS" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPS" GeneratorSourceName="SortByPS" GetMethodModifier="Public" GetMethodName="GetDataByPS" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPS" UserSourceName="SortByPS">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Pittsburgh Steelers' OR [Away Team] = 'Pittsburgh Steelers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortBySeahawks" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySeahawks" GeneratorSourceName="SortBySeahawks" GetMethodModifier="Public" GetMethodName="GetDataBySeahawks" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySeahawks" UserSourceName="SortBySeahawks">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Seattle Seahawks' OR [Away Team] = 'Seattle Seahawks';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortBySeptember" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySeptember" GeneratorSourceName="SortBySeptember" GetMethodModifier="Public" GetMethodName="GetDataBySeptember" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySeptember" UserSourceName="SortBySeptember">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time]
 FROM [NFL Upcoming Games]
 WHERE MONTH(CONVERT(date, [Game Date], 101)) = 9</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortBySF49" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySF49" GeneratorSourceName="SortBySF49" GetMethodModifier="Public" GetMethodName="GetDataBySF49" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySF49" UserSourceName="SortBySF49">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'San Francisco 49ers' OR [Away Team] = 'San Francisco 49ers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByTBB" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTBB" GeneratorSourceName="SortByTBB" GetMethodModifier="Public" GetMethodName="GetDataByTBB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTBB" UserSourceName="SortByTBB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Tampa Bay Buccaneers' OR [Away Team] = 'Tampa Bay Buccaneers';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByTT" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTT" GeneratorSourceName="SortByTT" GetMethodModifier="Public" GetMethodName="GetDataByTT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTT" UserSourceName="SortByTT">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Tennessee Titans' OR [Away Team] = 'Tennessee Titans';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NFL Upcoming Games]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByWC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByWC" GeneratorSourceName="SortByWC" GetMethodModifier="Public" GetMethodName="GetDataByWC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByWC" UserSourceName="SortByWC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Home Team], [Away Team], [Game Date], [Game Time] FROM [NFL Upcoming Games] WHERE [Home Team] = 'Washington Commanders' OR [Away Team] = 'Washington Commanders';</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
