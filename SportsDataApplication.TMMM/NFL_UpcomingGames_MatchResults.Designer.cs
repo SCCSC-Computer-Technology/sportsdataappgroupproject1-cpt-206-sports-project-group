@@ -315,6 +315,7 @@
             this.btnMonthSort.TabIndex = 7;
             this.btnMonthSort.Text = "Sort by &Month";
             this.btnMonthSort.UseVisualStyleBackColor = true;
+            this.btnMonthSort.Click += new System.EventHandler(this.btnMonthSort_Click);
             // 
             // btnTeamSort
             // 

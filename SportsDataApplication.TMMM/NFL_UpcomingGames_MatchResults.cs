@@ -94,5 +94,22 @@ namespace SportsDataApplication.TMMM
             string matchResultsSearch = txtBoxSearch.Text.Trim();
             nFL_Match_Results_DataBindingSource.Filter = "teamVS like '%" + matchResultsSearch + "%' OR CONVERT (matchDate, 'System.String') like '%" + matchResultsSearch + "%'";
         }
+
+        private void btnMonthSort_Click(object sender, EventArgs e)
+        {
+            switch (comboBoxMonthSort.SelectedIndex)
+            {
+                case 0: this.nFL_Upcoming_GamesTableAdapter.SortbyJanuary(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 1: this.nFL_Upcoming_GamesTableAdapter.SortByFebruary(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 2: this.nFL_Upcoming_GamesTableAdapter.SortBySeptember(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 3: this.nFL_Upcoming_GamesTableAdapter.SortByOctober(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 4: this.nFL_Upcoming_GamesTableAdapter.SortByNovember(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 5: this.nFL_Upcoming_GamesTableAdapter.SortByDecember(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                default:
+                    MessageBox.Show("Please select a Month");
+                    break;
+            }
+
+        }
     }
 }
