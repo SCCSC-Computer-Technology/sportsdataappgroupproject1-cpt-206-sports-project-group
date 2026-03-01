@@ -111,5 +111,47 @@ namespace SportsDataApplication.TMMM
             }
 
         }
+
+        private void btnTeamSort_Click(object sender, EventArgs e)
+        {
+            switch (comboBoxTeamSort.SelectedIndex)
+            {
+                case 0: this.nFL_Upcoming_GamesTableAdapter.SortByArizonaCardinals(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 1: this.nFL_Upcoming_GamesTableAdapter.SortByAtlantaFalcons(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 2: this.nFL_Upcoming_GamesTableAdapter.SortByBaltimoreRavens(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 3: this.nFL_Upcoming_GamesTableAdapter.SortByBuffaloBills(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 4: this.nFL_Upcoming_GamesTableAdapter.SortByCarolinaPanthers(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 5: this.nFL_Upcoming_GamesTableAdapter.SortByChicagoBears(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 6: this.nFL_Upcoming_GamesTableAdapter.SortByCincinnatiBengals(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 7: this.nFL_Upcoming_GamesTableAdapter.SortByClBr(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Cleveland Browns
+                case 8: this.nFL_Upcoming_GamesTableAdapter.SortByDB(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;   // Dallas Cowboys
+                case 9: this.nFL_Upcoming_GamesTableAdapter.SortByDC(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;   // Denver Broncos
+                case 10: this.nFL_Upcoming_GamesTableAdapter.SortByDL(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Detroit Lions
+                case 11: this.nFL_Upcoming_GamesTableAdapter.SortByGDP(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Green Bay Packers
+                case 12: this.nFL_Upcoming_GamesTableAdapter.SortByHT(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Houston Texans
+                case 13: this.nFL_Upcoming_GamesTableAdapter.SortByIC(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Indianapolis Colts
+                case 14: this.nFL_Upcoming_GamesTableAdapter.SortByJJ(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Jacksonville Jaguars
+                case 15: this.nFL_Upcoming_GamesTableAdapter.SortByKCC(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Kansas City Chiefs
+                case 16: this.nFL_Upcoming_GamesTableAdapter.SortByLVR(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Las Vegas Raiders
+                case 17: this.nFL_Upcoming_GamesTableAdapter.SortByLAC(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Los Angeles Chargers
+                case 18: this.nFL_Upcoming_GamesTableAdapter.SortByLAR(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Los Angeles Rams
+                case 19: this.nFL_Upcoming_GamesTableAdapter.SortByMD(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Miami Dolphins
+                case 20: this.nFL_Upcoming_GamesTableAdapter.SortByMV(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Minnesota Vikings
+                case 21: this.nFL_Upcoming_GamesTableAdapter.SortByNEP(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // New England Patriots
+                case 22: this.nFL_Upcoming_GamesTableAdapter.SortByNOS(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // New Orleans Saints
+                case 23: this.nFL_Upcoming_GamesTableAdapter.SortByNYG(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // New York Giants
+                case 24: this.nFL_Upcoming_GamesTableAdapter.SortByNYJ(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // New York Jets
+                case 25: this.nFL_Upcoming_GamesTableAdapter.SortByPE(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Philadelphia Eagles
+                case 26: this.nFL_Upcoming_GamesTableAdapter.SortByPS(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Pittsburgh Steelers
+                case 27: this.nFL_Upcoming_GamesTableAdapter.SortBySF49(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // San Francisco 49ers
+                case 28: this.nFL_Upcoming_GamesTableAdapter.SortBySeahawks(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;
+                case 29: this.nFL_Upcoming_GamesTableAdapter.SortByTBB(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break; // Tampa Bay Buccaneers
+                case 30: this.nFL_Upcoming_GamesTableAdapter.SortByTT(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Tennessee Titans
+                case 31: this.nFL_Upcoming_GamesTableAdapter.SortByWC(this.sportsProjectDBDataSet.NFL_Upcoming_Games); break;  // Washington Commanders
+                default:
+                    MessageBox.Show("Please select a Team");
+                    break;
+            }
+        }
     }
 }
