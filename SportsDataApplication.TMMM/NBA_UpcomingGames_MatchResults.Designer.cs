@@ -81,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingNavigator)).BeginInit();
             this.nBA_Match_Results_DataBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -404,7 +406,7 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
             this.nBA_Match_Results_DataDataGridView.DataSource = this.nBA_Match_Results_DataBindingSource;
-            this.nBA_Match_Results_DataDataGridView.Location = new System.Drawing.Point(16, 260);
+            this.nBA_Match_Results_DataDataGridView.Location = new System.Drawing.Point(15, 260);
             this.nBA_Match_Results_DataDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.nBA_Match_Results_DataDataGridView.Name = "nBA_Match_Results_DataDataGridView";
             this.nBA_Match_Results_DataDataGridView.RowHeadersWidth = 51;
@@ -511,6 +513,68 @@
             // 
             this.nBA_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
             // 
+            // nBA_Match_Results_DataBindingSource
+            // 
+            this.nBA_Match_Results_DataBindingSource.DataMember = "NBA Match Results Data";
+            this.nBA_Match_Results_DataBindingSource.DataSource = this.sportsProjectDBDataSet;
+            // 
+            // sportsProjectDBDataSet
+            // 
+            this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
+            this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nBA_Match_Results_DataTableAdapter
+            // 
+            this.nBA_Match_Results_DataTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Defense_Stats_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager.Defense_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Kick_Punt_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Kick_Punt_StatsTableAdapter = null;
+            this.tableAdapterManager.Kickoff_Normal_SeasonTableAdapter = null;
+            this.tableAdapterManager.Kickoff_Stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.NBA_Eastern_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager.NBA_Eastern_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager.NBA_Match_Results_DataTableAdapter = this.nBA_Match_Results_DataTableAdapter;
+            this.tableAdapterManager.nba_playerstats_2024TableAdapter = null;
+            this.tableAdapterManager.NBA_Upcoming_GamesTableAdapter = null;
+            this.tableAdapterManager.NBA_Western_Conference_24_25TableAdapter = null;
+            this.tableAdapterManager.NBA_Western_Conference_25_26TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_AFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_Match_Results_DataTableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_EAST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_NORTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_SOUTH_25TableAdapter = null;
+            this.tableAdapterManager.NFL_NFC_WEST_25TableAdapter = null;
+            this.tableAdapterManager.NFL_Upcoming_GamesTableAdapter = null;
+            this.tableAdapterManager.Passing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Passing_statsTableAdapter = null;
+            this.tableAdapterManager.PlayerStatistics_ImportErrorsTableAdapter = null;
+            this.tableAdapterManager.Punting_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Punting_statsTableAdapter = null;
+            this.tableAdapterManager.Receiving_statsTableAdapter = null;
+            this.tableAdapterManager.Recieving_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Rushing_stats_PlayoffTableAdapter = null;
+            this.tableAdapterManager.Rushing_statsTableAdapter = null;
+            this.tableAdapterManager.Scoring_stats_PlayoffsTableAdapter = null;
+            this.tableAdapterManager.Scoring_StatsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 470);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "H&elp (?)";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -538,6 +602,8 @@
             this.nBA_Match_Results_DataBindingNavigator.ResumeLayout(false);
             this.nBA_Match_Results_DataBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
