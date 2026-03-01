@@ -129,6 +129,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sign_InDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SportsProjectDBDataSet.cs">
+      <DependentUpon>SportsProjectDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SportsProjectDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
