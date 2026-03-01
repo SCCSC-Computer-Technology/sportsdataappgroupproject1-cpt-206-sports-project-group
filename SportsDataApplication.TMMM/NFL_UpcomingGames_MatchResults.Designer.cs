@@ -325,6 +325,7 @@
             this.btnTeamSort.TabIndex = 9;
             this.btnTeamSort.Text = "Sort by &Team";
             this.btnTeamSort.UseVisualStyleBackColor = true;
+            this.btnTeamSort.Click += new System.EventHandler(this.btnTeamSort_Click);
             // 
             // comboBoxTeamSort
             // 
