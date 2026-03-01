@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblInstruction = new System.Windows.Forms.Label();
             this.comboBoxSport = new System.Windows.Forms.ComboBox();
@@ -35,6 +36,10 @@
             this.lblInstruction2 = new System.Windows.Forms.Label();
             this.btnDatabase = new System.Windows.Forms.Button();
             this.btnExit2 = new System.Windows.Forms.Button();
+            this.toolTipSport = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDatabase = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipOpen = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -68,6 +73,7 @@
             this.comboBoxSport.Name = "comboBoxSport";
             this.comboBoxSport.Size = new System.Drawing.Size(359, 28);
             this.comboBoxSport.TabIndex = 2;
+            this.toolTipSport.SetToolTip(this.comboBoxSport, "Selects Sport to view data");
             // 
             // comboBoxDatabase
             // 
@@ -78,6 +84,7 @@
             this.comboBoxDatabase.Name = "comboBoxDatabase";
             this.comboBoxDatabase.Size = new System.Drawing.Size(359, 28);
             this.comboBoxDatabase.TabIndex = 4;
+            this.toolTipDatabase.SetToolTip(this.comboBoxDatabase, "Selects a Specific Data to view depending on Sport selected");
             // 
             // lblInstruction2
             // 
@@ -99,6 +106,7 @@
             this.btnDatabase.Size = new System.Drawing.Size(108, 63);
             this.btnDatabase.TabIndex = 5;
             this.btnDatabase.Text = "&Open Database";
+            this.toolTipOpen.SetToolTip(this.btnDatabase, "Opens Selected Sport with Selected Database");
             this.btnDatabase.UseVisualStyleBackColor = true;
             this.btnDatabase.Click += new System.EventHandler(this.btnDatabase_Click);
             // 
@@ -112,6 +120,7 @@
             this.btnExit2.Size = new System.Drawing.Size(112, 63);
             this.btnExit2.TabIndex = 6;
             this.btnExit2.Text = "E&xit";
+            this.toolTipExit.SetToolTip(this.btnExit2, "Exit Application");
             this.btnExit2.UseVisualStyleBackColor = true;
             this.btnExit2.Click += new System.EventHandler(this.btnExit2_Click);
             // 
@@ -148,5 +157,9 @@
         private System.Windows.Forms.Label lblInstruction2;
         private System.Windows.Forms.Button btnDatabase;
         private System.Windows.Forms.Button btnExit2;
+        private System.Windows.Forms.ToolTip toolTipExit;
+        private System.Windows.Forms.ToolTip toolTipSport;
+        private System.Windows.Forms.ToolTip toolTipDatabase;
+        private System.Windows.Forms.ToolTip toolTipOpen;
     }
 }

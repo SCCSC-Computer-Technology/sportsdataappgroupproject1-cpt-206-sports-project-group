@@ -236,5 +236,12 @@ namespace SportsDataApplication.TMMM
                 txtbxSearch.Clear();
             }
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowHelp("NFL");
+            helpForm.ShowDialog();
+        }
     }
 }
