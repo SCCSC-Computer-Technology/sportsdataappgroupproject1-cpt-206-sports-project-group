@@ -43,3 +43,7 @@ Stashed changes
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Ignore database file and log file
+*.mdf
+*.ldf
