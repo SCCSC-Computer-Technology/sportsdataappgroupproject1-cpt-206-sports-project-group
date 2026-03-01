@@ -1435,7 +1435,80 @@ SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore
               <Mapping SourceColumn="arenaState" DataSetColumn="arenaState" />
               <Mapping SourceColumn="officials" DataSetColumn="officials" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByJan" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByJan" GeneratorSourceName="FillByJan" GetMethodModifier="Public" GetMethodName="GetDataByJan" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByJan" UserSourceName="FillByJan">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByApril" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByApril" GeneratorSourceName="SortByApril" GetMethodModifier="Public" GetMethodName="GetDataByApril" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByApril" UserSourceName="SortByApril">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByDec" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDec" GeneratorSourceName="SortByDec" GetMethodModifier="Public" GetMethodName="GetDataByDec" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDec" UserSourceName="SortByDec">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 12</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByFeb" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFeb" GeneratorSourceName="SortByFeb" GetMethodModifier="Public" GetMethodName="GetDataByFeb" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFeb" UserSourceName="SortByFeb">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMar" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMar" GeneratorSourceName="SortByMar" GetMethodModifier="Public" GetMethodName="GetDataByMar" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMar" UserSourceName="SortByMar">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByMay" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMay" GeneratorSourceName="SortByMay" GetMethodModifier="Public" GetMethodName="GetDataByMay" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMay" UserSourceName="SortByMay">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 5</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByNov" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNov" GeneratorSourceName="SortByNov" GetMethodModifier="Public" GetMethodName="GetDataByNov" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNov" UserSourceName="SortByNov">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 11</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.[NBA Match Results Data]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SortByOct" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOct" GeneratorSourceName="SortByOct" GetMethodModifier="Public" GetMethodName="GetDataByOct" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOct" UserSourceName="SortByOct">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT gameId, gameDateTimeEst, hometeamName, awayteamName, homeScore, awayScore, winner, attendance, arenaName, arenaCity, arenaState, officials FROM [NBA Match Results Data]
+WHERE MONTH(CONVERT(date, gameDateTimeEst, 101)) = 10</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NBA Upcoming GamesTableAdapter" GeneratorDataComponentClassName="NBA_Upcoming_GamesTableAdapter" Name="NBA Upcoming Games" UserDataComponentName="NBA Upcoming GamesTableAdapter">
             <MainSource>
