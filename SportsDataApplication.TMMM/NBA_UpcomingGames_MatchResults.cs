@@ -146,6 +146,7 @@ namespace SportsDataApplication.TMMM
             txtBoxSearch.Clear();
             btnSearch_Click(btnSearch, EventArgs.Empty); // click event
             comBoxSelectColumn.SelectedIndex = 0;
+        }
         private void btnMonthSort_Click(object sender, EventArgs e)
         {
             switch (comboBoxMonthSort.SelectedIndex)
