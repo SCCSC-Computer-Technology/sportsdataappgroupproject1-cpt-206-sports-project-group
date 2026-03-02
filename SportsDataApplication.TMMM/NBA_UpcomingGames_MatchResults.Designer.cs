@@ -33,20 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.homeTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.awayTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nBA_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnTeamSort = new System.Windows.Forms.Button();
             this.comboBoxTeamSort = new System.Windows.Forms.ComboBox();
             this.btnMonthSort = new System.Windows.Forms.Button();
             this.comboBoxMonthSort = new System.Windows.Forms.ComboBox();
-            this.nBA_Match_Results_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nBA_Match_Results_DataTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.NBA_Match_Results_DataTableAdapter();
-            this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
             this.nBA_Match_Results_DataBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -73,16 +64,23 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nBA_Match_Results_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
+            this.homeTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.awayTeamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nBA_Upcoming_GamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nBA_Match_Results_DataTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.NBA_Match_Results_DataTableAdapter();
+            this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
             this.nBA_Upcoming_GamesTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.NBA_Upcoming_GamesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingNavigator)).BeginInit();
             this.nBA_Match_Results_DataBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -123,48 +121,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(738, 145);
             this.dataGridView1.TabIndex = 6;
             // 
-            // homeTeamDataGridViewTextBoxColumn
-            // 
-            this.homeTeamDataGridViewTextBoxColumn.DataPropertyName = "Home Team";
-            this.homeTeamDataGridViewTextBoxColumn.HeaderText = "Home Team";
-            this.homeTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homeTeamDataGridViewTextBoxColumn.Name = "homeTeamDataGridViewTextBoxColumn";
-            this.homeTeamDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // awayTeamDataGridViewTextBoxColumn
-            // 
-            this.awayTeamDataGridViewTextBoxColumn.DataPropertyName = "Away Team";
-            this.awayTeamDataGridViewTextBoxColumn.HeaderText = "Away Team";
-            this.awayTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.awayTeamDataGridViewTextBoxColumn.Name = "awayTeamDataGridViewTextBoxColumn";
-            this.awayTeamDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gameDateDataGridViewTextBoxColumn
-            // 
-            this.gameDateDataGridViewTextBoxColumn.DataPropertyName = "Game Date";
-            this.gameDateDataGridViewTextBoxColumn.HeaderText = "Game Date";
-            this.gameDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gameDateDataGridViewTextBoxColumn.Name = "gameDateDataGridViewTextBoxColumn";
-            this.gameDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gameTimeDataGridViewTextBoxColumn
-            // 
-            this.gameTimeDataGridViewTextBoxColumn.DataPropertyName = "Game Time";
-            this.gameTimeDataGridViewTextBoxColumn.HeaderText = "Game Time";
-            this.gameTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gameTimeDataGridViewTextBoxColumn.Name = "gameTimeDataGridViewTextBoxColumn";
-            this.gameTimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nBA_Upcoming_GamesBindingSource
-            // 
-            this.nBA_Upcoming_GamesBindingSource.DataMember = "NBA Upcoming Games";
-            this.nBA_Upcoming_GamesBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // sportsProjectDBDataSet
-            // 
-            this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
-            this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(661, 572);
@@ -185,6 +141,7 @@
             this.btnTeamSort.TabIndex = 13;
             this.btnTeamSort.Text = "Sort by &Team";
             this.btnTeamSort.UseVisualStyleBackColor = true;
+            this.btnTeamSort.Click += new System.EventHandler(this.btnTeamSort_Click);
             // 
             // comboBoxTeamSort
             // 
@@ -204,6 +161,7 @@
             this.btnMonthSort.TabIndex = 11;
             this.btnMonthSort.Text = "Sort by &Month";
             this.btnMonthSort.UseVisualStyleBackColor = true;
+            this.btnMonthSort.Click += new System.EventHandler(this.btnMonthSort_Click);
             // 
             // comboBoxMonthSort
             // 
@@ -213,54 +171,6 @@
             this.comboBoxMonthSort.Name = "comboBoxMonthSort";
             this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxMonthSort.TabIndex = 10;
-            // 
-            // nBA_Match_Results_DataBindingSource
-            // 
-            this.nBA_Match_Results_DataBindingSource.DataMember = "NBA Match Results Data";
-            this.nBA_Match_Results_DataBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // nBA_Match_Results_DataTableAdapter
-            // 
-            this.nBA_Match_Results_DataTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Defense_Stats_Normal_SeasonTableAdapter = null;
-            this.tableAdapterManager.Defense_Stats_PlayoffsTableAdapter = null;
-            this.tableAdapterManager.Kick_Punt_PlayoffsTableAdapter = null;
-            this.tableAdapterManager.Kick_Punt_StatsTableAdapter = null;
-            this.tableAdapterManager.Kickoff_Normal_SeasonTableAdapter = null;
-            this.tableAdapterManager.Kickoff_Stats_PlayoffsTableAdapter = null;
-            this.tableAdapterManager.NBA_Eastern_Conference_24_25TableAdapter = null;
-            this.tableAdapterManager.NBA_Eastern_Conference_25_26TableAdapter = null;
-            this.tableAdapterManager.NBA_Match_Results_DataTableAdapter = this.nBA_Match_Results_DataTableAdapter;
-            this.tableAdapterManager.nba_playerstats_2024TableAdapter = null;
-            this.tableAdapterManager.NBA_Upcoming_GamesTableAdapter = null;
-            this.tableAdapterManager.NBA_Western_Conference_24_25TableAdapter = null;
-            this.tableAdapterManager.NBA_Western_Conference_25_26TableAdapter = null;
-            this.tableAdapterManager.NFL_AFC_EAST_25TableAdapter = null;
-            this.tableAdapterManager.NFL_AFC_NORTH_25TableAdapter = null;
-            this.tableAdapterManager.NFL_AFC_SOUTH_25TableAdapter = null;
-            this.tableAdapterManager.NFL_AFC_WEST_25TableAdapter = null;
-            this.tableAdapterManager.NFL_Match_Results_DataTableAdapter = null;
-            this.tableAdapterManager.NFL_NFC_EAST_25TableAdapter = null;
-            this.tableAdapterManager.NFL_NFC_NORTH_25TableAdapter = null;
-            this.tableAdapterManager.NFL_NFC_SOUTH_25TableAdapter = null;
-            this.tableAdapterManager.NFL_NFC_WEST_25TableAdapter = null;
-            this.tableAdapterManager.NFL_Upcoming_GamesTableAdapter = null;
-            this.tableAdapterManager.Passing_stats_PlayoffTableAdapter = null;
-            this.tableAdapterManager.Passing_statsTableAdapter = null;
-            this.tableAdapterManager.PlayerStatistics_ImportErrorsTableAdapter = null;
-            this.tableAdapterManager.Punting_stats_PlayoffTableAdapter = null;
-            this.tableAdapterManager.Punting_statsTableAdapter = null;
-            this.tableAdapterManager.Receiving_statsTableAdapter = null;
-            this.tableAdapterManager.Recieving_stats_PlayoffsTableAdapter = null;
-            this.tableAdapterManager.Rushing_stats_PlayoffTableAdapter = null;
-            this.tableAdapterManager.Rushing_statsTableAdapter = null;
-            this.tableAdapterManager.Scoring_stats_PlayoffsTableAdapter = null;
-            this.tableAdapterManager.Scoring_StatsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // nBA_Match_Results_DataBindingNavigator
             // 
@@ -509,10 +419,6 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 125;
             // 
-            // nBA_Upcoming_GamesTableAdapter
-            // 
-            this.nBA_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
-            // 
             // nBA_Match_Results_DataBindingSource
             // 
             this.nBA_Match_Results_DataBindingSource.DataMember = "NBA Match Results Data";
@@ -522,6 +428,43 @@
             // 
             this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
             this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // homeTeamDataGridViewTextBoxColumn
+            // 
+            this.homeTeamDataGridViewTextBoxColumn.DataPropertyName = "Home Team";
+            this.homeTeamDataGridViewTextBoxColumn.HeaderText = "Home Team";
+            this.homeTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homeTeamDataGridViewTextBoxColumn.Name = "homeTeamDataGridViewTextBoxColumn";
+            this.homeTeamDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // awayTeamDataGridViewTextBoxColumn
+            // 
+            this.awayTeamDataGridViewTextBoxColumn.DataPropertyName = "Away Team";
+            this.awayTeamDataGridViewTextBoxColumn.HeaderText = "Away Team";
+            this.awayTeamDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.awayTeamDataGridViewTextBoxColumn.Name = "awayTeamDataGridViewTextBoxColumn";
+            this.awayTeamDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gameDateDataGridViewTextBoxColumn
+            // 
+            this.gameDateDataGridViewTextBoxColumn.DataPropertyName = "Game Date";
+            this.gameDateDataGridViewTextBoxColumn.HeaderText = "Game Date";
+            this.gameDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gameDateDataGridViewTextBoxColumn.Name = "gameDateDataGridViewTextBoxColumn";
+            this.gameDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gameTimeDataGridViewTextBoxColumn
+            // 
+            this.gameTimeDataGridViewTextBoxColumn.DataPropertyName = "Game Time";
+            this.gameTimeDataGridViewTextBoxColumn.HeaderText = "Game Time";
+            this.gameTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gameTimeDataGridViewTextBoxColumn.Name = "gameTimeDataGridViewTextBoxColumn";
+            this.gameTimeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nBA_Upcoming_GamesBindingSource
+            // 
+            this.nBA_Upcoming_GamesBindingSource.DataMember = "NBA Upcoming Games";
+            this.nBA_Upcoming_GamesBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
             // nBA_Match_Results_DataTableAdapter
             // 
@@ -566,8 +509,9 @@
             this.tableAdapterManager.Scoring_StatsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // button1
+            // nBA_Upcoming_GamesTableAdapter
             // 
+            this.nBA_Upcoming_GamesTableAdapter.ClearBeforeFill = true;
             // 
             // NBA_UpcomingGames_MatchResults
             // 
@@ -589,15 +533,13 @@
             this.Text = "NBA - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NBAUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingNavigator)).EndInit();
             this.nBA_Match_Results_DataBindingNavigator.ResumeLayout(false);
             this.nBA_Match_Results_DataBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Match_Results_DataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
