@@ -31,46 +31,49 @@
             this.components = new System.ComponentModel.Container();
             this.comBoxStatViewOption = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxPlayoffSelection = new System.Windows.Forms.ComboBox();
             this.btnView = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
             this.defense_Stats_Normal_SeasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.defense_Stats_Normal_SeasonTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Defense_Stats_Normal_SeasonTableAdapter();
             this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
-            this.defense_Stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.defense_Stats_PlayoffsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Defense_Stats_PlayoffsTableAdapter();
-            this.kick_Punt_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kick_Punt_PlayoffsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Kick_Punt_PlayoffsTableAdapter();
-            this.kick_Punt_StatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kick_Punt_StatsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Kick_Punt_StatsTableAdapter();
-            this.kickoff_Normal_SeasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kickoff_Normal_SeasonTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Kickoff_Normal_SeasonTableAdapter();
-            this.kickoff_Stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kickoff_Stats_PlayoffsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Kickoff_Stats_PlayoffsTableAdapter();
-            this.passing_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.passing_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Passing_statsTableAdapter();
-            this.passing_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.passing_stats_PlayoffTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Passing_stats_PlayoffTableAdapter();
-            this.punting_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.punting_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Punting_statsTableAdapter();
-            this.punting_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.passing_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Passing_statsTableAdapter();
             this.punting_stats_PlayoffTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Punting_stats_PlayoffTableAdapter();
-            this.receiving_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.punting_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Punting_statsTableAdapter();
             this.receiving_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Receiving_statsTableAdapter();
-            this.recieving_stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recieving_stats_PlayoffsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Recieving_stats_PlayoffsTableAdapter();
-            this.rushing_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rushing_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Rushing_statsTableAdapter();
-            this.rushing_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rushing_stats_PlayoffTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Rushing_stats_PlayoffTableAdapter();
-            this.scoring_StatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scoring_StatsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Scoring_StatsTableAdapter();
-            this.scoring_stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rushing_statsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Rushing_statsTableAdapter();
             this.scoring_stats_PlayoffsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Scoring_stats_PlayoffsTableAdapter();
-            this.comboBoxPlayoffSelection = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.scoring_StatsTableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.Scoring_StatsTableAdapter();
+            this.defense_Stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kick_Punt_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kick_Punt_StatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kickoff_Normal_SeasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kickoff_Stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.passing_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.passing_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.punting_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.punting_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.receiving_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recieving_stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rushing_statsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rushing_stats_PlayoffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoring_StatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoring_stats_PlayoffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBoxPlayerSearch = new System.Windows.Forms.TextBox();
+            this.btnSearchPlayer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_PlayoffsBindingSource)).BeginInit();
@@ -88,7 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rushing_stats_PlayoffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoring_StatsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoring_stats_PlayoffsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comBoxStatViewOption
@@ -104,7 +106,7 @@
             "Rushing Stats",
             "Scoring Stats"});
             this.comBoxStatViewOption.Location = new System.Drawing.Point(16, 28);
-            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(2);
             this.comBoxStatViewOption.Name = "comBoxStatViewOption";
             this.comBoxStatViewOption.Size = new System.Drawing.Size(257, 23);
             this.comBoxStatViewOption.TabIndex = 0;
@@ -116,21 +118,33 @@
             this.groupBox1.Controls.Add(this.comBoxStatViewOption);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(624, 67);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose a Player Stat View";
             // 
+            // comboBoxPlayoffSelection
+            // 
+            this.comboBoxPlayoffSelection.FormattingEnabled = true;
+            this.comboBoxPlayoffSelection.Items.AddRange(new object[] {
+            "Normal Season",
+            "Playoffs"});
+            this.comboBoxPlayoffSelection.Location = new System.Drawing.Point(277, 28);
+            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPlayoffSelection.Name = "comboBoxPlayoffSelection";
+            this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(257, 23);
+            this.comboBoxPlayoffSelection.TabIndex = 1;
+            // 
             // btnView
             // 
             this.btnView.Location = new System.Drawing.Point(549, 24);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(57, 27);
-            this.btnView.TabIndex = 1;
+            this.btnView.TabIndex = 2;
             this.btnView.Text = "&View";
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
@@ -138,10 +152,10 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(524, 355);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(67, 25);
-            this.btnBack.TabIndex = 3;
+            this.btnBack.TabIndex = 5;
             this.btnBack.Text = "&Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -154,8 +168,16 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 15);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 0;
             this.label1.Text = "NFL - Player Stats Data";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(22, 128);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(569, 222);
+            this.dataGridView1.TabIndex = 5;
             // 
             // sportsProjectDBDataSet
             // 
@@ -210,175 +232,177 @@
             this.tableAdapterManager.Scoring_StatsTableAdapter = this.scoring_StatsTableAdapter;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // defense_Stats_PlayoffsTableAdapter
+            // 
+            this.defense_Stats_PlayoffsTableAdapter.ClearBeforeFill = true;
+            // 
+            // kick_Punt_PlayoffsTableAdapter
+            // 
+            this.kick_Punt_PlayoffsTableAdapter.ClearBeforeFill = true;
+            // 
+            // kick_Punt_StatsTableAdapter
+            // 
+            this.kick_Punt_StatsTableAdapter.ClearBeforeFill = true;
+            // 
+            // kickoff_Normal_SeasonTableAdapter
+            // 
+            this.kickoff_Normal_SeasonTableAdapter.ClearBeforeFill = true;
+            // 
+            // kickoff_Stats_PlayoffsTableAdapter
+            // 
+            this.kickoff_Stats_PlayoffsTableAdapter.ClearBeforeFill = true;
+            // 
+            // passing_stats_PlayoffTableAdapter
+            // 
+            this.passing_stats_PlayoffTableAdapter.ClearBeforeFill = true;
+            // 
+            // passing_statsTableAdapter
+            // 
+            this.passing_statsTableAdapter.ClearBeforeFill = true;
+            // 
+            // punting_stats_PlayoffTableAdapter
+            // 
+            this.punting_stats_PlayoffTableAdapter.ClearBeforeFill = true;
+            // 
+            // punting_statsTableAdapter
+            // 
+            this.punting_statsTableAdapter.ClearBeforeFill = true;
+            // 
+            // receiving_statsTableAdapter
+            // 
+            this.receiving_statsTableAdapter.ClearBeforeFill = true;
+            // 
+            // recieving_stats_PlayoffsTableAdapter
+            // 
+            this.recieving_stats_PlayoffsTableAdapter.ClearBeforeFill = true;
+            // 
+            // rushing_stats_PlayoffTableAdapter
+            // 
+            this.rushing_stats_PlayoffTableAdapter.ClearBeforeFill = true;
+            // 
+            // rushing_statsTableAdapter
+            // 
+            this.rushing_statsTableAdapter.ClearBeforeFill = true;
+            // 
+            // scoring_stats_PlayoffsTableAdapter
+            // 
+            this.scoring_stats_PlayoffsTableAdapter.ClearBeforeFill = true;
+            // 
+            // scoring_StatsTableAdapter
+            // 
+            this.scoring_StatsTableAdapter.ClearBeforeFill = true;
+            // 
             // defense_Stats_PlayoffsBindingSource
             // 
             this.defense_Stats_PlayoffsBindingSource.DataMember = "Defense Stats Playoffs";
             this.defense_Stats_PlayoffsBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // defense_Stats_PlayoffsTableAdapter
-            // 
-            this.defense_Stats_PlayoffsTableAdapter.ClearBeforeFill = true;
             // 
             // kick_Punt_PlayoffsBindingSource
             // 
             this.kick_Punt_PlayoffsBindingSource.DataMember = "Kick/Punt Playoffs";
             this.kick_Punt_PlayoffsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // kick_Punt_PlayoffsTableAdapter
-            // 
-            this.kick_Punt_PlayoffsTableAdapter.ClearBeforeFill = true;
-            // 
             // kick_Punt_StatsBindingSource
             // 
             this.kick_Punt_StatsBindingSource.DataMember = "Kick/Punt Stats";
             this.kick_Punt_StatsBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // kick_Punt_StatsTableAdapter
-            // 
-            this.kick_Punt_StatsTableAdapter.ClearBeforeFill = true;
             // 
             // kickoff_Normal_SeasonBindingSource
             // 
             this.kickoff_Normal_SeasonBindingSource.DataMember = "Kickoff Normal Season";
             this.kickoff_Normal_SeasonBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // kickoff_Normal_SeasonTableAdapter
-            // 
-            this.kickoff_Normal_SeasonTableAdapter.ClearBeforeFill = true;
-            // 
             // kickoff_Stats_PlayoffsBindingSource
             // 
             this.kickoff_Stats_PlayoffsBindingSource.DataMember = "Kickoff Stats Playoffs";
             this.kickoff_Stats_PlayoffsBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // kickoff_Stats_PlayoffsTableAdapter
-            // 
-            this.kickoff_Stats_PlayoffsTableAdapter.ClearBeforeFill = true;
             // 
             // passing_statsBindingSource
             // 
             this.passing_statsBindingSource.DataMember = "Passing stats";
             this.passing_statsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // passing_statsTableAdapter
-            // 
-            this.passing_statsTableAdapter.ClearBeforeFill = true;
-            // 
             // passing_stats_PlayoffBindingSource
             // 
             this.passing_stats_PlayoffBindingSource.DataMember = "Passing stats Playoff";
             this.passing_stats_PlayoffBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // passing_stats_PlayoffTableAdapter
-            // 
-            this.passing_stats_PlayoffTableAdapter.ClearBeforeFill = true;
             // 
             // punting_statsBindingSource
             // 
             this.punting_statsBindingSource.DataMember = "Punting stats";
             this.punting_statsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // punting_statsTableAdapter
-            // 
-            this.punting_statsTableAdapter.ClearBeforeFill = true;
-            // 
             // punting_stats_PlayoffBindingSource
             // 
             this.punting_stats_PlayoffBindingSource.DataMember = "Punting stats Playoff";
             this.punting_stats_PlayoffBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // punting_stats_PlayoffTableAdapter
-            // 
-            this.punting_stats_PlayoffTableAdapter.ClearBeforeFill = true;
             // 
             // receiving_statsBindingSource
             // 
             this.receiving_statsBindingSource.DataMember = "Receiving stats";
             this.receiving_statsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // receiving_statsTableAdapter
-            // 
-            this.receiving_statsTableAdapter.ClearBeforeFill = true;
-            // 
             // recieving_stats_PlayoffsBindingSource
             // 
             this.recieving_stats_PlayoffsBindingSource.DataMember = "Recieving stats Playoffs";
             this.recieving_stats_PlayoffsBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // recieving_stats_PlayoffsTableAdapter
-            // 
-            this.recieving_stats_PlayoffsTableAdapter.ClearBeforeFill = true;
             // 
             // rushing_statsBindingSource
             // 
             this.rushing_statsBindingSource.DataMember = "Rushing stats";
             this.rushing_statsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // rushing_statsTableAdapter
-            // 
-            this.rushing_statsTableAdapter.ClearBeforeFill = true;
-            // 
             // rushing_stats_PlayoffBindingSource
             // 
             this.rushing_stats_PlayoffBindingSource.DataMember = "Rushing stats Playoff";
             this.rushing_stats_PlayoffBindingSource.DataSource = this.sportsProjectDBDataSet;
-            // 
-            // rushing_stats_PlayoffTableAdapter
-            // 
-            this.rushing_stats_PlayoffTableAdapter.ClearBeforeFill = true;
             // 
             // scoring_StatsBindingSource
             // 
             this.scoring_StatsBindingSource.DataMember = "Scoring Stats";
             this.scoring_StatsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // scoring_StatsTableAdapter
-            // 
-            this.scoring_StatsTableAdapter.ClearBeforeFill = true;
-            // 
             // scoring_stats_PlayoffsBindingSource
             // 
             this.scoring_stats_PlayoffsBindingSource.DataMember = "Scoring stats Playoffs";
             this.scoring_stats_PlayoffsBindingSource.DataSource = this.sportsProjectDBDataSet;
             // 
-            // scoring_stats_PlayoffsTableAdapter
+            // txtBoxPlayerSearch
             // 
-            this.scoring_stats_PlayoffsTableAdapter.ClearBeforeFill = true;
+            this.txtBoxPlayerSearch.Location = new System.Drawing.Point(23, 360);
+            this.txtBoxPlayerSearch.Name = "txtBoxPlayerSearch";
+            this.txtBoxPlayerSearch.Size = new System.Drawing.Size(130, 20);
+            this.txtBoxPlayerSearch.TabIndex = 3;
             // 
-            // comboBoxPlayoffSelection
+            // btnSearchPlayer
             // 
-            this.comboBoxPlayoffSelection.FormattingEnabled = true;
-            this.comboBoxPlayoffSelection.Items.AddRange(new object[] {
-            "Normal Season",
-            "Playoffs"});
-            this.comboBoxPlayoffSelection.Location = new System.Drawing.Point(277, 28);
-            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxPlayoffSelection.Name = "comboBoxPlayoffSelection";
-            this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(257, 23);
-            this.comboBoxPlayoffSelection.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 128);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(569, 222);
-            this.dataGridView1.TabIndex = 5;
+            this.btnSearchPlayer.Location = new System.Drawing.Point(23, 386);
+            this.btnSearchPlayer.Name = "btnSearchPlayer";
+            this.btnSearchPlayer.Size = new System.Drawing.Size(130, 23);
+            this.btnSearchPlayer.TabIndex = 4;
+            this.btnSearchPlayer.Text = "&Search Player";
+            this.btnSearchPlayer.UseVisualStyleBackColor = true;
+            this.btnSearchPlayer.Click += new System.EventHandler(this.btnSearchPlayer_Click);
             // 
             // NFLPlayerStats
             // 
+            this.AcceptButton = this.btnSearchPlayer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 515);
+            this.CancelButton = this.btnBack;
+            this.ClientSize = new System.Drawing.Size(1102, 468);
+            this.Controls.Add(this.btnSearchPlayer);
+            this.Controls.Add(this.txtBoxPlayerSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NFLPlayerStats";
             this.Text = "NFLPlayerStats";
             this.Load += new System.EventHandler(this.NFLPlayerStats_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_PlayoffsBindingSource)).EndInit();
@@ -396,7 +420,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rushing_stats_PlayoffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoring_StatsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoring_stats_PlayoffsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +468,7 @@
         private System.Windows.Forms.BindingSource scoring_stats_PlayoffsBindingSource;
         private System.Windows.Forms.ComboBox comboBoxPlayoffSelection;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBoxPlayerSearch;
+        private System.Windows.Forms.Button btnSearchPlayer;
     }
 }

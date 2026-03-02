@@ -104,16 +104,30 @@ namespace SportsDataApplication.TMMM
 
                 }
 
-                        string query = $"SELECT * FROM {dataTable}";
-                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
-                        {
-                            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
+                string query = $"SELECT * FROM {dataTable}";
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
 
-                            dataGridView1.DataSource = dt;
-                        }
-                
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.DataError += dataGridView1_DataError;
+                    if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                    {
+                        dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                    }
+                    if (dataGridView1.Columns.Contains("Awards"))
+                    {
+                        dataGridView1.Columns["Awards"].Visible = false;
+                    }
+                    if(dataGridView1.Columns.Contains("#NAME?"))
+                    {
+                        dataGridView1.Columns["#Name?"].Visible = false;
+                    }
+
+                }
+
             }
             else if (comboBoxPlayoffSelection.SelectedIndex == 1 && comBoxStatViewOption.SelectedIndex != -1)
             {
@@ -146,22 +160,176 @@ namespace SportsDataApplication.TMMM
 
                 }
 
-                        string query = $"SELECT * FROM {dataTable}";
-                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
-                        {
-                            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
+                string query = $"SELECT * FROM {dataTable}";
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
 
-                            dataGridView1.DataSource = dt;
-                        }
-                
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.DataError += dataGridView1_DataError;
+                    if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                    {
+                        dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                    }
+                    if (dataGridView1.Columns.Contains("Awards"))
+                    {
+                        dataGridView1.Columns["Awards"].Visible = false;
+                    }
+                    if (dataGridView1.Columns.Contains("#NAME?"))
+                    {
+                        dataGridView1.Columns["#Name?"].Visible = false;
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Please select options from both drop down menus to see stats.");
             }
-    
+
         }
+
+        private void btnSearchPlayer_Click(object sender, EventArgs e)
+        {
+            string dataTable = "";
+            string playerName = txtBoxPlayerSearch.Text;
+            if (comboBoxPlayoffSelection.SelectedIndex == 0 && comBoxStatViewOption.SelectedIndex != -1)
+            {
+                switch (comBoxStatViewOption.SelectedIndex)
+                {
+                    case 0:
+                        dataTable = "[Defense Stats Normal Season]";
+
+                        break;
+                    case 1:
+                        dataTable = "[Kick/Punt Stats]";
+                        break;
+                    case 2:
+                        dataTable = "[Kickoff Normal Season]";
+                        break;
+                    case 3:
+                        dataTable = "[Passing stats]";
+                        break;
+                    case 4:
+                        dataTable = "[Punting Stats]";
+                        break;
+                    case 5:
+                        dataTable = "[Receiving Stats]";
+                        break;
+                    case 6:
+                        dataTable = "[Rushing Stats]";
+                        break;
+                    case 7:
+                        dataTable = "[Scoring Stats]";
+                        break;
+
+                }
+
+                string query = $"SELECT * FROM {dataTable} WHERE Player = @Player";
+
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Player", playerName); // playerName is your variable
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+                            dataGridView1.DataSource = dt;
+
+                            dataGridView1.DataError += dataGridView1_DataError;
+                            if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                            {
+                                dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                            }
+                            if (dataGridView1.Columns.Contains("Awards"))
+                            {
+                                dataGridView1.Columns["Awards"].Visible = false;
+                            }
+                            if (dataGridView1.Columns.Contains("#NAME?"))
+                            {
+                                dataGridView1.Columns["#Name?"].Visible = false;
+                            }
+                        }
+
+                    }
+                }
+            }
+            else if (comboBoxPlayoffSelection.SelectedIndex == 1 && comBoxStatViewOption.SelectedIndex != -1)
+            {
+                switch (comBoxStatViewOption.SelectedIndex)
+                {
+                    case 0:
+                        dataTable = "[Defense Stats Playoffs]";
+                        break;
+                    case 1:
+                        dataTable = "[Kick/Punt Playoffs]";
+                        break;
+                    case 2:
+                        dataTable = "[Kickoff Stats Playoffs]";
+                        break;
+                    case 3:
+                        dataTable = "[Passing stats Playoff]";
+                        break;
+                    case 4:
+                        dataTable = "[Punting stats Playoff]";
+                        break;
+                    case 5:
+                        dataTable = "[Receiving stats Playoff]";
+                        break;
+                    case 6:
+                        dataTable = "[Rushing stats Playoff]";
+                        break;
+                    case 7:
+                        dataTable = "[Scoring stats Playoffs]";
+                        break;
+
+                }
+
+                string query = $"SELECT * FROM {dataTable} WHERE Player = @Player";
+
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Player", playerName); // playerName is your variable
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+                            dataGridView1.DataSource = dt;
+                            dataGridView1.DataError += dataGridView1_DataError;
+                            if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                            {
+                                dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                            }
+                            if (dataGridView1.Columns.Contains("Awards"))
+                            {
+                                dataGridView1.Columns["Awards"].Visible = false;
+                            }
+                            if (dataGridView1.Columns.Contains("#NAME?"))
+                            {
+                                dataGridView1.Columns["#Name?"].Visible = false;
+                            }
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select options from both drop down menus to see stats.");
+            }
+
+        }
+    
+    private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        } 
     }
-}
+    }
