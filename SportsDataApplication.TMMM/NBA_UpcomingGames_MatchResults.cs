@@ -27,6 +27,7 @@ namespace SportsDataApplication.TMMM
 
             AddMonths();
             AddTeamsToBox();
+            AddSearchColumns_MatchResults();
         }
 
         private void AddTeamsToBox()
@@ -70,7 +71,15 @@ namespace SportsDataApplication.TMMM
             comboBoxMonthSort.Items.Add("April");
             comboBoxMonthSort.Items.Add("October");
             comboBoxMonthSort.Items.Add("November");
-            
+        }
+
+        private void AddSearchColumns_MatchResults()
+        {
+            comBoxSelectColumn.Items.Add("Specify Search Column");
+            comBoxSelectColumn.Items.Add("hometeamName");
+            comBoxSelectColumn.Items.Add("awayteamName");
+            comBoxSelectColumn.Items.Add("winner");
+            comBoxSelectColumn.Items.Add("arenaCity");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -87,6 +96,56 @@ namespace SportsDataApplication.TMMM
 
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // Search button for Match Results table
+            try
+            {
+                if (comBoxSelectColumn.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a column to search.");
+                    return;
+                }
+
+                // set text box input to variable / selected column to variable / create filter string
+                string matchResultsSearch = txtBoxSearch.Text.Trim();
+                string selectedColumn = comBoxSelectColumn.SelectedItem.ToString();
+
+                // filter string to filter the data source
+                // handles special characters by converting to string
+
+                /*
+                 * Searchable columns only = hometeamName, awayteamName, winner, arenaCity
+                 */
+
+                string columnFilter = "CONVERT(" + selectedColumn + ", 'System.String') LIKE '%" + matchResultsSearch + "%'";
+
+                // condition depending on if the search box is empty or not
+                if (string.IsNullOrEmpty(matchResultsSearch))
+                {
+                    // remove the filter if the search box is empty
+                    nBA_Match_Results_DataBindingSource.RemoveFilter();
+                }
+                else
+                {
+                    // apply the filter to the data source
+                    nBA_Match_Results_DataBindingSource.Filter = columnFilter;
+                }
+            }
+            catch
+            {
+                // Error if user enters invalid characters
+                MessageBox.Show("An Error Occurred. Please specify a column to filter from the dropdown.");
+            }
+        }
+
+        private void btnRefreshTable_Click(object sender, EventArgs e)
+        {
+            // refresh table button
+            this.nBA_Match_Results_DataTableAdapter.Fill(this.sportsProjectDBDataSet.NBA_Match_Results_Data);
+            txtBoxSearch.Clear();
+            btnSearch_Click(btnSearch, EventArgs.Empty); // click event
+            comBoxSelectColumn.SelectedIndex = 0;
         private void btnMonthSort_Click(object sender, EventArgs e)
         {
             switch (comboBoxMonthSort.SelectedIndex)
