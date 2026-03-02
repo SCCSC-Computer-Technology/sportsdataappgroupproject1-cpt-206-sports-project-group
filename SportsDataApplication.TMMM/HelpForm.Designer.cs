@@ -72,15 +72,15 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.pnlNBAUpcomingGames = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.pnlNFLUpcomingGames = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -91,10 +91,25 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pnlNFLTeamStandings.SuspendLayout();
             this.pnlNBATeamStandings.SuspendLayout();
             this.pnlNBAUpcomingGames.SuspendLayout();
             this.pnlNFLUpcomingGames.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -540,6 +555,51 @@
             this.pnlNBAUpcomingGames.TabIndex = 21;
             this.pnlNBAUpcomingGames.Visible = false;
             // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(43, 233);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(268, 13);
+            this.label51.TabIndex = 23;
+            this.label51.Text = "Use drop down menu to Sort Historical Games by Team";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(43, 199);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(271, 13);
+            this.label45.TabIndex = 22;
+            this.label45.Text = "Use drop down menu to Sort Historical Games by Month";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(43, 115);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(202, 13);
+            this.label44.TabIndex = 21;
+            this.label44.Text = "Displays Historical Results of Past Games";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(3, 76);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(103, 13);
+            this.label43.TabIndex = 20;
+            this.label43.Text = "NBA Match Results:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(43, 42);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(187, 13);
+            this.label42.TabIndex = 19;
+            this.label42.Text = "Displays Upcoming Scheduled Games";
+            // 
             // label48
             // 
             this.label48.AutoSize = true;
@@ -576,53 +636,9 @@
             this.label63.TabIndex = 0;
             this.label63.Text = "NBA Upcoming Games:";
             // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(43, 42);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(187, 13);
-            this.label42.TabIndex = 19;
-            this.label42.Text = "Displays Upcoming Scheduled Games";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(3, 76);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(103, 13);
-            this.label43.TabIndex = 20;
-            this.label43.Text = "NBA Match Results:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(43, 115);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(202, 13);
-            this.label44.TabIndex = 21;
-            this.label44.Text = "Displays Historical Results of Past Games";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(43, 199);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(271, 13);
-            this.label45.TabIndex = 22;
-            this.label45.Text = "Use drop down menu to Sort Historical Games by Month";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(43, 233);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(268, 13);
-            this.label51.TabIndex = 23;
-            this.label51.Text = "Use drop down menu to Sort Historical Games by Team";
-            // 
             // pnlNFLUpcomingGames
             // 
+            this.pnlNFLUpcomingGames.Controls.Add(this.pnlNFLTeamStandings);
             this.pnlNFLUpcomingGames.Controls.Add(this.label46);
             this.pnlNFLUpcomingGames.Controls.Add(this.label47);
             this.pnlNFLUpcomingGames.Controls.Add(this.label52);
@@ -719,12 +735,161 @@
             this.label58.TabIndex = 0;
             this.label58.Text = "NFL Upcoming Games:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.linkLabel4);
+            this.panel1.Controls.Add(this.label61);
+            this.panel1.Controls.Add(this.linkLabel3);
+            this.panel1.Controls.Add(this.label60);
+            this.panel1.Controls.Add(this.label59);
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.label64);
+            this.panel1.Controls.Add(this.label65);
+            this.panel1.Controls.Add(this.label66);
+            this.panel1.Controls.Add(this.label76);
+            this.panel1.Controls.Add(this.label77);
+            this.panel1.Controls.Add(this.label78);
+            this.panel1.Location = new System.Drawing.Point(443, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(368, 370);
+            this.panel1.TabIndex = 23;
+            this.panel1.Visible = false;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(24, 156);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(116, 13);
+            this.label64.TabIndex = 15;
+            this.label64.Text = "Pro Football Reference";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(3, 127);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(78, 13);
+            this.label65.TabIndex = 14;
+            this.label65.Text = "Data Sources: ";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(24, 88);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(79, 13);
+            this.label66.TabIndex = 13;
+            this.label66.Text = "Exit to Desktop";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(24, 64);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(247, 13);
+            this.label76.TabIndex = 2;
+            this.label76.Text = "Create Log In if this is first time accessing database";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(24, 39);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(165, 13);
+            this.label77.TabIndex = 1;
+            this.label77.Text = "Fill in a User Name and Password";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(1, 7);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(62, 13);
+            this.label78.TabIndex = 0;
+            this.label78.Text = "Sign In/Up:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(3, 176);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(198, 13);
+            this.linkLabel1.TabIndex = 19;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://www.pro-football-reference.com/";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(255, 204);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(110, 13);
+            this.label59.TabIndex = 20;
+            this.label59.Text = "BasketBall Reference";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(251, 251);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(114, 13);
+            this.label60.TabIndex = 22;
+            this.label60.Text = "Kaggle NBA Database";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.LinkArea = new System.Windows.Forms.LinkArea(0, 22);
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel3.Location = new System.Drawing.Point(275, 273);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(90, 17);
+            this.linkLabel3.TabIndex = 23;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "www.kaggle.com";
+            this.linkLabel3.UseCompatibleTextRendering = true;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(283, 296);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(82, 13);
+            this.label61.TabIndex = 24;
+            this.label61.Text = "FootballDB.com";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
+            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabel4.Location = new System.Drawing.Point(262, 321);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(103, 13);
+            this.linkLabel4.TabIndex = 25;
+            this.linkLabel4.Text = "www.footballdb.com";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(167, 224);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(194, 13);
+            this.linkLabel2.TabIndex = 26;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "https://www.basketball-reference.com/";
+            // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 384);
-            this.Controls.Add(this.pnlNFLTeamStandings);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlNFLUpcomingGames);
             this.Controls.Add(this.pnlNBAUpcomingGames);
             this.Controls.Add(this.pnlNBATeamStandings);
@@ -739,6 +904,8 @@
             this.pnlNBAUpcomingGames.PerformLayout();
             this.pnlNFLUpcomingGames.ResumeLayout(false);
             this.pnlNFLUpcomingGames.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -808,5 +975,19 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

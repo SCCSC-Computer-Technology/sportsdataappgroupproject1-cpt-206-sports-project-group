@@ -41,5 +41,16 @@ namespace SportsDataApplication.TMMM
         {
 
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://www.pro-football-reference.com/") { UseShellExecute = true });
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://www.footballdb.com/games/previews.html?yr=2025&wk=1&type=reg") { UseShellExecute = true });
+
+        }
     }
 }
