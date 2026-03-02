@@ -114,13 +114,18 @@ namespace SportsDataApplication.TMMM
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string keyword = txtbxSearch.Text.Trim();
+            string keyword = txtbxSearch.Text.ToLower();
 
-            // Check if the search keyword is empty
-            if (string.IsNullOrEmpty(keyword))
+            foreach (DataGridViewRow row in dgvNFLStandings.Rows)
             {
-                MessageBox.Show("Please enter a keyword to search.");
-                return;
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().ToLower().Contains(keyword))
+                {
+                    row.Selected = true;
+                }
+                else
+                {
+                    row.Selected = false;
+                }
             }
 
             // Get the connection string from the configuration file
