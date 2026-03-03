@@ -108,10 +108,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 17);
+            this.label1.Size = new System.Drawing.Size(191, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "NFL - Upcoming Games";
             // 
@@ -119,10 +118,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 259);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(21, 319);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 17);
+            this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "NFL - Match Results";
             // 
@@ -136,12 +134,12 @@
             this.gameDateDataGridViewTextBoxColumn,
             this.gameTimeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.nFL_Upcoming_GamesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 84);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 103);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 185);
             this.dataGridView1.TabIndex = 4;
             // 
             // homeTeamDataGridViewTextBoxColumn
@@ -188,10 +186,11 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(501, 548);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.Location = new System.Drawing.Point(668, 674);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(69, 28);
+            this.btnBack.Size = new System.Drawing.Size(92, 34);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "&Back";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnBack, "Sends you back to the choose database form");
@@ -201,19 +200,19 @@
             // comboBoxMonthSort
             // 
             this.comboBoxMonthSort.FormattingEnabled = true;
-            this.comboBoxMonthSort.Location = new System.Drawing.Point(19, 56);
-            this.comboBoxMonthSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMonthSort.Location = new System.Drawing.Point(25, 69);
+            this.comboBoxMonthSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMonthSort.Name = "comboBoxMonthSort";
-            this.comboBoxMonthSort.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxMonthSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxMonthSort.TabIndex = 6;
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.comboBoxMonthSort, "Select a Month");
             // 
             // btnMonthSort
             // 
-            this.btnMonthSort.Location = new System.Drawing.Point(200, 51);
-            this.btnMonthSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMonthSort.Location = new System.Drawing.Point(267, 63);
+            this.btnMonthSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMonthSort.Name = "btnMonthSort";
-            this.btnMonthSort.Size = new System.Drawing.Size(86, 28);
+            this.btnMonthSort.Size = new System.Drawing.Size(115, 34);
             this.btnMonthSort.TabIndex = 7;
             this.btnMonthSort.Text = "Sort by &Month";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnMonthSort, "Sort by selected Month");
@@ -222,10 +221,10 @@
             // 
             // btnTeamSort
             // 
-            this.btnTeamSort.Location = new System.Drawing.Point(485, 51);
-            this.btnTeamSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTeamSort.Location = new System.Drawing.Point(647, 63);
+            this.btnTeamSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTeamSort.Name = "btnTeamSort";
-            this.btnTeamSort.Size = new System.Drawing.Size(84, 28);
+            this.btnTeamSort.Size = new System.Drawing.Size(112, 34);
             this.btnTeamSort.TabIndex = 9;
             this.btnTeamSort.Text = "Sort by &Team";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnTeamSort, "Sorts by selected team");
@@ -235,10 +234,10 @@
             // comboBoxTeamSort
             // 
             this.comboBoxTeamSort.FormattingEnabled = true;
-            this.comboBoxTeamSort.Location = new System.Drawing.Point(304, 56);
-            this.comboBoxTeamSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTeamSort.Location = new System.Drawing.Point(405, 69);
+            this.comboBoxTeamSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTeamSort.Name = "comboBoxTeamSort";
-            this.comboBoxTeamSort.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxTeamSort.Size = new System.Drawing.Size(235, 24);
             this.comboBoxTeamSort.TabIndex = 8;
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.comboBoxTeamSort, "Select a team");
             // 
@@ -288,19 +287,19 @@
             // txtBoxSearch
             // 
             this.txtBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoxSearch.Location = new System.Drawing.Point(190, 23);
-            this.txtBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxSearch.Location = new System.Drawing.Point(253, 28);
+            this.txtBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.Size = new System.Drawing.Size(178, 20);
+            this.txtBoxSearch.Size = new System.Drawing.Size(237, 22);
             this.txtBoxSearch.TabIndex = 10;
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.txtBoxSearch, "Enter search criteria");
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(372, 19);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(496, 23);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(65, 25);
+            this.btnSearch.Size = new System.Drawing.Size(87, 31);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "&Search";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnSearch, "Searches based on criteria");
@@ -309,10 +308,10 @@
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(19, 548);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHelp.Location = new System.Drawing.Point(25, 674);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(67, 26);
+            this.btnHelp.Size = new System.Drawing.Size(89, 32);
             this.btnHelp.TabIndex = 14;
             this.btnHelp.Text = "&Help (?)";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnHelp, "Opens help form");
@@ -320,10 +319,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(442, 19);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(589, 23);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(86, 26);
+            this.btnRefresh.Size = new System.Drawing.Size(115, 32);
             this.btnRefresh.TabIndex = 15;
             this.btnRefresh.Text = "&Refresh Table";
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnRefresh, "Refreshes the table.");
@@ -333,10 +332,10 @@
             // comBoxSpecifyColumn
             // 
             this.comBoxSpecifyColumn.FormattingEnabled = true;
-            this.comBoxSpecifyColumn.Location = new System.Drawing.Point(10, 23);
-            this.comBoxSpecifyColumn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comBoxSpecifyColumn.Location = new System.Drawing.Point(13, 28);
+            this.comBoxSpecifyColumn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comBoxSpecifyColumn.Name = "comBoxSpecifyColumn";
-            this.comBoxSpecifyColumn.Size = new System.Drawing.Size(177, 21);
+            this.comBoxSpecifyColumn.Size = new System.Drawing.Size(235, 24);
             this.comBoxSpecifyColumn.TabIndex = 20;
             this.toolTipUpcomingGamesAndMatch.SetToolTip(this.comBoxSpecifyColumn, "Select search option");
             // 
@@ -364,12 +363,12 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.nFL_Match_Results_DataDataGridView.DataSource = this.nFL_Match_Results_DataBindingSource;
-            this.nFL_Match_Results_DataDataGridView.Location = new System.Drawing.Point(20, 278);
-            this.nFL_Match_Results_DataDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nFL_Match_Results_DataDataGridView.Location = new System.Drawing.Point(27, 342);
+            this.nFL_Match_Results_DataDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nFL_Match_Results_DataDataGridView.Name = "nFL_Match_Results_DataDataGridView";
             this.nFL_Match_Results_DataDataGridView.RowHeadersWidth = 51;
             this.nFL_Match_Results_DataDataGridView.RowTemplate.Height = 24;
-            this.nFL_Match_Results_DataDataGridView.Size = new System.Drawing.Size(550, 179);
+            this.nFL_Match_Results_DataDataGridView.Size = new System.Drawing.Size(733, 220);
             this.nFL_Match_Results_DataDataGridView.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn1
@@ -443,7 +442,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "teamVS";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 69;
+            this.dataGridViewTextBoxColumn9.Width = 84;
             // 
             // groupBox1
             // 
@@ -451,20 +450,22 @@
             this.groupBox1.Controls.Add(this.txtBoxSearch);
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Location = new System.Drawing.Point(20, 462);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(27, 569);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(550, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(733, 74);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Match Results";
             // 
             // NFL_UpcomingGames_MatchResults
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnSearch;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 590);
+            this.CancelButton = this.btnBack;
+            this.ClientSize = new System.Drawing.Size(935, 726);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nFL_Match_Results_DataDataGridView);
             this.Controls.Add(this.comboBoxTeamSort);
@@ -476,8 +477,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NFL_UpcomingGames_MatchResults";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NFL - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NFLUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).EndInit();
