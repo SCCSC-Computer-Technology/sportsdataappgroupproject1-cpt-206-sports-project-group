@@ -32,11 +32,9 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnSort = new System.Windows.Forms.Button();
             this.comboBoxSort = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nba_playerstats_2024DataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,8 +68,11 @@
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nba_playerstats_2024BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxSortType = new System.Windows.Forms.ComboBox();
             this.nba_playerstats_2024TableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.nba_playerstats_2024TableAdapter();
             this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
+            this.btnSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
@@ -79,11 +80,12 @@
             // 
             // btnBack
             // 
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Location = new System.Drawing.Point(522, 328);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 28);
-            this.btnBack.TabIndex = 0;
+            this.btnBack.TabIndex = 5;
             this.btnBack.Text = "&Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -110,23 +112,33 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnSort
-            // 
-            this.btnSort.Location = new System.Drawing.Point(138, 261);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(69, 28);
-            this.btnSort.TabIndex = 5;
-            this.btnSort.Text = "S&ort";
-            this.btnSort.UseVisualStyleBackColor = true;
-            // 
             // comboBoxSort
             // 
+            this.comboBoxSort.AutoCompleteCustomSource.AddRange(new string[] {
+            "Team",
+            "Position",
+            "3 Points",
+            "2 Points",
+            "Total Rebounds",
+            "Assists",
+            "Steals",
+            "Blocks",
+            "Points Made"});
             this.comboBoxSort.FormattingEnabled = true;
+            this.comboBoxSort.Items.AddRange(new object[] {
+            "Team",
+            "Position",
+            "3 Points",
+            "2 Points",
+            "Total Rebounds",
+            "Assist",
+            "Steals",
+            "Blocks",
+            "Points Made"});
             this.comboBoxSort.Location = new System.Drawing.Point(12, 266);
             this.comboBoxSort.Name = "comboBoxSort";
             this.comboBoxSort.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSort.TabIndex = 7;
+            this.comboBoxSort.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -174,13 +186,6 @@
             this.nba_playerstats_2024DataGridView.Name = "nba_playerstats_2024DataGridView";
             this.nba_playerstats_2024DataGridView.Size = new System.Drawing.Size(587, 220);
             this.nba_playerstats_2024DataGridView.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 298);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -379,6 +384,24 @@
             this.sportsProjectDBDataSet.DataSetName = "SportsProjectDBDataSet";
             this.sportsProjectDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 298);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // comboBoxSortType
+            // 
+            this.comboBoxSortType.FormattingEnabled = true;
+            this.comboBoxSortType.Items.AddRange(new object[] {
+            "ASC",
+            "DESC"});
+            this.comboBoxSortType.Location = new System.Drawing.Point(138, 266);
+            this.comboBoxSortType.Name = "comboBoxSortType";
+            this.comboBoxSortType.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSortType.TabIndex = 1;
+            // 
             // nba_playerstats_2024TableAdapter
             // 
             this.nba_playerstats_2024TableAdapter.ClearBeforeFill = true;
@@ -422,20 +445,34 @@
             this.tableAdapterManager.Scoring_StatsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(265, 266);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.TabIndex = 2;
+            this.btnSort.Text = "S&ort";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
             // NBAPlayerStats
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(611, 376);
+            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.comboBoxSortType);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nba_playerstats_2024DataGridView);
             this.Controls.Add(this.comboBoxSort);
-            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NBAPlayerStats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "comboBoxSearch";
             this.Load += new System.EventHandler(this.NBAPlayerStats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).EndInit();
@@ -451,7 +488,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.ComboBox comboBoxSort;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
@@ -493,5 +529,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxSortType;
+        private System.Windows.Forms.Button btnSort;
     }
 }

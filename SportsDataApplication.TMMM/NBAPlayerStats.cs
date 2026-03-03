@@ -28,35 +28,103 @@ namespace SportsDataApplication.TMMM
         {
             // TODO: This line of code loads data into the 'sportsProjectDBDataSet.nba_playerstats_2024' table. You can move, or remove it, as needed.
             this.nba_playerstats_2024TableAdapter.Fill(this.sportsProjectDBDataSet.nba_playerstats_2024);
-            nba_playerstats_2024DataGridView.DataError += dataGridView1_DataError;
-        }
-
-
-        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            e.ThrowException = false;
-        }
-
-        private void nba_playerstats_2024BindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.nba_playerstats_2024BindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.sportsProjectDBDataSet);
-
-        }
-
-        private void nba_playerstats_2024BindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.nba_playerstats_2024BindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.sportsProjectDBDataSet);
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string playerName=textBox1.Text;
             nba_playerstats_2024TableAdapter.FillBySearchPlayer(sportsProjectDBDataSet.nba_playerstats_2024, playerName);
+        }
+
+        // Uses combo boxes and switches to sort the dataGridView.
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxSort.SelectedIndex != -1)
+                {
+                    if (comboBoxSortType.SelectedIndex == 0)
+                    {
+                        switch (comboBoxSort.SelectedIndex)
+                        {
+                            case 0:
+                                nba_playerstats_2024TableAdapter.FillByTeamASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 1:
+                                nba_playerstats_2024TableAdapter.FillByPositionASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 2:
+                                nba_playerstats_2024TableAdapter.FillByThreePointASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 3:
+                                nba_playerstats_2024TableAdapter.FillByTwoPointASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 4:
+                                nba_playerstats_2024TableAdapter.FillByTotalReboundsASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 5:
+                                nba_playerstats_2024TableAdapter.FillByAssistASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 6:
+                                nba_playerstats_2024TableAdapter.FillByStealASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 7:
+                                nba_playerstats_2024TableAdapter.FillByBlockASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 8:
+                                nba_playerstats_2024TableAdapter.FillByPointsASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                        }
+                    }
+                    else if (comboBoxSortType.SelectedIndex == 1)
+                    {
+                        switch (comboBoxSort.SelectedIndex)
+                        {
+                            case 0:
+                                nba_playerstats_2024TableAdapter.FillByTeamDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 1:
+                                nba_playerstats_2024TableAdapter.FillByPositionDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 2:
+                                nba_playerstats_2024TableAdapter.FillByThreePointDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 3:
+                                nba_playerstats_2024TableAdapter.FillByTwoPointsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 4:
+                                nba_playerstats_2024TableAdapter.FillByTotalReboundsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 5:
+                                nba_playerstats_2024TableAdapter.FillByAssistDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 6:
+                                nba_playerstats_2024TableAdapter.FillByStealsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 7:
+                                nba_playerstats_2024TableAdapter.FillByBlocksDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 8:
+                                nba_playerstats_2024TableAdapter.FillByTotalPointsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        //Message that shows if they didnt select a sorting method
+                        MessageBox.Show("Please select ASC or DESC to choose sorting method.");
+                    }
+                }
+                else
+                {
+                    //Message that shows if they didnt select a column to sort by
+                    MessageBox.Show("Please select the column you want to sort by.");
+                }
+            }
+            catch ()
+            {
+                MessageBox.Show("There was and error please try again.");
+            }
         }
     }
 }

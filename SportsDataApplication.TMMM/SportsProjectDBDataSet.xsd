@@ -2373,6 +2373,71 @@ SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [
               <Mapping SourceColumn="PTS" DataSetColumn="PTS" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAssistASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAssistASC" GeneratorSourceName="FillByAssistASC" GetMethodModifier="Public" GetMethodName="GetDataByAssistASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAssistASC" UserSourceName="FillByAssistASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY AST ASC
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAssistDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAssistDESC" GeneratorSourceName="FillByAssistDESC" GetMethodModifier="Public" GetMethodName="GetDataByAssistDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAssistDESC" UserSourceName="FillByAssistDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY AST DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByBlockASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBlockASC" GeneratorSourceName="FillByBlockASC" GetMethodModifier="Public" GetMethodName="GetDataByBlockASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBlockASC" UserSourceName="FillByBlockASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY BLK ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByBlocksDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBlocksDESC" GeneratorSourceName="FillByBlocksDESC" GetMethodModifier="Public" GetMethodName="GetDataByBlocksDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBlocksDESC" UserSourceName="FillByBlocksDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY BLK DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPointsASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPointsASC" GeneratorSourceName="FillByPointsASC" GetMethodModifier="Public" GetMethodName="GetDataByPointsASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPointsASC" UserSourceName="FillByPointsASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY PTS ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPositionASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPositionASC" GeneratorSourceName="FillByPositionASC" GetMethodModifier="Public" GetMethodName="GetDataByPositionASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPositionASC" UserSourceName="FillByPositionASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS
+FROM            nba_playerstats_2024
+ORDER BY Pos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPositionDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPositionDESC" GeneratorSourceName="FillByPositionDESC" GetMethodModifier="Public" GetMethodName="GetDataByPositionDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPositionDESC" UserSourceName="FillByPositionDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY Pos DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySearchPlayer" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySearchPlayer" GeneratorSourceName="FillBySearchPlayer" GetMethodModifier="Public" GetMethodName="GetDataBySearchPlayer" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySearchPlayer" UserSourceName="FillBySearchPlayer">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -2382,6 +2447,106 @@ WHERE Player LIKE '%'+@Player+'%'</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="Player" ColumnName="Player" DataSourceName="[8430BB2B954622C773B5C48E2D6331EB_ATAAPPGROUPPROJECT1-CPT-206-SPORTS-PROJECT-GROUP\SPORTSDATAAPPLICATION.TMMM\SPORTSPROJECTDB.MDF].dbo.nba_playerstats_2024" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@Player" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="Player" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStealASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStealASC" GeneratorSourceName="FillByStealASC" GetMethodModifier="Public" GetMethodName="GetDataByStealASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStealASC" UserSourceName="FillByStealASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY STL ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStealsDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStealsDESC" GeneratorSourceName="FillByStealsDESC" GetMethodModifier="Public" GetMethodName="GetDataByStealsDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStealsDESC" UserSourceName="FillByStealsDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY STL DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTeamASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTeamASC" GeneratorSourceName="FillByTeamASC" GetMethodModifier="Public" GetMethodName="GetDataByTeamASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTeamASC" UserSourceName="FillByTeamASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS
+FROM            nba_playerstats_2024
+ORDER BY Team</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTeamDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTeamDESC" GeneratorSourceName="FillByTeamDESC" GetMethodModifier="Public" GetMethodName="GetDataByTeamDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTeamDESC" UserSourceName="FillByTeamDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY Team DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByThreePointASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByThreePointASC" GeneratorSourceName="FillByThreePointASC" GetMethodModifier="Public" GetMethodName="GetDataByThreePointASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByThreePointASC" UserSourceName="FillByThreePointASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024 
+ORDER BY [3p] ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByThreePointDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByThreePointDESC" GeneratorSourceName="FillByThreePointDESC" GetMethodModifier="Public" GetMethodName="GetDataByThreePointDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByThreePointDESC" UserSourceName="FillByThreePointDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY [3p] DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTotalPointsDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTotalPointsDESC" GeneratorSourceName="FillByTotalPointsDESC" GetMethodModifier="Public" GetMethodName="GetDataByTotalPointsDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTotalPointsDESC" UserSourceName="FillByTotalPointsDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY PTS DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTotalReboundsASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTotalReboundsASC" GeneratorSourceName="FillByTotalReboundsASC" GetMethodModifier="Public" GetMethodName="GetDataByTotalReboundsASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTotalReboundsASC" UserSourceName="FillByTotalReboundsASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY TRB ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTotalReboundsDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTotalReboundsDESC" GeneratorSourceName="FillByTotalReboundsDESC" GetMethodModifier="Public" GetMethodName="GetDataByTotalReboundsDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTotalReboundsDESC" UserSourceName="FillByTotalReboundsDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY TRB DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTwoPointASC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTwoPointASC" GeneratorSourceName="FillByTwoPointASC" GetMethodModifier="Public" GetMethodName="GetDataByTwoPointASC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTwoPointASC" UserSourceName="FillByTwoPointASC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY [2p] ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SportsProjectDBConnectionString (Settings)" DbObjectName="dbo.nba_playerstats_2024" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTwoPointsDESC" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTwoPointsDESC" GeneratorSourceName="FillByTwoPointsDESC" GetMethodModifier="Public" GetMethodName="GetDataByTwoPointsDESC" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTwoPointsDESC" UserSourceName="FillByTwoPointsDESC">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Rk, Player, Age, Team, Pos, G, GS, MP, FG, FGA, [FG%], [3P], [3PA], [3P%], [2P], [2PA], [2P%], [eFG%], FT, FTA, [FT%], ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS FROM nba_playerstats_2024
+ORDER BY [2p] DESC</CommandText>
+                    <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
