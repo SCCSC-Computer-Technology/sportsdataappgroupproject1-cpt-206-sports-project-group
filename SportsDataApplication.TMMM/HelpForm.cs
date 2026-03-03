@@ -33,7 +33,7 @@ namespace SportsDataApplication.TMMM
                     pnlNFLTeamStandings.Visible = true;
                     break;
                 case "nflPlayerStats":
-                    pnlnflPlayerStats.Visible = true;
+                    // pnlnflPlayerStats.Visible = true;
                     break;
                 default:
                     MessageBox.Show("No help available for this form.");
@@ -54,6 +54,11 @@ namespace SportsDataApplication.TMMM
         {
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://www.footballdb.com/games/previews.html?yr=2025&wk=1&type=reg") { UseShellExecute = true });
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
