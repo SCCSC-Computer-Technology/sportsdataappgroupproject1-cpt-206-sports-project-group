@@ -72,6 +72,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtBoxSearchPlayer = new System.Windows.Forms.TextBox();
             this.btnSearchPlayer = new System.Windows.Forms.Button();
+            this.toolTipNFLPS = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
@@ -105,10 +106,10 @@
             "Receiving Stats",
             "Rushing Stats",
             "Scoring Stats"});
-            this.comBoxStatViewOption.Location = new System.Drawing.Point(16, 28);
-            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(2);
+            this.comBoxStatViewOption.Location = new System.Drawing.Point(21, 34);
+            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comBoxStatViewOption.Name = "comBoxStatViewOption";
-            this.comBoxStatViewOption.Size = new System.Drawing.Size(257, 23);
+            this.comBoxStatViewOption.Size = new System.Drawing.Size(341, 26);
             this.comBoxStatViewOption.TabIndex = 0;
             // 
             // groupBox1
@@ -117,11 +118,11 @@
             this.groupBox1.Controls.Add(this.btnView);
             this.groupBox1.Controls.Add(this.comBoxStatViewOption);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(22, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(29, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(624, 67);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(832, 82);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose a Player Stat View";
@@ -132,31 +133,34 @@
             this.comboBoxPlayoffSelection.Items.AddRange(new object[] {
             "Normal Season",
             "Playoffs"});
-            this.comboBoxPlayoffSelection.Location = new System.Drawing.Point(277, 28);
-            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPlayoffSelection.Location = new System.Drawing.Point(369, 34);
+            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxPlayoffSelection.Name = "comboBoxPlayoffSelection";
-            this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(257, 23);
+            this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(341, 26);
             this.comboBoxPlayoffSelection.TabIndex = 2;
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(549, 24);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnView.Location = new System.Drawing.Point(732, 30);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(57, 27);
+            this.btnView.Size = new System.Drawing.Size(76, 33);
             this.btnView.TabIndex = 1;
             this.btnView.Text = "&View";
+            this.toolTipNFLPS.SetToolTip(this.btnView, "View a Table");
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(524, 355);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.Location = new System.Drawing.Point(699, 437);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(67, 25);
+            this.btnBack.Size = new System.Drawing.Size(89, 31);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "&Back";
+            this.toolTipNFLPS.SetToolTip(this.btnBack, "Back");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -164,10 +168,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(27, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 15);
+            this.label1.Size = new System.Drawing.Size(163, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "NFL - Player Stats Data";
             // 
@@ -362,41 +365,49 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 158);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(569, 222);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(759, 273);
             this.dataGridView1.TabIndex = 5;
             // 
             // txtBoxSearchPlayer
             // 
-            this.txtBoxSearchPlayer.Location = new System.Drawing.Point(22, 360);
+            this.txtBoxSearchPlayer.Location = new System.Drawing.Point(29, 443);
+            this.txtBoxSearchPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxSearchPlayer.Name = "txtBoxSearchPlayer";
-            this.txtBoxSearchPlayer.Size = new System.Drawing.Size(147, 20);
+            this.txtBoxSearchPlayer.Size = new System.Drawing.Size(195, 22);
             this.txtBoxSearchPlayer.TabIndex = 6;
             // 
             // btnSearchPlayer
             // 
-            this.btnSearchPlayer.Location = new System.Drawing.Point(175, 356);
+            this.btnSearchPlayer.Location = new System.Drawing.Point(233, 438);
+            this.btnSearchPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchPlayer.Name = "btnSearchPlayer";
-            this.btnSearchPlayer.Size = new System.Drawing.Size(120, 23);
+            this.btnSearchPlayer.Size = new System.Drawing.Size(160, 28);
             this.btnSearchPlayer.TabIndex = 7;
             this.btnSearchPlayer.Text = "Search Player";
+            this.toolTipNFLPS.SetToolTip(this.btnSearchPlayer, "Search for a Player");
             this.btnSearchPlayer.UseVisualStyleBackColor = true;
             this.btnSearchPlayer.Click += new System.EventHandler(this.btnSearchPlayer_Click);
             // 
             // NFLPlayerStats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnView;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 515);
+            this.CancelButton = this.btnBack;
+            this.ClientSize = new System.Drawing.Size(1571, 634);
             this.Controls.Add(this.btnSearchPlayer);
             this.Controls.Add(this.txtBoxSearchPlayer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NFLPlayerStats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NFLPlayerStats";
             this.Load += new System.EventHandler(this.NFLPlayerStats_Load);
             this.groupBox1.ResumeLayout(false);
@@ -468,5 +479,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBoxSearchPlayer;
         private System.Windows.Forms.Button btnSearchPlayer;
+        private System.Windows.Forms.ToolTip toolTipNFLPS;
     }
 }

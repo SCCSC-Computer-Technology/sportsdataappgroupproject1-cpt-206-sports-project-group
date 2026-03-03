@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+
+            this.toolTipNBAPS = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.comboBoxSort = new System.Windows.Forms.ComboBox();
@@ -75,16 +79,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
+
             this.SuspendLayout();
             // 
             // btnBack
             // 
+
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.Location = new System.Drawing.Point(696, 404);
+
             this.btnBack.Location = new System.Drawing.Point(522, 328);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 28);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "&Back";
+            this.toolTipNBAPS.SetToolTip(this.btnBack, "Back");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -426,21 +437,32 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.CancelButton = this.btnBack;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.ClientSize = new System.Drawing.Size(611, 376);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nba_playerstats_2024DataGridView);
             this.Controls.Add(this.comboBoxSort);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnSearch);
+
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NBAPlayerStats";
+
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NBAPlayerStats";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+
             this.Text = "comboBoxSearch";
             this.Load += new System.EventHandler(this.NBAPlayerStats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +472,9 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.ToolTip toolTipNBAPS;
+
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.ComboBox comboBoxSort;
@@ -493,5 +518,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.TextBox textBox1;
+
     }
 }
