@@ -22,5 +22,17 @@ namespace SportsDataApplication.TMMM
             // close NFL player stats form
             this.Close();
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowHelp("nflPlayerStats");
+            helpForm.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
