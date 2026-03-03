@@ -35,6 +35,9 @@ namespace SportsDataApplication.TMMM
                 case "nflPlayerStats":
                     // pnlnflPlayerStats.Visible = true;
                     break;
+                case "NBAUpcomingGames":
+                    pnlNBAUpcomingGames.Visible = true;
+                    break;
                 default:
                     MessageBox.Show("No help available for this form.");
                     break;
