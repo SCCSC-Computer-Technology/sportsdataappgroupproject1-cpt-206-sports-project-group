@@ -12,9 +12,11 @@ namespace SportsDataApplication.TMMM
 {
     public partial class HelpForm : Form
     {
-        public HelpForm()
+        public HelpForm(string formname)
         {
             InitializeComponent();
+            ShowHelp(formname);
+
         }
         // method to enable different help messages for different forms
         public void ShowHelp(string formName)
@@ -22,18 +24,21 @@ namespace SportsDataApplication.TMMM
             //panels need to be hidden
             pnlNBATeamStandings.Visible = false;
             pnlNFLTeamStandings.Visible = false;
+            pnlNBAUpcomingGames.Visible = false;
+            pnlnflPlayerStats.Visible = false;  
+            pnlNFLUpcomingGames.Visible = false;
 
             //activate pnl depending on form 
             switch (formName)
             {
-                case "NBA":
+                case "NBAStandings":
                     pnlNBATeamStandings.Visible = true;
                     break;
-                case "NFL":
+                case "NFLStandings":
                     pnlNFLTeamStandings.Visible = true;
                     break;
                 case "nflPlayerStats":
-                    // pnlnflPlayerStats.Visible = true;
+                    pnlnflPlayerStats.Visible = true;
                     break;
                 case "NBAUpcomingGames":
                     pnlNBAUpcomingGames.Visible = true;

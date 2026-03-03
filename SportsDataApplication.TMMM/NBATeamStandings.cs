@@ -89,9 +89,10 @@ namespace SportsDataApplication.TMMM
         private void btnHelp_Click(object sender, EventArgs e)
         {
             // Open help form and display relevant information about NBA team standings
-            HelpForm helpForm = new HelpForm();
-            helpForm.ShowHelp("NBA");
+            // Open help form and display relevant information about NBA team standings
+            HelpForm helpForm = new HelpForm("NBAStandings");
             helpForm.ShowDialog();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
