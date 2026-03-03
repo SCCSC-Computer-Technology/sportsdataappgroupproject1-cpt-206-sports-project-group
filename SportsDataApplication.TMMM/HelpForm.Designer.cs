@@ -106,22 +106,17 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
             this.pnlNBAUpcoming = new System.Windows.Forms.Panel();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pnlnflPlayerStats = new System.Windows.Forms.Panel();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             this.pnlNFLTeamStandings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlNBATeamStandings.SuspendLayout();
             this.pnlNBAUpcomingGames.SuspendLayout();
             this.pnlNFLUpcomingGames.SuspendLayout();
             this.pnlNBAUpcoming.SuspendLayout();
-            this.pnlnflPlayerStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -902,7 +897,7 @@
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Location = new System.Drawing.Point(820, 351);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 28);
             this.btnBack.TabIndex = 24;
@@ -910,32 +905,17 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // label74
+            // pnlNBAUpcoming
             // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(1, 7);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(94, 13);
-            this.label74.TabIndex = 0;
-            this.label74.Text = "Upcoming Games:";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(24, 39);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(216, 13);
-            this.label73.TabIndex = 1;
-            this.label73.Text = "View upcoming games by Month or by Team";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(1, 104);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(78, 13);
-            this.label70.TabIndex = 14;
-            this.label70.Text = "Match Results:";
+            this.pnlNBAUpcoming.Controls.Add(this.label69);
+            this.pnlNBAUpcoming.Controls.Add(this.label70);
+            this.pnlNBAUpcoming.Controls.Add(this.label73);
+            this.pnlNBAUpcoming.Controls.Add(this.label74);
+            this.pnlNBAUpcoming.Location = new System.Drawing.Point(8, 3);
+            this.pnlNBAUpcoming.Name = "pnlNBAUpcoming";
+            this.pnlNBAUpcoming.Size = new System.Drawing.Size(368, 370);
+            this.pnlNBAUpcoming.TabIndex = 25;
+            this.pnlNBAUpcoming.Visible = false;
             // 
             // label69
             // 
@@ -946,55 +926,32 @@
             this.label69.TabIndex = 15;
             this.label69.Text = "Displays Historal Matches";
             // 
-            // pnlNBAUpcoming
+            // label70
             // 
-            this.pnlNBAUpcoming.Controls.Add(this.label69);
-            this.pnlNBAUpcoming.Controls.Add(this.label70);
-            this.pnlNBAUpcoming.Controls.Add(this.label73);
-            this.pnlNBAUpcoming.Controls.Add(this.label74);
-            this.pnlNBAUpcoming.Location = new System.Drawing.Point(8, 4);
-            this.pnlNBAUpcoming.Name = "pnlNBAUpcoming";
-            this.pnlNBAUpcoming.Size = new System.Drawing.Size(368, 370);
-            this.pnlNBAUpcoming.TabIndex = 25;
-            this.pnlNBAUpcoming.Visible = false;
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(1, 104);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(78, 13);
+            this.label70.TabIndex = 14;
+            this.label70.Text = "Match Results:";
             // 
-            // label71
+            // label73
             // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(1, 7);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(89, 13);
-            this.label71.TabIndex = 0;
-            this.label71.Text = "NFL Player Stats:";
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(24, 39);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(216, 13);
+            this.label73.TabIndex = 1;
+            this.label73.Text = "View upcoming games by Month or by Team";
             // 
-            // label68
+            // label74
             // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(24, 39);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(88, 13);
-            this.label68.TabIndex = 1;
-            this.label68.Text = "View player Stats";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(24, 67);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(179, 13);
-            this.label62.TabIndex = 15;
-            this.label62.Text = "Displays searched Player information";
-            // 
-            // pnlnflPlayerStats
-            // 
-            this.pnlnflPlayerStats.Controls.Add(this.label62);
-            this.pnlnflPlayerStats.Controls.Add(this.label68);
-            this.pnlnflPlayerStats.Controls.Add(this.label71);
-            this.pnlnflPlayerStats.Location = new System.Drawing.Point(447, 12);
-            this.pnlnflPlayerStats.Name = "pnlnflPlayerStats";
-            this.pnlnflPlayerStats.Size = new System.Drawing.Size(368, 370);
-            this.pnlnflPlayerStats.TabIndex = 26;
-            this.pnlnflPlayerStats.Visible = false;
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(1, 7);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(94, 13);
+            this.label74.TabIndex = 0;
+            this.label74.Text = "Upcoming Games:";
             // 
             // HelpForm
             // 
@@ -1002,7 +959,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(898, 384);
-            this.Controls.Add(this.pnlnflPlayerStats);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlNFLUpcomingGames);
             this.Controls.Add(this.pnlNBAUpcomingGames);
@@ -1023,8 +979,6 @@
             this.pnlNFLUpcomingGames.PerformLayout();
             this.pnlNBAUpcoming.ResumeLayout(false);
             this.pnlNBAUpcoming.PerformLayout();
-            this.pnlnflPlayerStats.ResumeLayout(false);
-            this.pnlnflPlayerStats.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1114,9 +1068,5 @@
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Panel pnlnflPlayerStats;
     }
 }
