@@ -244,9 +244,9 @@ namespace SportsDataApplication.TMMM
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            HelpForm helpForm = new HelpForm("NFLStandings");
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowHelp("NFL");
             helpForm.ShowDialog();
-            
         }
     }
 }

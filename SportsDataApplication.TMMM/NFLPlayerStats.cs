@@ -381,17 +381,5 @@ namespace SportsDataApplication.TMMM
                 MessageBox.Show("Please select options from both drop down menus to see stats.");
             }
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            // Open help form and display relevant information about NBA team standings
-            HelpForm helpForm = new HelpForm("nflPlayerStats");
-            helpForm.ShowDialog();
-        }    
     }
 }
