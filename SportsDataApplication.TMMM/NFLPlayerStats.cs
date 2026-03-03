@@ -158,7 +158,7 @@ namespace SportsDataApplication.TMMM
                         dataTable = "[Punting stats Playoff]";
                         break;
                     case 5:
-                        dataTable = "[Receiving stats Playoff]";
+                        dataTable = "[Recieving stats Playoffs]";
                         break;
                     case 6:
                         dataTable = "[Rushing stats Playoff]";
@@ -333,7 +333,7 @@ namespace SportsDataApplication.TMMM
                         dataTable = "[Punting stats Playoff]";
                         break;
                     case 5:
-                        dataTable = "[Receiving stats Playoff]";
+                        dataTable = "[Recieving stats Playoffs]";
                         break;
                     case 6:
                         dataTable = "[Rushing stats Playoff]";
