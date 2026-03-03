@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,10 +70,14 @@ namespace SportsDataApplication.TMMM
             this.defense_Stats_Normal_SeasonTableAdapter.Fill(this.sportsProjectDBDataSet.Defense_Stats_Normal_Season);
 
         }
+        
 
+       
         private void btnView_Click(object sender, EventArgs e)
         {
             string dataTable = "";
+
+            //If statement selects Normal season and ensures they chose a stat type. The switch sets the dataTable variable with the Table name.
             if (comboBoxPlayoffSelection.SelectedIndex == 0 && comBoxStatViewOption.SelectedIndex != -1)
             {
                 switch (comBoxStatViewOption.SelectedIndex)
@@ -104,6 +109,7 @@ namespace SportsDataApplication.TMMM
 
                 }
 
+                //This portion creates a new connection, a new adapter, and a new datatable and then fills the datatable with the correct info.
                         string query = $"SELECT * FROM {dataTable}";
                         using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
                         {
@@ -112,9 +118,201 @@ namespace SportsDataApplication.TMMM
                             adapter.Fill(dt);
 
                             dataGridView1.DataSource = dt;
-                        }
+                            dataGridView1.DataError += dataGridView1_DataError; //negates the throwing of an exception for one of the columns.
+                    //These if statements hide the specified columns.         
+                    if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                            {
+                                dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                            }
+                    if (dataGridView1.Columns.Contains("Awards"))
+                    {
+                        dataGridView1.Columns["Awards"].Visible = false;
+                    }
+                    if (dataGridView1.Columns.Contains("#NAME?"))
+                    {
+                        dataGridView1.Columns["#NAME?"].Visible = false;
+                    }
+                }
+               
+
+            }
+            //If statement selects Playoffs and ensures they chose a stat type. The switch sets the dataTable variable with the Table name.
+            else if (comboBoxPlayoffSelection.SelectedIndex == 1 && comBoxStatViewOption.SelectedIndex != -1)
+            {
+                
+                switch (comBoxStatViewOption.SelectedIndex)
+                {
+                    case 0:
+                        dataTable = "[Defense Stats Playoffs]";
+                        break;
+                    case 1:
+                        dataTable = "[Kick/Punt Playoffs]";
+                        break;
+                    case 2:
+                        dataTable = "[Kickoff Stats Playoffs]";
+                        break;
+                    case 3:
+                        dataTable = "[Passing stats Playoff]";
+                        break;
+                    case 4:
+                        dataTable = "[Punting stats Playoff]";
+                        break;
+                    case 5:
+                        dataTable = "[Receiving stats Playoff]";
+                        break;
+                    case 6:
+                        dataTable = "[Rushing stats Playoff]";
+                        break;
+                    case 7:
+                        dataTable = "[Scoring stats Playoffs]";
+                        break;
+
+                }
+                //This portion creates a new connection, a new adapter, and a new datatable and then fills the datatable with the correct info.
+                string query = $"SELECT * FROM {dataTable}";
+                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                        {
+                            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            dataGridView1.DataSource = dt;
+                            dataGridView1.DataError += dataGridView1_DataError; //negates the throwing of an exception for one of the columns.
+                      //These if statements hide the specified columns
+                    if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                             {
+                                dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                             }
+                    if (dataGridView1.Columns.Contains("Awards"))
+                    {
+                        dataGridView1.Columns["Awards"].Visible = false;
+                    }
+                    if (dataGridView1.Columns.Contains("#NAME?"))
+                    {
+                        dataGridView1.Columns["#NAME?"].Visible = false;
+                    }
+                }
                 
             }
+            else //Displays error message if both combo boxes arent selected.
+            {
+                MessageBox.Show("Please select options from both drop down menus to see stats.");
+            }
+    
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void btnSearchPlayer_Click(object sender, EventArgs e)
+        {
+            string dataTable = "";
+            string playerName = txtBoxSearchPlayer.Text;
+
+            //If statement selects Normal Season and ensures they chose a stat type. The switch sets the dataTable variable with the Table name.
+            if (comboBoxPlayoffSelection.SelectedIndex == 0 && comBoxStatViewOption.SelectedIndex != -1)
+            {
+                switch (comBoxStatViewOption.SelectedIndex)
+                {
+                    case 0:
+                        dataTable = "[Defense Stats Normal Season]";
+                        break;
+                    case 1:
+                        dataTable = "[Kick/Punt Stats]";
+                        break;
+                    case 2:
+                        dataTable = "[Kickoff Normal Season]";
+                        break;
+                    case 3:
+                        dataTable = "[Passing stats]";
+                        break;
+                    case 4:
+                        dataTable = "[Punting Stats]";
+                        break;
+                    case 5:
+                        dataTable = "[Receiving Stats]";
+                        break;
+                    case 6:
+                        dataTable = "[Rushing Stats]";
+                        break;
+                    case 7:
+                        dataTable = "[Scoring Stats]";
+                        break;
+
+                }
+                //This if statement specifies that if the Normal Season Scoring Stats are displayed it still allows for search due to the first row not containing column names.
+                if (comBoxStatViewOption.SelectedIndex == 7&&comboBoxPlayoffSelection.SelectedIndex==0)
+                {
+                    string query = $"SELECT * FROM {dataTable} WHERE F2 LIKE @F2";//Sql Statement to search Player Names
+
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@F2", "%" + playerName + "%"); // playerName is your variable
+
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                            {
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+
+                                dataGridView1.DataSource = dt;
+                                dataGridView1.DataError += dataGridView1_DataError;//negates the throwing of an exception for one of the columns.
+                                //These if statements hide the specified columns
+                                if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                                {
+                                    dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("Awards"))
+                                {
+                                    dataGridView1.Columns["Awards"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("#NAME?"))
+                                {
+                                    dataGridView1.Columns["#NAME?"].Visible = false;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    string query = $"SELECT * FROM {dataTable} WHERE Player LIKE @Player";
+
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Player", "%"+playerName+"%"); // playerName is your variable
+
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                            {
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+
+                                dataGridView1.DataSource = dt;
+                                dataGridView1.DataError += dataGridView1_DataError;//negates the throwing of an exception for one of the columns.
+                                //These if statements hide the specified columns
+                                if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                                {
+                                    dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("Awards"))
+                                {
+                                    dataGridView1.Columns["Awards"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("#NAME?"))
+                                {
+                                    dataGridView1.Columns["#NAME?"].Visible = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //If statement selects Playoffs and ensures they chose a stat type. The switch sets the dataTable variable with the Table name.
             else if (comboBoxPlayoffSelection.SelectedIndex == 1 && comBoxStatViewOption.SelectedIndex != -1)
             {
                 switch (comBoxStatViewOption.SelectedIndex)
@@ -145,23 +343,43 @@ namespace SportsDataApplication.TMMM
                         break;
 
                 }
+               //Search query for players for the playoffs tables.
+                    string query = $"SELECT * FROM {dataTable} WHERE Player LIKE @Player";
 
-                        string query = $"SELECT * FROM {dataTable}";
-                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.SportsProjectDBConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
+                            cmd.Parameters.AddWithValue("@Player", "%" + playerName + "%"); // playerName is your variable
 
-                            dataGridView1.DataSource = dt;
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                            {
+                                DataTable dt = new DataTable();
+                                adapter.Fill(dt);
+
+                                dataGridView1.DataSource = dt;
+                                dataGridView1.DataError += dataGridView1_DataError;//negates the throwing of an exception for one of the columns.
+                             //These if statements hide the specified columns
+                            if (dataGridView1.Columns.Contains("SSMA_TimeStamp"))
+                                {
+                                    dataGridView1.Columns["SSMA_TimeStamp"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("Awards"))
+                                {
+                                    dataGridView1.Columns["Awards"].Visible = false;
+                                }
+                                if (dataGridView1.Columns.Contains("#NAME?"))
+                                {
+                                    dataGridView1.Columns["#NAME?"].Visible = false;
+                                }
+                            }
                         }
-                
-            }
-            else
+                    }
+                }
+            else//Displays error message if both combo boxes arent selected.
             {
                 MessageBox.Show("Please select options from both drop down menus to see stats.");
             }
-    
         }
     }
 }
