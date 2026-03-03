@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -106,15 +107,7 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.pnlNBAUpcoming = new System.Windows.Forms.Panel();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.pnlnflPlayerStats = new System.Windows.Forms.Panel();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.pnlNFLTeamStandings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlNBATeamStandings.SuspendLayout();
@@ -318,6 +311,7 @@
             this.pnlNFLTeamStandings.Controls.Add(this.label2);
             this.pnlNFLTeamStandings.Controls.Add(this.label1);
             this.pnlNFLTeamStandings.Location = new System.Drawing.Point(0, 0);
+            this.pnlNFLTeamStandings.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNFLTeamStandings.Name = "pnlNFLTeamStandings";
             this.pnlNFLTeamStandings.Size = new System.Drawing.Size(368, 370);
             this.pnlNFLTeamStandings.TabIndex = 19;
@@ -339,7 +333,8 @@
             this.panel1.Controls.Add(this.label76);
             this.panel1.Controls.Add(this.label77);
             this.panel1.Controls.Add(this.label78);
-            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Location = new System.Drawing.Point(591, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 370);
             this.panel1.TabIndex = 23;
@@ -497,7 +492,8 @@
             this.pnlNBATeamStandings.Controls.Add(this.label36);
             this.pnlNBATeamStandings.Controls.Add(this.label37);
             this.pnlNBATeamStandings.Controls.Add(this.label38);
-            this.pnlNBATeamStandings.Location = new System.Drawing.Point(14, 9);
+            this.pnlNBATeamStandings.Location = new System.Drawing.Point(19, 11);
+            this.pnlNBATeamStandings.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNBATeamStandings.Name = "pnlNBATeamStandings";
             this.pnlNBATeamStandings.Size = new System.Drawing.Size(383, 370);
             this.pnlNBATeamStandings.TabIndex = 20;
@@ -713,6 +709,7 @@
             this.pnlNBAUpcomingGames.Controls.Add(this.label50);
             this.pnlNBAUpcomingGames.Controls.Add(this.label63);
             this.pnlNBAUpcomingGames.Location = new System.Drawing.Point(0, 0);
+            this.pnlNBAUpcomingGames.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNBAUpcomingGames.Name = "pnlNBAUpcomingGames";
             this.pnlNBAUpcomingGames.Size = new System.Drawing.Size(383, 370);
             this.pnlNBAUpcomingGames.TabIndex = 21;
@@ -812,6 +809,7 @@
             this.pnlNFLUpcomingGames.Controls.Add(this.label57);
             this.pnlNFLUpcomingGames.Controls.Add(this.label58);
             this.pnlNFLUpcomingGames.Location = new System.Drawing.Point(0, 0);
+            this.pnlNFLUpcomingGames.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNFLUpcomingGames.Name = "pnlNFLUpcomingGames";
             this.pnlNFLUpcomingGames.Size = new System.Drawing.Size(383, 370);
             this.pnlNFLUpcomingGames.TabIndex = 22;
@@ -907,6 +905,7 @@
             this.btnBack.Size = new System.Drawing.Size(69, 28);
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "&Back";
+            this.toolTipHelp.SetToolTip(this.btnBack, "Go Back to the previous form");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -1007,6 +1006,7 @@
             this.Controls.Add(this.pnlNFLUpcomingGames);
             this.Controls.Add(this.pnlNBAUpcomingGames);
             this.Controls.Add(this.pnlNBATeamStandings);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HelpForm";
@@ -1109,14 +1109,6 @@
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Panel pnlNBAUpcoming;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Panel pnlnflPlayerStats;
+        private System.Windows.Forms.ToolTip toolTipHelp;
     }
 }
