@@ -27,11 +27,11 @@ namespace SportsDataApplication.TMMM
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Search for team standings based on user input
-            // Using SQL querries
+            // Get the search keyword from the text box and trim any leading/trailing whitespace
             string keyword = txtBoxKeyword.Text.Trim();
             if (string.IsNullOrEmpty(keyword)) return;
 
+            // Create a DataTable to hold the search results with appropriate columns
             DataTable searchResults = new DataTable();
             searchResults.Columns.Add("Source");
             searchResults.Columns.Add("Team/Player");
@@ -39,28 +39,32 @@ namespace SportsDataApplication.TMMM
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString"].ConnectionString))
+                //connection string to the database, make sure this matches the name in your app.config file
+                string connName = "SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString";
+                string connString = ConfigurationManager.ConnectionStrings[connName].ConnectionString;
+
+                using (SqlConnection connection = new SqlConnection(connString))
                 {
                     connection.Open();
+                    // Construct a SQL query that searches for the keyword in the TeamName column across all four tables, using UNION ALL to combine results
                     string query = @"
-                        SELECT 'NBA Eastern Conference 24-25' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
-                        FROM [NBA Eastern Conference 24-25]
-                        WHERE TeamName LIKE @Keyword
-                        UNION ALL
-                        SELECT 'NBA Eastern Conference 25-26' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
-                        FROM [NBA Eastern Conference 25-26]
-                        WHERE TeamName LIKE @Keyword
-                        UNION ALL
-                        SELECT 'NBA Western Conference 24-25' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
-                        FROM [NBA Western Conference 24-25]
-                        WHERE TeamName LIKE @Keyword
-                        UNION ALL
-                        SELECT 'NBA Western Conference 25-26' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
-                        FROM [NBA Western Conference 25-26]
-                        WHERE TeamName LIKE @Keyword";
+                    SELECT 'NBA Eastern 24-25' AS Source, [Eastern Conference] AS [Team/Player], CONCAT('W: ', Win, ', L: ', Loss) AS Details 
+                    FROM [NBA Eastern Conference 24-25] WHERE [Eastern Conference] LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Eastern 25-26' AS Source, TEAM AS [Team/Player], CONCAT('W: ', WIN, ', L: ', LOSS) AS Details 
+                    FROM [NBA Eastern Conference 25-26] WHERE TEAM LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Western 24-25' AS Source, Team AS [Team/Player], CONCAT('W: ', W, ', L: ', L) AS Details 
+                    FROM [NBA Western Conference 24-25] WHERE Team LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Western 25-26' AS Source, TEAM AS [Team/Player], CONCAT('W: ', WIN, ', L: ', LOSS) AS Details 
+                    FROM [NBA Western Conference 25-26] WHERE TEAM LIKE @Keyword";
+
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        // Wildcards (%) are added here to the parameter value
                         command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
@@ -70,13 +74,16 @@ namespace SportsDataApplication.TMMM
                         }
                     }
                 }
+
+                // Bind the results to your DataGridView
                 dgvNBAStandings.DataSource = searchResults;
             }
             catch (Exception ex)
-             {
-                MessageBox.Show("Error during search: " + ex.Message);
-             }
-             
+            {
+                // This will catch the 'Login failed' or 'Permission denied' errors if the DB is locked
+                MessageBox.Show("Could not access the database.\n\nDetails: " + ex.Message);
+            }
+
         }
               
         private void btnHelp_Click(object sender, EventArgs e)
@@ -169,16 +176,17 @@ namespace SportsDataApplication.TMMM
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            string userSelection = cbConfDiv.SelectedItem.ToString();
-
-            // Determine which file to load based on user selection
-            string dataTable = " ";
-            // Safeguard against null selection
             if (cbConfDiv.SelectedItem == null)
             {
                 MessageBox.Show("Please select a conference/division from the dropdown.");
                 return;
             }
+            string userSelection = cbConfDiv.SelectedItem.ToString();
+
+            // Determine which file to load based on user selection
+            string dataTable = " ";
+            // Safeguard against null selection
+           
 
             // Map user selection to the corresponding data table
             switch (userSelection)
