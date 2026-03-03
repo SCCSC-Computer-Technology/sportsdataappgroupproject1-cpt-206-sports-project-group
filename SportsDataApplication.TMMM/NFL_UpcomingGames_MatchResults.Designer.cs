@@ -78,7 +78,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolTipNFLUGMR = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingNavigator)).BeginInit();
@@ -315,7 +314,6 @@
             this.btnMonthSort.Size = new System.Drawing.Size(114, 35);
             this.btnMonthSort.TabIndex = 7;
             this.btnMonthSort.Text = "Sort by &Month";
-            this.toolTipNFLUGMR.SetToolTip(this.btnMonthSort, "Sort by Month");
             this.btnMonthSort.UseVisualStyleBackColor = true;
             this.btnMonthSort.Click += new System.EventHandler(this.btnMonthSort_Click);
             // 
@@ -326,7 +324,6 @@
             this.btnTeamSort.Size = new System.Drawing.Size(112, 35);
             this.btnTeamSort.TabIndex = 9;
             this.btnTeamSort.Text = "Sort by &Team";
-            this.toolTipNFLUGMR.SetToolTip(this.btnTeamSort, "Sort by NFL Team");
             this.btnTeamSort.UseVisualStyleBackColor = true;
             this.btnTeamSort.Click += new System.EventHandler(this.btnTeamSort_Click);
             // 
@@ -396,7 +393,6 @@
             this.btnSearch.Size = new System.Drawing.Size(87, 31);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "&Search";
-            this.toolTipNFLUGMR.SetToolTip(this.btnSearch, "Search");
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -407,7 +403,6 @@
             this.button1.Size = new System.Drawing.Size(89, 32);
             this.button1.TabIndex = 14;
             this.button1.Text = "Help (?)";
-            this.toolTipNFLUGMR.SetToolTip(this.button1, "Help");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -417,7 +412,6 @@
             this.button2.Size = new System.Drawing.Size(114, 32);
             this.button2.TabIndex = 15;
             this.button2.Text = "Sort by &Team";
-            this.toolTipNFLUGMR.SetToolTip(this.button2, "Sort by NFL Team");
             this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox4
@@ -533,10 +527,8 @@
             // 
             // NFL_UpcomingGames_MatchResults
             // 
-            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(790, 728);
             this.Controls.Add(this.nFL_Match_Results_DataDataGridView);
             this.Controls.Add(this.btnSearch);
@@ -554,7 +546,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.credentialsBindingNavigator);
             this.Name = "NFL_UpcomingGames_MatchResults";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NFL - Upcoming Games / Match Results";
             this.Load += new System.EventHandler(this.NFLUpcomingGames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).EndInit();
@@ -623,6 +614,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ToolTip toolTipNFLUGMR;
     }
 }

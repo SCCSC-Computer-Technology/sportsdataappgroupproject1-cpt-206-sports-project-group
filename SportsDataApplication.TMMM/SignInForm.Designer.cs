@@ -40,7 +40,6 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.toolTipSignIn = new System.Windows.Forms.ToolTip(this.components);
             userNameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
@@ -75,7 +74,6 @@
             this.btnCreateUser.Size = new System.Drawing.Size(100, 59);
             this.btnCreateUser.TabIndex = 0;
             this.btnCreateUser.Text = "&Create User";
-            this.toolTipSignIn.SetToolTip(this.btnCreateUser, "Create New User");
             this.btnCreateUser.UseVisualStyleBackColor = true;
             this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
@@ -87,7 +85,6 @@
             this.btnLogin.Size = new System.Drawing.Size(100, 59);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "&Login";
-            this.toolTipSignIn.SetToolTip(this.btnLogin, "Login");
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -138,7 +135,6 @@
             this.btnExit.Size = new System.Drawing.Size(100, 59);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "E&xit";
-            this.toolTipSignIn.SetToolTip(this.btnExit, "Exit");
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -179,7 +175,6 @@
         private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ToolTip toolTipSignIn;
     }
 }
 

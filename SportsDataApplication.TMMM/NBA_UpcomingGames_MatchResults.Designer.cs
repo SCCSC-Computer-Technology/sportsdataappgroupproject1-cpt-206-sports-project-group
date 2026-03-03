@@ -66,7 +66,6 @@
             this.comBoxSelectColumn = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefreshTable = new System.Windows.Forms.Button();
-            this.toolTipNBAUGMR = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
@@ -164,7 +163,6 @@
             this.btnBack.Size = new System.Drawing.Size(93, 34);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "&Back";
-            this.toolTipNBAUGMR.SetToolTip(this.btnBack, "Back");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -176,7 +174,6 @@
             this.btnTeamSort.Size = new System.Drawing.Size(112, 34);
             this.btnTeamSort.TabIndex = 13;
             this.btnTeamSort.Text = "Sort by &Team";
-            this.toolTipNBAUGMR.SetToolTip(this.btnTeamSort, "Sort by NBA Team");
             this.btnTeamSort.UseVisualStyleBackColor = true;
             this.btnTeamSort.Click += new System.EventHandler(this.btnTeamSort_Click);
             // 
@@ -197,7 +194,6 @@
             this.btnMonthSort.Size = new System.Drawing.Size(115, 34);
             this.btnMonthSort.TabIndex = 11;
             this.btnMonthSort.Text = "Sort by &Month";
-            this.toolTipNBAUGMR.SetToolTip(this.btnMonthSort, "Sort by Month");
             this.btnMonthSort.UseVisualStyleBackColor = true;
             this.btnMonthSort.Click += new System.EventHandler(this.btnMonthSort_Click);
             // 
@@ -390,7 +386,6 @@
             this.btnHelp.Size = new System.Drawing.Size(95, 34);
             this.btnHelp.TabIndex = 15;
             this.btnHelp.Text = "Help (?)";
-            this.toolTipNBAUGMR.SetToolTip(this.btnHelp, "Help");
             this.btnHelp.UseVisualStyleBackColor = true;
             // 
             // btnSearch
@@ -400,7 +395,6 @@
             this.btnSearch.Size = new System.Drawing.Size(90, 30);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "&Search";
-            this.toolTipNBAUGMR.SetToolTip(this.btnSearch, "Search Table");
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -441,7 +435,6 @@
             this.btnRefreshTable.Size = new System.Drawing.Size(112, 30);
             this.btnRefreshTable.TabIndex = 19;
             this.btnRefreshTable.Text = "Refresh Table";
-            this.toolTipNBAUGMR.SetToolTip(this.btnRefreshTable, "Refresh Table");
             this.btnRefreshTable.UseVisualStyleBackColor = true;
             this.btnRefreshTable.Click += new System.EventHandler(this.btnRefreshTable_Click);
             // 
@@ -518,6 +511,5 @@
         private System.Windows.Forms.ComboBox comBoxSelectColumn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRefreshTable;
-        private System.Windows.Forms.ToolTip toolTipNBAUGMR;
     }
 }
