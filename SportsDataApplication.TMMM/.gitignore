@@ -47,6 +47,3 @@ Desktop.ini
 # Ignore database file and log file
 *.mdf
 *.ldf
-
-# Ignore settings file - Prevents connection string from being edited
-*.settings
