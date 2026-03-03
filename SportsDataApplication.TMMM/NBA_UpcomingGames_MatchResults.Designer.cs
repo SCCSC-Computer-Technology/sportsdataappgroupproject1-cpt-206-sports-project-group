@@ -108,7 +108,7 @@
             this.gameTimeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.nBA_Upcoming_GamesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 75);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -161,7 +161,7 @@
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Location = new System.Drawing.Point(500, 547);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(70, 28);
             this.btnBack.TabIndex = 7;
@@ -173,7 +173,7 @@
             // btnTeamSort
             // 
             this.btnTeamSort.Location = new System.Drawing.Point(486, 41);
-            this.btnTeamSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTeamSort.Margin = new System.Windows.Forms.Padding(2);
             this.btnTeamSort.Name = "btnTeamSort";
             this.btnTeamSort.Size = new System.Drawing.Size(84, 28);
             this.btnTeamSort.TabIndex = 13;
@@ -186,7 +186,7 @@
             // 
             this.comboBoxTeamSort.FormattingEnabled = true;
             this.comboBoxTeamSort.Location = new System.Drawing.Point(305, 49);
-            this.comboBoxTeamSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTeamSort.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTeamSort.Name = "comboBoxTeamSort";
             this.comboBoxTeamSort.Size = new System.Drawing.Size(177, 21);
             this.comboBoxTeamSort.TabIndex = 12;
@@ -195,7 +195,7 @@
             // btnMonthSort
             // 
             this.btnMonthSort.Location = new System.Drawing.Point(197, 44);
-            this.btnMonthSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMonthSort.Margin = new System.Windows.Forms.Padding(2);
             this.btnMonthSort.Name = "btnMonthSort";
             this.btnMonthSort.Size = new System.Drawing.Size(86, 28);
             this.btnMonthSort.TabIndex = 11;
@@ -208,7 +208,7 @@
             // 
             this.comboBoxMonthSort.FormattingEnabled = true;
             this.comboBoxMonthSort.Location = new System.Drawing.Point(16, 52);
-            this.comboBoxMonthSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMonthSort.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMonthSort.Name = "comboBoxMonthSort";
             this.comboBoxMonthSort.Size = new System.Drawing.Size(177, 21);
             this.comboBoxMonthSort.TabIndex = 10;
@@ -389,18 +389,19 @@
             // btnHelp
             // 
             this.btnHelp.Location = new System.Drawing.Point(17, 547);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(71, 28);
             this.btnHelp.TabIndex = 15;
             this.btnHelp.Text = "Help (?)";
             this.toolTipNBAUpcomingAndMatch.SetToolTip(this.btnHelp, "Opens the help form");
             this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(368, 19);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(68, 24);
             this.btnSearch.TabIndex = 16;
@@ -413,7 +414,7 @@
             // 
             this.txtBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxSearch.Location = new System.Drawing.Point(183, 23);
-            this.txtBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.Size = new System.Drawing.Size(172, 20);
             this.txtBoxSearch.TabIndex = 17;
@@ -423,7 +424,7 @@
             // 
             this.comBoxSelectColumn.FormattingEnabled = true;
             this.comBoxSelectColumn.Location = new System.Drawing.Point(8, 22);
-            this.comBoxSelectColumn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comBoxSelectColumn.Margin = new System.Windows.Forms.Padding(2);
             this.comBoxSelectColumn.Name = "comBoxSelectColumn";
             this.comBoxSelectColumn.Size = new System.Drawing.Size(171, 21);
             this.comBoxSelectColumn.TabIndex = 18;
@@ -436,9 +437,9 @@
             this.groupBox1.Controls.Add(this.comBoxSelectColumn);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Location = new System.Drawing.Point(17, 466);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(542, 58);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
@@ -447,7 +448,7 @@
             // btnRefreshTable
             // 
             this.btnRefreshTable.Location = new System.Drawing.Point(440, 19);
-            this.btnRefreshTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefreshTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefreshTable.Name = "btnRefreshTable";
             this.btnRefreshTable.Size = new System.Drawing.Size(84, 24);
             this.btnRefreshTable.TabIndex = 19;
@@ -474,7 +475,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NBA_UpcomingGames_MatchResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NBA - Upcoming Games / Match Results";
