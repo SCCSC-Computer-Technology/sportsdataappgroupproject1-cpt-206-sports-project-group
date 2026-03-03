@@ -72,6 +72,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtBoxSearchPlayer = new System.Windows.Forms.TextBox();
             this.btnSearchPlayer = new System.Windows.Forms.Button();
+            this.toolTipNFLPlayerStats = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
@@ -110,6 +111,7 @@
             this.comBoxStatViewOption.Name = "comBoxStatViewOption";
             this.comBoxStatViewOption.Size = new System.Drawing.Size(257, 23);
             this.comBoxStatViewOption.TabIndex = 0;
+            this.toolTipNFLPlayerStats.SetToolTip(this.comBoxStatViewOption, "Selects a stat to view");
             // 
             // groupBox1
             // 
@@ -137,6 +139,7 @@
             this.comboBoxPlayoffSelection.Name = "comboBoxPlayoffSelection";
             this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(257, 23);
             this.comboBoxPlayoffSelection.TabIndex = 2;
+            this.toolTipNFLPlayerStats.SetToolTip(this.comboBoxPlayoffSelection, "Select regular seaon or playoffs");
             // 
             // btnView
             // 
@@ -146,6 +149,7 @@
             this.btnView.Size = new System.Drawing.Size(57, 27);
             this.btnView.TabIndex = 1;
             this.btnView.Text = "&View";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnView, "Shows specific table based on selections");
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
@@ -157,6 +161,7 @@
             this.btnBack.Size = new System.Drawing.Size(67, 25);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "&Back";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnBack, "Goes back to choose database form");
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -373,6 +378,7 @@
             this.txtBoxSearchPlayer.Name = "txtBoxSearchPlayer";
             this.txtBoxSearchPlayer.Size = new System.Drawing.Size(147, 20);
             this.txtBoxSearchPlayer.TabIndex = 6;
+            this.toolTipNFLPlayerStats.SetToolTip(this.txtBoxSearchPlayer, "Enter a player name.");
             // 
             // btnSearchPlayer
             // 
@@ -381,6 +387,7 @@
             this.btnSearchPlayer.Size = new System.Drawing.Size(120, 23);
             this.btnSearchPlayer.TabIndex = 7;
             this.btnSearchPlayer.Text = "Search Player";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnSearchPlayer, "Searches for player based on user input.");
             this.btnSearchPlayer.UseVisualStyleBackColor = true;
             this.btnSearchPlayer.Click += new System.EventHandler(this.btnSearchPlayer_Click);
             // 
@@ -468,5 +475,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBoxSearchPlayer;
         private System.Windows.Forms.Button btnSearchPlayer;
+        private System.Windows.Forms.ToolTip toolTipNFLPlayerStats;
     }
 }
