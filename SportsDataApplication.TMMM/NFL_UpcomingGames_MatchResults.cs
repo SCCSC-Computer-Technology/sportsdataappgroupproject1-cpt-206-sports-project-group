@@ -207,5 +207,10 @@ private void btnMonthSort_Click(object sender, EventArgs e)
             btnSearch_Click(btnSearch, EventArgs.Empty); // click event
             comBoxSpecifyColumn.SelectedIndex = 0;
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
