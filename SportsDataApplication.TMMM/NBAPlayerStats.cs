@@ -121,7 +121,7 @@ namespace SportsDataApplication.TMMM
                     MessageBox.Show("Please select the column you want to sort by.");
                 }
             }
-            catch ()
+            catch
             {
                 MessageBox.Show("There was and error please try again.");
             }
