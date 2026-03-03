@@ -92,30 +92,24 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
-            this.pnlnflPlayerStats = new System.Windows.Forms.Panel();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label59 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label60 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label61 = new System.Windows.Forms.Label();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pnlNFLTeamStandings.SuspendLayout();
             this.pnlNBATeamStandings.SuspendLayout();
             this.pnlNBAUpcomingGames.SuspendLayout();
             this.pnlNFLUpcomingGames.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlnflPlayerStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -744,24 +738,42 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.label59);
+            this.panel1.Controls.Add(this.linkLabel4);
+            this.panel1.Controls.Add(this.label61);
             this.panel1.Controls.Add(this.linkLabel3);
             this.panel1.Controls.Add(this.label60);
-            this.panel1.Controls.Add(this.label61);
-            this.panel1.Controls.Add(this.linkLabel4);
+            this.panel1.Controls.Add(this.label59);
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label64);
             this.panel1.Controls.Add(this.label65);
             this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.label76);
             this.panel1.Controls.Add(this.label77);
             this.panel1.Controls.Add(this.label78);
-            this.panel1.Location = new System.Drawing.Point(12, 6);
+            this.panel1.Location = new System.Drawing.Point(443, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 370);
             this.panel1.TabIndex = 23;
             this.panel1.Visible = false;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(24, 156);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(116, 13);
+            this.label64.TabIndex = 15;
+            this.label64.Text = "Pro Football Reference";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(3, 127);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(78, 13);
+            this.label65.TabIndex = 14;
+            this.label65.Text = "Data Sources: ";
             // 
             // label66
             // 
@@ -799,149 +811,86 @@
             this.label78.TabIndex = 0;
             this.label78.Text = "Sign In/Up:";
             // 
-            // pnlnflPlayerStats
-            // 
-            this.pnlnflPlayerStats.Controls.Add(this.label67);
-            this.pnlnflPlayerStats.Controls.Add(this.label62);
-            this.pnlnflPlayerStats.Controls.Add(this.label73);
-            this.pnlnflPlayerStats.Controls.Add(this.label74);
-            this.pnlnflPlayerStats.Location = new System.Drawing.Point(20, 3);
-            this.pnlnflPlayerStats.Name = "pnlnflPlayerStats";
-            this.pnlnflPlayerStats.Size = new System.Drawing.Size(368, 370);
-            this.pnlnflPlayerStats.TabIndex = 24;
-            this.pnlnflPlayerStats.Visible = false;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(24, 39);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(197, 13);
-            this.label73.TabIndex = 1;
-            this.label73.Text = "Select Player to see Player specific stats";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(1, 7);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(86, 13);
-            this.label74.TabIndex = 0;
-            this.label74.Text = "NFL Player Stats";
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(5, 221);
+            this.linkLabel1.Location = new System.Drawing.Point(3, 176);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(194, 13);
-            this.linkLabel1.TabIndex = 35;
+            this.linkLabel1.Size = new System.Drawing.Size(198, 13);
+            this.linkLabel1.TabIndex = 19;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.basketball-reference.com/";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.linkLabel2.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.linkLabel2.Location = new System.Drawing.Point(7, 337);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(103, 13);
-            this.linkLabel2.TabIndex = 34;
-            this.linkLabel2.Text = "www.footballdb.com";
+            this.linkLabel1.Text = "https://www.pro-football-reference.com/";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(7, 315);
+            this.label59.Location = new System.Drawing.Point(255, 204);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(82, 13);
-            this.label59.TabIndex = 33;
-            this.label59.Text = "FootballDB.com";
+            this.label59.Size = new System.Drawing.Size(110, 13);
+            this.label59.TabIndex = 20;
+            this.label59.Text = "BasketBall Reference";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(251, 251);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(114, 13);
+            this.label60.TabIndex = 22;
+            this.label60.Text = "Kaggle NBA Database";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.LinkArea = new System.Windows.Forms.LinkArea(0, 22);
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel3.Location = new System.Drawing.Point(8, 286);
+            this.linkLabel3.Location = new System.Drawing.Point(275, 273);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(90, 17);
-            this.linkLabel3.TabIndex = 32;
+            this.linkLabel3.TabIndex = 23;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "www.kaggle.com";
             this.linkLabel3.UseCompatibleTextRendering = true;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(5, 254);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(114, 13);
-            this.label60.TabIndex = 31;
-            this.label60.Text = "Kaggle NBA Database";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(5, 190);
+            this.label61.Location = new System.Drawing.Point(283, 296);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(110, 13);
-            this.label61.TabIndex = 30;
-            this.label61.Text = "BasketBall Reference";
+            this.label61.Size = new System.Drawing.Size(82, 13);
+            this.label61.TabIndex = 24;
+            this.label61.Text = "FootballDB.com";
             // 
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(5, 153);
+            this.linkLabel4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
+            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.linkLabel4.Location = new System.Drawing.Point(262, 321);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(198, 13);
-            this.linkLabel4.TabIndex = 29;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "https://www.pro-football-reference.com/";
+            this.linkLabel4.Size = new System.Drawing.Size(103, 13);
+            this.linkLabel4.TabIndex = 25;
+            this.linkLabel4.Text = "www.footballdb.com";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
-            // label64
+            // linkLabel2
             // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(5, 124);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(116, 13);
-            this.label64.TabIndex = 28;
-            this.label64.Text = "Pro Football Reference";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(1, 101);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(78, 13);
-            this.label65.TabIndex = 27;
-            this.label65.Text = "Data Sources: ";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(3, 103);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(35, 13);
-            this.label62.TabIndex = 2;
-            this.label62.Text = "Back:";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(24, 150);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(107, 13);
-            this.label67.TabIndex = 3;
-            this.label67.Text = "Return to Main Menu";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(167, 224);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(194, 13);
+            this.linkLabel2.TabIndex = 26;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "https://www.basketball-reference.com/";
             // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 384);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlNFLUpcomingGames);
             this.Controls.Add(this.pnlNBAUpcomingGames);
             this.Controls.Add(this.pnlNBATeamStandings);
@@ -958,8 +907,6 @@
             this.pnlNFLUpcomingGames.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlnflPlayerStats.ResumeLayout(false);
-            this.pnlnflPlayerStats.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1030,23 +977,18 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Panel pnlnflPlayerStats;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
