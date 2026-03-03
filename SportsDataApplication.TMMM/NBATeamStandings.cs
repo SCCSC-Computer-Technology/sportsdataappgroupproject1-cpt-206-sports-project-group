@@ -29,6 +29,54 @@ namespace SportsDataApplication.TMMM
         {
             // Search for team standings based on user input
             // Using SQL querries
+            string keyword = txtBoxKeyword.Text.Trim();
+            if (string.IsNullOrEmpty(keyword)) return;
+
+            DataTable searchResults = new DataTable();
+            searchResults.Columns.Add("Source");
+            searchResults.Columns.Add("Team/Player");
+            searchResults.Columns.Add("Details");
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = @"
+                        SELECT 'NBA Eastern Conference 24-25' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
+                        FROM [NBA Eastern Conference 24-25]
+                        WHERE TeamName LIKE @Keyword
+                        UNION ALL
+                        SELECT 'NBA Eastern Conference 25-26' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
+                        FROM [NBA Eastern Conference 25-26]
+                        WHERE TeamName LIKE @Keyword
+                        UNION ALL
+                        SELECT 'NBA Western Conference 24-25' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
+                        FROM [NBA Western Conference 24-25]
+                        WHERE TeamName LIKE @Keyword
+                        UNION ALL
+                        SELECT 'NBA Western Conference 25-26' AS Source, TeamName AS [Team/Player], CONCAT('Wins: ', Wins, ', Losses: ', Losses) AS Details
+                        FROM [NBA Western Conference 25-26]
+                        WHERE TeamName LIKE @Keyword";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                searchResults.Rows.Add(reader["Source"], reader["Team/Player"], reader["Details"]);
+                            }
+                        }
+                    }
+                }
+                dgvNBAStandings.DataSource = searchResults;
+            }
+            catch (Exception ex)
+             {
+                MessageBox.Show("Error during search: " + ex.Message);
+             }
+             
         }
               
         private void btnHelp_Click(object sender, EventArgs e)
@@ -118,5 +166,44 @@ namespace SportsDataApplication.TMMM
                 txtBoxKeyword.Clear();
             }
         }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            string userSelection = cbConfDiv.SelectedItem.ToString();
+
+            // Determine which file to load based on user selection
+            string dataTable = " ";
+            // Safeguard against null selection
+            if (cbConfDiv.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a conference/division from the dropdown.");
+                return;
+            }
+
+            // Map user selection to the corresponding data table
+            switch (userSelection)
+            {
+                case "Eastern Conference 24-25":
+                    dataTable = "[NBA Eastern Conference 24-25]";
+                    break;
+                case "Eastern Conference 25-26":
+                    dataTable = "[NBA Eastern Conference 25-26]";
+                    break;
+                case "Western Conference 24-25":
+                    dataTable = "[NBA Western Conference 24-25]";
+                    break;
+                case "Western Conference 25-26":
+                    dataTable = "[NBA Western Conference 25-26]";
+                    break;
+                
+            }
+
+            // Load the selected data into the data grid view
+            if (!string.IsNullOrEmpty(dataTable))
+            {
+                UpdateDataGridView(dataTable);
+            }
+        
+    }
     }
 }

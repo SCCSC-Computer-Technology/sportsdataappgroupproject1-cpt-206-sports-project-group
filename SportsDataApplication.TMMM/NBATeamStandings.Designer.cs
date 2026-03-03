@@ -180,6 +180,7 @@
             this.btnDisplay.Text = "&Display";
             this.toolTipDisplay.SetToolTip(this.btnDisplay, "Displays selected Conference or Division");
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // label2
             // 

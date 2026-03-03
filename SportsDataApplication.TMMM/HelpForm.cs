@@ -32,6 +32,9 @@ namespace SportsDataApplication.TMMM
                 case "NFL":
                     pnlNFLTeamStandings.Visible = true;
                     break;
+                case "nflPlayerStats":
+                    pnlnflPlayerStats.Visible = true;
+                    break;
                 default:
                     MessageBox.Show("No help available for this form.");
                     break;
@@ -39,6 +42,17 @@ namespace SportsDataApplication.TMMM
         }
         private void HelpForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://www.pro-football-reference.com/") { UseShellExecute = true });
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://www.footballdb.com/games/previews.html?yr=2025&wk=1&type=reg") { UseShellExecute = true });
 
         }
     }
