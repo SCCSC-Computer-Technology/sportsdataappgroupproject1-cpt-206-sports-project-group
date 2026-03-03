@@ -88,14 +88,6 @@ namespace SportsDataApplication.TMMM
             this.Close();  
         }
 
-        private void nBA_Match_Results_DataBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.nBA_Match_Results_DataBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.sportsProjectDBDataSet);
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Search button for Match Results table
