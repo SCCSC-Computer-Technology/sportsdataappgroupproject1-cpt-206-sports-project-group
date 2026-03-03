@@ -285,6 +285,8 @@
             // 
             // pnlNFLTeamStandings
             // 
+            this.pnlNFLTeamStandings.Controls.Add(this.pnlnflPlayerStats);
+            this.pnlNFLTeamStandings.Controls.Add(this.panel1);
             this.pnlNFLTeamStandings.Controls.Add(this.label12);
             this.pnlNFLTeamStandings.Controls.Add(this.label19);
             this.pnlNFLTeamStandings.Controls.Add(this.label18);
