@@ -72,5 +72,93 @@ namespace SportsDataApplication.TMMM
             this.tableAdapterManager.UpdateAll(this.sportsProjectDBDataSet);
 
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxSort.SelectedIndex != -1)
+                {
+                    if (comboBoxSortType.SelectedIndex == 0)
+                    {
+                        switch (comboBoxSort.SelectedIndex)
+                        {
+                            case 0:
+                                nba_playerstats_2024TableAdapter.FillByTeamASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 1:
+                                nba_playerstats_2024TableAdapter.FillByPositonASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 2:
+                                nba_playerstats_2024TableAdapter.FillByThreePointASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 3:
+                                nba_playerstats_2024TableAdapter.FillByTwoPointASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 4:
+                                nba_playerstats_2024TableAdapter.FillByTotalReboundsASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 5:
+                                nba_playerstats_2024TableAdapter.FillByAssistASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 6:
+                                nba_playerstats_2024TableAdapter.FillByStealsASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 7:
+                                nba_playerstats_2024TableAdapter.FillByBlocksASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 8:
+                                nba_playerstats_2024TableAdapter.FillByTotalPointsASC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                        }
+                    }
+                    else if (comboBoxSortType.SelectedIndex == 1)
+                    {
+                        switch (comboBoxSort.SelectedIndex)
+                        {
+                            case 0:
+                                nba_playerstats_2024TableAdapter.FillByTeamDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 1:
+                                nba_playerstats_2024TableAdapter.FillByPositionDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 2:
+                                nba_playerstats_2024TableAdapter.FillByThreePointDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 3:
+                                nba_playerstats_2024TableAdapter.FillByTwoPointsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 4:
+                                nba_playerstats_2024TableAdapter.FillByTotalReboundsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 5:
+                                nba_playerstats_2024TableAdapter.FillByAssistDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 6:
+                                nba_playerstats_2024TableAdapter.FillByStealsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 7:
+                                nba_playerstats_2024TableAdapter.FillByBlocksDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                            case 8:
+                                nba_playerstats_2024TableAdapter.FillByTotalPointsDESC(sportsProjectDBDataSet.nba_playerstats_2024);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select ASC or DESC to choose sorting method.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select the column you want to sort by.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
