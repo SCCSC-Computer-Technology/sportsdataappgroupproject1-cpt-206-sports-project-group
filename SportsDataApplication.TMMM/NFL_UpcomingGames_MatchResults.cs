@@ -216,5 +216,10 @@ private void btnMonthSort_Click(object sender, EventArgs e)
             // Show the form as a modal dialog (prevents clicking the main form until closed)
             helpForm.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
