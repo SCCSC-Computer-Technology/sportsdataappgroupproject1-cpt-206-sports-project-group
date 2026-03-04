@@ -75,6 +75,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.btnFavorite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
@@ -421,6 +422,17 @@
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // btnFavorite
+            // 
+            this.btnFavorite.Location = new System.Drawing.Point(373, 384);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.Size = new System.Drawing.Size(75, 23);
+            this.btnFavorite.TabIndex = 10;
+            this.btnFavorite.Text = "&Favorite";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnFavorite, "Press to display favorites. Favorites will show if they are in selected table");
+            this.btnFavorite.UseVisualStyleBackColor = true;
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            // 
             // NFLPlayerStats
             // 
             this.AcceptButton = this.btnView;
@@ -428,6 +440,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(681, 420);
+            this.Controls.Add(this.btnFavorite);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchPlayer);
@@ -513,5 +526,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnFavorite;
     }
 }
