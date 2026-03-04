@@ -12,9 +12,11 @@ namespace SportsDataApplication.TMMM
 {
     public partial class HelpForm : Form
     {
-        public HelpForm()
+        public HelpForm(string formName)
         {
             InitializeComponent();
+
+            ShowHelp(formName);
         }
         // method to enable different help messages for different forms
         public void ShowHelp(string formName)
@@ -26,17 +28,23 @@ namespace SportsDataApplication.TMMM
             //activate pnl depending on form 
             switch (formName)
             {
-                case "NBA":
+                case "NBATeamStanding":
                     pnlNBATeamStandings.Visible = true;
                     break;
-                case "NFL":
+                case "NFLTeamStanding":
                     pnlNFLTeamStandings.Visible = true;
                     break;
-                case "nflPlayerStats":
-                    // pnlnflPlayerStats.Visible = true;
+                case "NFLPlayerStat":
+                    pnlNFLPlayerStat.Visible = true;
                     break;
                 case "NBAUpcomingGames":
                     pnlNBAUpcomingGames.Visible = true;
+                    break;
+                case "NFLUpcomingGames":
+                    pnlNFLUpcomingGames.Visible = true;
+                    break;
+                case "NBAPlayerStat":
+                    pnlNBAPlayerStat.Visible = true;
                     break;
                 default:
                     MessageBox.Show("No help available for this form.");
@@ -62,6 +70,11 @@ namespace SportsDataApplication.TMMM
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

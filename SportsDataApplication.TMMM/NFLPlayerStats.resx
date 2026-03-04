@@ -222,4 +222,7 @@
   <metadata name="scoring_stats_PlayoffsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>210, 313</value>
   </metadata>
+  <metadata name="toolTipNFLPlayerStats.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>695, 43</value>
+  </metadata>
 </root>

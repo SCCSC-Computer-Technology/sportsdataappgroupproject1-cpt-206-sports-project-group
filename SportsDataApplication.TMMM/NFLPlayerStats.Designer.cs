@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxPlayoffSelection = new System.Windows.Forms.ComboBox();
             this.btnView = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.sportsProjectDBDataSet = new SportsDataApplication.TMMM.SportsProjectDBDataSet();
             this.defense_Stats_Normal_SeasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -73,6 +72,9 @@
             this.txtBoxSearchPlayer = new System.Windows.Forms.TextBox();
             this.btnSearchPlayer = new System.Windows.Forms.Button();
             this.toolTipNFLPlayerStats = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
@@ -107,7 +109,7 @@
             "Rushing Stats",
             "Scoring Stats"});
             this.comBoxStatViewOption.Location = new System.Drawing.Point(16, 28);
-            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comBoxStatViewOption.Margin = new System.Windows.Forms.Padding(2);
             this.comBoxStatViewOption.Name = "comBoxStatViewOption";
             this.comBoxStatViewOption.Size = new System.Drawing.Size(257, 23);
             this.comBoxStatViewOption.TabIndex = 0;
@@ -120,9 +122,9 @@
             this.groupBox1.Controls.Add(this.comBoxStatViewOption);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(624, 67);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -135,7 +137,7 @@
             "Normal Season",
             "Playoffs"});
             this.comboBoxPlayoffSelection.Location = new System.Drawing.Point(277, 28);
-            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPlayoffSelection.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPlayoffSelection.Name = "comboBoxPlayoffSelection";
             this.comboBoxPlayoffSelection.Size = new System.Drawing.Size(257, 23);
             this.comboBoxPlayoffSelection.TabIndex = 2;
@@ -144,7 +146,7 @@
             // btnView
             // 
             this.btnView.Location = new System.Drawing.Point(549, 24);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(57, 27);
             this.btnView.TabIndex = 1;
@@ -152,19 +154,6 @@
             this.toolTipNFLPlayerStats.SetToolTip(this.btnView, "Shows specific table based on selections");
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Location = new System.Drawing.Point(524, 355);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(67, 25);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "&Back";
-            this.toolTipNFLPlayerStats.SetToolTip(this.btnBack, "Goes back to choose database form");
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label1
             // 
@@ -393,6 +382,45 @@
             this.btnSearchPlayer.UseVisualStyleBackColor = true;
             this.btnSearchPlayer.Click += new System.EventHandler(this.btnSearchPlayer_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.Location = new System.Drawing.Point(524, 355);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(67, 25);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "&Back";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnBack, "Goes back to choose database form");
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(524, 384);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(67, 25);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "E&xit";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnExit, "Goes back to choose database form");
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnHelp.Location = new System.Drawing.Point(453, 384);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(67, 25);
+            this.btnHelp.TabIndex = 9;
+            this.btnHelp.Text = "&Help (?)";
+            this.toolTipNFLPlayerStats.SetToolTip(this.btnHelp, "Goes back to choose database form");
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // NFLPlayerStats
             // 
             this.AcceptButton = this.btnView;
@@ -400,13 +428,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(681, 420);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchPlayer);
             this.Controls.Add(this.txtBoxSearchPlayer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NFLPlayerStats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NFLPlayerStats";
@@ -440,7 +470,6 @@
         private System.Windows.Forms.ComboBox comBoxStatViewOption;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private SportsProjectDBDataSet sportsProjectDBDataSet;
         private System.Windows.Forms.BindingSource defense_Stats_Normal_SeasonBindingSource;
@@ -481,5 +510,8 @@
         private System.Windows.Forms.TextBox txtBoxSearchPlayer;
         private System.Windows.Forms.Button btnSearchPlayer;
         private System.Windows.Forms.ToolTip toolTipNFLPlayerStats;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
