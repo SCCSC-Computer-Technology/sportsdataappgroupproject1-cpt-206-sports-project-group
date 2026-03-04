@@ -221,5 +221,48 @@ private void btnMonthSort_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void btnFav_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comBoxSpecifyColumn.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a column to search.");
+                    return;
+                }
+
+                // set text box input to variable / selected column to variable / create filter string
+                string matchResultsSearch = CurrentUser.FavoriteNFLTeam;
+                string selectedColumn = comBoxSpecifyColumn.SelectedItem.ToString();
+
+                // filter string to filter the data source
+                // handles special characters by converting to string
+
+                /*
+                 * Searchable columns only = matchDate and teamVS (Most searchable columns)
+                 */
+
+                string columnFilter = "CONVERT(" + selectedColumn + ", 'System.String') LIKE '%" + matchResultsSearch + "%'";
+
+                // condition depending on if the search box is empty or not
+                if (string.IsNullOrEmpty(matchResultsSearch))
+                {
+                    // remove the filter if the search box is empty
+                    nFL_Match_Results_DataBindingSource.RemoveFilter();
+                }
+                else
+                {
+                    // apply the filter to the data source
+                    nFL_Match_Results_DataBindingSource.Filter = columnFilter;
+                }
+            }
+
+            catch
+            {
+                // Error if user enters invalid characters
+                MessageBox.Show("An Error Occurred. Please specify a column to filter from the dropdown.");
+            }
+        }
     }
 }

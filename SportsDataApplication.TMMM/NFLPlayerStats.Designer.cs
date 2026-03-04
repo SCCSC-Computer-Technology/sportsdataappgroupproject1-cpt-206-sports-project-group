@@ -75,6 +75,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.btnFavoritePlayer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defense_Stats_Normal_SeasonBindingSource)).BeginInit();
@@ -385,7 +386,7 @@
             // btnBack
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Location = new System.Drawing.Point(524, 355);
+            this.btnBack.Location = new System.Drawing.Point(524, 357);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(67, 25);
@@ -421,13 +422,24 @@
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // btnFavoritePlayer
+            // 
+            this.btnFavoritePlayer.Location = new System.Drawing.Point(453, 356);
+            this.btnFavoritePlayer.Name = "btnFavoritePlayer";
+            this.btnFavoritePlayer.Size = new System.Drawing.Size(69, 26);
+            this.btnFavoritePlayer.TabIndex = 10;
+            this.btnFavoritePlayer.Text = "&Favorite Player";
+            this.btnFavoritePlayer.UseVisualStyleBackColor = true;
+            this.btnFavoritePlayer.Click += new System.EventHandler(this.btnFavoritePlayer_Click);
+            // 
             // NFLPlayerStats
             // 
             this.AcceptButton = this.btnView;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
-            this.ClientSize = new System.Drawing.Size(681, 420);
+            this.ClientSize = new System.Drawing.Size(660, 420);
+            this.Controls.Add(this.btnFavoritePlayer);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchPlayer);
@@ -513,5 +525,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnFavoritePlayer;
     }
 }

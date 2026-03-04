@@ -86,6 +86,7 @@
     <Compile Include="Favorites.Designer.cs">
       <DependentUpon>Favorites.cs</DependentUpon>
     </Compile>
+    <Compile Include="FavsClass.cs" />
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
