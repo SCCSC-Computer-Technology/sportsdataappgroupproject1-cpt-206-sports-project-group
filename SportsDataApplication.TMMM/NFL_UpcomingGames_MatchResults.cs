@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SportsDataApplication.TMMM.Sign_InDataSetTableAdapters;
+using SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -221,5 +223,24 @@ private void btnMonthSort_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void btnFavorites_Click(object sender, EventArgs e)
+        {
+            var adapter = new userFavsTableAdapter();
+            var table = adapter.GetDataByFavoriteData(Session.Username.ToString());
+            if (table.Rows.Count > 0)
+            {
+                string teamName = table.Rows[0]["favNFLTeam"].ToString();
+                if (teamName != string.Empty)
+                {
+                    this.nFL_Match_Results_DataTableAdapter.FillBySearchTeam(sportsProjectDBDataSet.NFL_Match_Results_Data, teamName);
+                    this.nFL_Upcoming_GamesTableAdapter.FillBySearchHomeTeam(sportsProjectDBDataSet.NFL_Upcoming_Games, teamName);
+                }
+                else
+                {
+                    MessageBox.Show("Please go enter a favorite NFL team on the favorites form and save it.");
+                }
+            }
+            }
     }
 }
