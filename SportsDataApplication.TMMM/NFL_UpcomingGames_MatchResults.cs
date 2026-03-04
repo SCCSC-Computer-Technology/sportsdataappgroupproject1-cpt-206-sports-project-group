@@ -207,5 +207,14 @@ private void btnMonthSort_Click(object sender, EventArgs e)
             btnSearch_Click(btnSearch, EventArgs.Empty); // click event
             comBoxSpecifyColumn.SelectedIndex = 0;
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            // Create the form and pass the "key" for the help info
+            HelpForm helpForm = new HelpForm("NFLUpcomingGames");
+
+            // Show the form as a modal dialog (prevents clicking the main form until closed)
+            helpForm.ShowDialog();
+        }
     }
 }
