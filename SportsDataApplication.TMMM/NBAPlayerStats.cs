@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -162,7 +163,18 @@ namespace SportsDataApplication.TMMM
         }
 
         private void btnFavoritePlayer_Click(object sender, EventArgs e)
-        {
+        {           
+            // Check if the memory box is empty first
+            if (string.IsNullOrWhiteSpace(CurrentUser.FavoriteNBAPlayer))
+            {
+                MessageBox.Show("You haven't saved a favorite NBA player yet! Go to the Favorites menu first.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Stops the code so it doesn't try to search for a blank name
+            }
+
+            // Your brilliant code!
+            nba_playerstats_2024TableAdapter.FillBySearchPlayer(sportsProjectDBDataSet.nba_playerstats_2024, CurrentUser.FavoriteNBAPlayer);
+        }
+    
            
         private void btnHelp_Click(object sender, EventArgs e)
         {

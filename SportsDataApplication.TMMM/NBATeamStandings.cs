@@ -215,5 +215,64 @@ namespace SportsDataApplication.TMMM
             }
         
     }
+
+        private void btnFav_Click(object sender, EventArgs e)
+        {
+            string keyword = CurrentUser.FavoriteNBATeam; // Assuming you have a property in your CurrentUser class for the favorite NBA team
+            if (string.IsNullOrEmpty(keyword)) return;
+
+            // Create a DataTable to hold the search results with appropriate columns
+            DataTable searchResults = new DataTable();
+            searchResults.Columns.Add("Source");
+            searchResults.Columns.Add("Team/Player");
+            searchResults.Columns.Add("Details");
+
+            try
+            {
+                //connection string to the database, make sure this matches the name in your app.config file
+                string connName = "SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString";
+                string connString = ConfigurationManager.ConnectionStrings[connName].ConnectionString;
+
+                using (SqlConnection connection = new SqlConnection(connString))
+                {
+                    connection.Open();
+                    // Construct a SQL query that searches for the keyword in the TeamName column across all four tables, using UNION ALL to combine results
+                    string query = @"
+                    SELECT 'NBA Eastern 24-25' AS Source, [Eastern Conference] AS [Team/Player], CONCAT('W: ', Win, ', L: ', Loss) AS Details 
+                    FROM [NBA Eastern Conference 24-25] WHERE [Eastern Conference] LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Eastern 25-26' AS Source, TEAM AS [Team/Player], CONCAT('W: ', WIN, ', L: ', LOSS) AS Details 
+                    FROM [NBA Eastern Conference 25-26] WHERE TEAM LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Western 24-25' AS Source, Team AS [Team/Player], CONCAT('W: ', W, ', L: ', L) AS Details 
+                    FROM [NBA Western Conference 24-25] WHERE Team LIKE @Keyword
+                    UNION ALL
+                    SELECT 'NBA Western 25-26' AS Source, TEAM AS [Team/Player], CONCAT('W: ', WIN, ', L: ', LOSS) AS Details 
+                    FROM [NBA Western Conference 25-26] WHERE TEAM LIKE @Keyword";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Wildcards (%) are added here to the parameter value
+                        command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                searchResults.Rows.Add(reader["Source"], reader["Team/Player"], reader["Details"]);
+                            }
+                        }
+                    }
+                }
+
+                // Bind the results to your DataGridView
+                dgvNBAStandings.DataSource = searchResults;
+            }
+            catch (Exception ex)
+            {
+                // This will catch the 'Login failed' or 'Permission denied' errors if the DB is locked
+                MessageBox.Show("Could not access the database.\n\nDetails: " + ex.Message);
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipTextSearch = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFav = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNBAStandings)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -59,7 +60,7 @@
             // 
             this.dgvNBAStandings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNBAStandings.Location = new System.Drawing.Point(32, 44);
-            this.dgvNBAStandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvNBAStandings.Margin = new System.Windows.Forms.Padding(2);
             this.dgvNBAStandings.Name = "dgvNBAStandings";
             this.dgvNBAStandings.RowHeadersWidth = 51;
             this.dgvNBAStandings.RowTemplate.Height = 24;
@@ -79,7 +80,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(410, 379);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 25);
             this.btnBack.TabIndex = 2;
@@ -92,7 +93,7 @@
             // 
             this.txtBoxKeyword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxKeyword.Location = new System.Drawing.Point(21, 25);
-            this.txtBoxKeyword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxKeyword.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxKeyword.Name = "txtBoxKeyword";
             this.txtBoxKeyword.Size = new System.Drawing.Size(190, 20);
             this.txtBoxKeyword.TabIndex = 3;
@@ -101,7 +102,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(21, 52);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(70, 25);
             this.btnSearch.TabIndex = 4;
@@ -116,9 +117,9 @@
             this.groupBox1.Controls.Add(this.txtBoxKeyword);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Location = new System.Drawing.Point(11, 268);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(232, 90);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -127,7 +128,7 @@
             // btnRefreshData
             // 
             this.btnRefreshData.Location = new System.Drawing.Point(130, 52);
-            this.btnRefreshData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefreshData.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefreshData.Name = "btnRefreshData";
             this.btnRefreshData.Size = new System.Drawing.Size(81, 25);
             this.btnRefreshData.TabIndex = 6;
@@ -139,7 +140,7 @@
             // btnHelp
             // 
             this.btnHelp.Location = new System.Drawing.Point(9, 379);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(70, 25);
             this.btnHelp.TabIndex = 6;
@@ -152,7 +153,7 @@
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(492, 379);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(69, 25);
             this.btnExit.TabIndex = 7;
@@ -208,6 +209,18 @@
             this.cbConfDiv.Size = new System.Drawing.Size(198, 21);
             this.cbConfDiv.TabIndex = 0;
             // 
+            // btnFav
+            // 
+            this.btnFav.Location = new System.Drawing.Point(337, 379);
+            this.btnFav.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFav.Name = "btnFav";
+            this.btnFav.Size = new System.Drawing.Size(69, 25);
+            this.btnFav.TabIndex = 16;
+            this.btnFav.Text = "&Favorite";
+            this.toolTipBack.SetToolTip(this.btnFav, "Navigates to the previous form");
+            this.btnFav.UseVisualStyleBackColor = true;
+            this.btnFav.Click += new System.EventHandler(this.btnFav_Click);
+            // 
             // NBATeamStandings
             // 
             this.AcceptButton = this.btnDisplay;
@@ -215,6 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(581, 414);
+            this.Controls.Add(this.btnFav);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
@@ -222,7 +236,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNBAStandings);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NBATeamStandings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NBA Team Standings - Sports Data Application";
@@ -259,5 +273,6 @@
         private System.Windows.Forms.ToolTip toolTipExit;
         private System.Windows.Forms.ToolTip toolTipTextSearch;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnFav;
     }
 }

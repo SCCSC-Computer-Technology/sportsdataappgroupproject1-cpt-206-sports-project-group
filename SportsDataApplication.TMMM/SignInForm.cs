@@ -58,25 +58,33 @@ namespace SportsDataApplication.TMMM
         {
             try
             {
-                Session.Username = userNameTextBox.Text;
+                // 1. Check the database for the username and password
                 int result = (int)credentialsTableAdapter.LoginValidation(userNameTextBox.Text.Trim(), passwordTextBox.Text.Trim());
 
-                if (result == 1)
+                if (result == 1) // If the login is a match!
                 {
+                    // 2. Save the username to your existing Session class
+                    Session.Username = userNameTextBox.Text.Trim();
+
+                    // 3. Save the exact same username to our new Favorites memory box
+                    CurrentUser.UserName = userNameTextBox.Text.Trim();
+
+                    // 4. PRE-LOAD their saved favorites right now so the app is ready!
+                    CurrentUser.LoadAllUserFavorites();
+
                     MessageBox.Show("Login Successful.");
+
                     ChooseDatabase chooseDatabase = new ChooseDatabase();
                     chooseDatabase.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password. Pleases try again.");
+                    MessageBox.Show("Invalid username or password. Please try again.");
                 }
             }
             catch (Exception ex)
             {
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 

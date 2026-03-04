@@ -205,5 +205,48 @@ namespace SportsDataApplication.TMMM
             // Show the form as a modal dialog (prevents clicking the main form until closed)
             helpForm.ShowDialog();
         }
+
+        //favorite button to add selected match result to favorites form
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comBoxSelectColumn.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a column to search.");
+                    return;
+                }
+
+                // set text box input to variable / selected column to variable / create filter string
+                string matchResultsSearch = CurrentUser.FavoriteNBATeam;
+                string selectedColumn = comBoxSelectColumn.SelectedItem.ToString();
+
+                // filter string to filter the data source
+                // handles special characters by converting to string
+
+                /*
+                 * Searchable columns only = hometeamName, awayteamName, winner, arenaCity
+                 */
+
+                string columnFilter = "CONVERT(" + selectedColumn + ", 'System.String') LIKE '%" + matchResultsSearch + "%'";
+
+                // condition depending on if the search box is empty or not
+                if (string.IsNullOrEmpty(matchResultsSearch))
+                {
+                    // remove the filter if the search box is empty
+                    nBA_Match_Results_DataBindingSource.RemoveFilter();
+                }
+                else
+                {
+                    // apply the filter to the data source
+                    nBA_Match_Results_DataBindingSource.Filter = columnFilter;
+                }
+            }
+            catch
+            {
+                // Error if user enters invalid characters
+                MessageBox.Show("An Error Occurred. Please specify a column to filter from the dropdown.");
+            }
+        }
     }
 }
