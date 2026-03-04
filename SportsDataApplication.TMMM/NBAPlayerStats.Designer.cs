@@ -73,6 +73,7 @@
             this.nba_playerstats_2024TableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.nba_playerstats_2024TableAdapter();
             this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
             this.toolTipNBAPlayerStats = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFavoritePlayer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
@@ -512,6 +513,17 @@
             this.tableAdapterManager.Scoring_StatsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // btnFavoritePlayer
+            // 
+            this.btnFavoritePlayer.Location = new System.Drawing.Point(442, 331);
+            this.btnFavoritePlayer.Name = "btnFavoritePlayer";
+            this.btnFavoritePlayer.Size = new System.Drawing.Size(75, 23);
+            this.btnFavoritePlayer.TabIndex = 8;
+            this.btnFavoritePlayer.Text = "&Favorite Player";
+            this.toolTipNBAPlayerStats.SetToolTip(this.btnFavoritePlayer, "Adds selected player in data grid to Favorites");
+            this.btnFavoritePlayer.UseVisualStyleBackColor = true;
+            this.btnFavoritePlayer.Click += new System.EventHandler(this.btnFavoritePlayer_Click);
+            // 
             // NBAPlayerStats
             // 
             this.AcceptButton = this.btnSearch;
@@ -519,6 +531,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(606, 372);
+            this.Controls.Add(this.btnFavoritePlayer);
             this.Controls.Add(this.comboBoxSortType);
             this.Controls.Add(this.comboBoxSort);
             this.Controls.Add(this.btnSort);
@@ -586,5 +599,6 @@
         private System.Windows.Forms.ComboBox comboBoxSort;
         private System.Windows.Forms.ComboBox comboBoxSortType;
         private System.Windows.Forms.ToolTip toolTipNBAPlayerStats;
+        private System.Windows.Forms.Button btnFavoritePlayer;
     }
 }

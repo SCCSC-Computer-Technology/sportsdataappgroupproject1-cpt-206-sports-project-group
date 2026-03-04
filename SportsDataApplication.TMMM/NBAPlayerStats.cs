@@ -160,5 +160,10 @@ namespace SportsDataApplication.TMMM
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnFavoritePlayer_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
