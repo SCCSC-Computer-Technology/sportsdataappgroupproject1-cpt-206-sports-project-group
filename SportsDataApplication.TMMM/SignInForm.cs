@@ -16,7 +16,6 @@ namespace SportsDataApplication.TMMM
         {
             InitializeComponent();
         }
-
         private void credentialsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -59,6 +58,7 @@ namespace SportsDataApplication.TMMM
         {
             try
             {
+                Session.Username = userNameTextBox.Text;
                 int result = (int)credentialsTableAdapter.LoginValidation(userNameTextBox.Text.Trim(), passwordTextBox.Text.Trim());
 
                 if (result == 1)

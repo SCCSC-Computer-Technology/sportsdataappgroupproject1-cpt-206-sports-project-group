@@ -80,6 +80,12 @@
     <Compile Include="ChooseDatabase.Designer.cs">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Favorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Favorites.Designer.cs">
+      <DependentUpon>Favorites.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,7 @@
     <Compile Include="NFL_UpcomingGames_MatchResults.Designer.cs">
       <DependentUpon>NFL_UpcomingGames_MatchResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="ChooseDatabase.resx">
       <DependentUpon>ChooseDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Favorites.resx">
+      <DependentUpon>Favorites.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>

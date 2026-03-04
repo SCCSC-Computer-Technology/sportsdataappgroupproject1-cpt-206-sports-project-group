@@ -161,6 +161,9 @@ namespace SportsDataApplication.TMMM
             }
         }
 
+        private void btnFavoritePlayer_Click(object sender, EventArgs e)
+        {
+           
         private void btnHelp_Click(object sender, EventArgs e)
         {
             // Create the form and pass the "key" for the help info

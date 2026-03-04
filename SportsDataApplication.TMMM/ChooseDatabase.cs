@@ -15,8 +15,8 @@ namespace SportsDataApplication.TMMM
         public ChooseDatabase()
         {
             InitializeComponent();
+            
         }
-
         private void ChooseDatabase_Load(object sender, EventArgs e)
         {
             comboBoxSport.Items.Add("Football (NFL)");
@@ -99,6 +99,13 @@ namespace SportsDataApplication.TMMM
                 MessageBox.Show(ex.Message);
             }
     
+        }
+
+        private void btnFavorites_Click(object sender, EventArgs e)
+        {
+            
+            Form favorites = new Favorites();
+            favorites.ShowDialog();
         }
     }
 }

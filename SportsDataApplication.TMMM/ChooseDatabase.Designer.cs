@@ -40,6 +40,7 @@
             this.toolTipDatabase = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipOpen = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFavorites = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -114,7 +115,7 @@
             // 
             this.btnExit2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit2.Location = new System.Drawing.Point(274, 322);
+            this.btnExit2.Location = new System.Drawing.Point(276, 322);
             this.btnExit2.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit2.Name = "btnExit2";
             this.btnExit2.Size = new System.Drawing.Size(112, 63);
@@ -124,6 +125,19 @@
             this.btnExit2.UseVisualStyleBackColor = true;
             this.btnExit2.Click += new System.EventHandler(this.btnExit2_Click);
             // 
+            // btnFavorites
+            // 
+            this.btnFavorites.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFavorites.Location = new System.Drawing.Point(168, 322);
+            this.btnFavorites.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFavorites.Name = "btnFavorites";
+            this.btnFavorites.Size = new System.Drawing.Size(108, 63);
+            this.btnFavorites.TabIndex = 7;
+            this.btnFavorites.Text = "&Favorites";
+            this.toolTipOpen.SetToolTip(this.btnFavorites, "Opens Selected Sport with Selected Database");
+            this.btnFavorites.UseVisualStyleBackColor = true;
+            this.btnFavorites.Click += new System.EventHandler(this.btnFavorites_Click);
+            // 
             // ChooseDatabase
             // 
             this.AcceptButton = this.btnDatabase;
@@ -131,6 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit2;
             this.ClientSize = new System.Drawing.Size(453, 422);
+            this.Controls.Add(this.btnFavorites);
             this.Controls.Add(this.btnExit2);
             this.Controls.Add(this.btnDatabase);
             this.Controls.Add(this.comboBoxDatabase);
@@ -161,5 +176,6 @@
         private System.Windows.Forms.ToolTip toolTipSport;
         private System.Windows.Forms.ToolTip toolTipDatabase;
         private System.Windows.Forms.ToolTip toolTipOpen;
+        private System.Windows.Forms.Button btnFavorites;
     }
 }
