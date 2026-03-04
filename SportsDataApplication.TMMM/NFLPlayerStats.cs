@@ -381,5 +381,19 @@ namespace SportsDataApplication.TMMM
                 MessageBox.Show("Please select options from both drop down menus to see stats.");
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            // Create the form and pass the "key" for the help info
+            HelpForm helpForm = new HelpForm("NFLPlayerStat");
+
+            // Show the form as a modal dialog (prevents clicking the main form until closed)
+            helpForm.ShowDialog();
+        }
     }
 }
