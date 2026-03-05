@@ -70,7 +70,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTipUpcomingGamesAndMatch = new System.Windows.Forms.ToolTip(this.components);
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnFavorites = new System.Windows.Forms.Button();
+            this.btnFav = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sign_InDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credentialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nFL_Upcoming_GamesBindingSource)).BeginInit();
@@ -102,7 +102,6 @@
             this.tableAdapterManager.CredentialsTableAdapter = this.credentialsTableAdapter;
             this.tableAdapterManager.FavoritesTableTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.Sign_InDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.userFavsTableAdapter = null;
             // 
             // nFL_Upcoming_GamesBindingSource
             // 
@@ -479,16 +478,18 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnFavorites
+            // btnFav
             // 
-            this.btnFavorites.Location = new System.Drawing.Point(91, 550);
-            this.btnFavorites.Name = "btnFavorites";
-            this.btnFavorites.Size = new System.Drawing.Size(75, 23);
-            this.btnFavorites.TabIndex = 23;
-            this.btnFavorites.Text = "&Favorite";
-            this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnFavorites, "Displays Favorite Team for upcoming games and Match results");
-            this.btnFavorites.UseVisualStyleBackColor = true;
-            this.btnFavorites.Click += new System.EventHandler(this.btnFavorites_Click);
+            this.btnFav.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnFav.Location = new System.Drawing.Point(358, 546);
+            this.btnFav.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFav.Name = "btnFav";
+            this.btnFav.Size = new System.Drawing.Size(69, 28);
+            this.btnFav.TabIndex = 23;
+            this.btnFav.Text = "&Favorite";
+            this.toolTipUpcomingGamesAndMatch.SetToolTip(this.btnFav, "Sends you back to the choose database form");
+            this.btnFav.UseVisualStyleBackColor = true;
+            this.btnFav.Click += new System.EventHandler(this.btnFav_Click);
             // 
             // NFL_UpcomingGames_MatchResults
             // 
@@ -497,7 +498,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(601, 590);
-            this.Controls.Add(this.btnFavorites);
+            this.Controls.Add(this.btnFav);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nFL_Match_Results_DataDataGridView);
@@ -573,6 +574,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.ToolTip toolTipUpcomingGamesAndMatch;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnFavorites;
+        private System.Windows.Forms.Button btnFav;
     }
 }

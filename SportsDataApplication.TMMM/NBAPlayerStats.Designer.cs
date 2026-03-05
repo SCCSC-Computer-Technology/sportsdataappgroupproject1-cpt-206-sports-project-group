@@ -517,12 +517,12 @@
             // 
             // btnFavoritePlayer
             // 
-            this.btnFavoritePlayer.Location = new System.Drawing.Point(429, 302);
+            this.btnFavoritePlayer.Location = new System.Drawing.Point(435, 296);
             this.btnFavoritePlayer.Name = "btnFavoritePlayer";
-            this.btnFavoritePlayer.Size = new System.Drawing.Size(75, 23);
+            this.btnFavoritePlayer.Size = new System.Drawing.Size(69, 28);
             this.btnFavoritePlayer.TabIndex = 8;
             this.btnFavoritePlayer.Text = "&Favorite Player";
-            this.toolTipNBAPlayerStats.SetToolTip(this.btnFavoritePlayer, "Shows favorite NBA player stats");
+            this.toolTipNBAPlayerStats.SetToolTip(this.btnFavoritePlayer, "Adds selected player in data grid to Favorites");
             this.btnFavoritePlayer.UseVisualStyleBackColor = true;
             this.btnFavoritePlayer.Click += new System.EventHandler(this.btnFavoritePlayer_Click);
             // 
@@ -541,9 +541,9 @@
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(435, 331);
+            this.btnHelp.Location = new System.Drawing.Point(435, 330);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(69, 25);
+            this.btnHelp.Size = new System.Drawing.Size(69, 26);
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "Help (?)";
             this.btnHelp.UseVisualStyleBackColor = true;

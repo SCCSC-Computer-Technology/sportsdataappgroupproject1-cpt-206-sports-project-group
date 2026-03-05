@@ -1,10 +1,9 @@
-﻿using SportsDataApplication.TMMM.Sign_InDataSetTableAdapters;
-using System;
-using System.Configuration;
+﻿using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.IO;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace SportsDataApplication.TMMM
 {
@@ -252,31 +251,27 @@ namespace SportsDataApplication.TMMM
             helpForm.ShowDialog();
         }
 
-        private void btnFavorite_Click(object sender, EventArgs e)
+        private void btnFav_Click(object sender, EventArgs e)
         {
-            var adapter1 = new userFavsTableAdapter();
-            var table = adapter1.GetDataByFavoriteData(Session.Username.ToString());
-            if (table.Rows.Count > 0)
+            string keyword = CurrentUser.FavoriteNFLTeam;
+
+            foreach (DataGridViewRow row in dgvNFLStandings.Rows)
             {
-                string keyword = table.Rows[0]["favNFLTeam"].ToString();
-                
-                foreach (DataGridViewRow row in dgvNFLStandings.Rows)
+                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().ToLower().Contains(keyword))
                 {
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().ToLower().Contains(keyword))
-                    {
-                        row.Selected = true;
-                    }
-                    else
-                    {
-                        row.Selected = false;
-                    }
+                    row.Selected = true;
                 }
+                else
+                {
+                    row.Selected = false;
+                }
+            }
 
-                // Get the connection string from the configuration file
-                string connString = ConfigurationManager.ConnectionStrings["SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString"].ConnectionString;
+            // Get the connection string from the configuration file
+            string connString = ConfigurationManager.ConnectionStrings["SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString"].ConnectionString;
 
-                // Construct a SQL query that searches for the keyword across all conference/division tables
-                string query = $@"
+            // Construct a SQL query that searches for the keyword across all conference/division tables
+            string query = $@"
             SELECT [AFC EAST] AS [Team/Division], W, L, T, PCT, PF, PA, [Net Pts], Home, Road, Div, Pct1, Conf, Pct_1, [Non-Conf], strk, [Last 5] FROM [NFL AFC EAST 25] WHERE [AFC East] LIKE @key
             UNION ALL
             SELECT [AFC NORTH], W, L, T, PCT, PF, PA, [Net Pts], Home, Road, Div, Pct1, Conf, Pct_1, [Non-Conf], strk, [Last 5] FROM [NFL AFC NORTH 25] WHERE [AFC North] LIKE @key
@@ -293,39 +288,38 @@ namespace SportsDataApplication.TMMM
             UNION ALL
             SELECT [NFC WEST], W, L, T, PCT, PF, PA, [Net Pts], Home, Road, Div, Pct1, Conf, Pct_1, [Non-Conf], strk, [Last 5] FROM [NFL NFC WEST 25] WHERE [NFC West] LIKE @key";
 
-                try
+            try
+            {
+                // Use parameterized query to prevent SQL injection
+                using (SqlConnection conn = new SqlConnection(connString))
                 {
-                    // Use parameterized query to prevent SQL injection
-                    using (SqlConnection conn = new SqlConnection(connString))
+                    // Open the connection
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Add the search keyword as a parameter with wildcards for partial matching
+                    cmd.Parameters.AddWithValue("@key", "%" + keyword + "%");
+
+                    // Execute the query and fill the results into a data table
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    // Create a data table to hold the search results
+                    DataTable dt = new DataTable();
+                    // Fill the data table with the search results
+                    adapter.Fill(dt);
+
+                    // Bind the search results to the data grid view
+                    dgvNFLStandings.DataSource = dt;
+
+                    // Check if any results were found
+                    if (dt.Rows.Count == 0)
                     {
-                        // Open the connection
-                        SqlCommand cmd = new SqlCommand(query, conn);
-                        // Add the search keyword as a parameter with wildcards for partial matching
-                        cmd.Parameters.AddWithValue("@key", "%" + keyword + "%");
-
-                        // Execute the query and fill the results into a data table
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        // Create a data table to hold the search results
-                        DataTable dt = new DataTable();
-                        // Fill the data table with the search results
-                        adapter.Fill(dt);
-
-                        // Bind the search results to the data grid view
-                        dgvNFLStandings.DataSource = dt;
-
-                        // Check if any results were found
-                        if (dt.Rows.Count == 0)
-                        {
-                            MessageBox.Show("No results found for '" + keyword + "'.");
-                        }
+                        MessageBox.Show("No results found for '" + keyword + "'.");
                     }
                 }
-                catch (Exception ex)
-                {
-                    // Handle any errors that occur during the search
-                    MessageBox.Show("Error searching data: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that occur during the search
+                MessageBox.Show("Error searching data: " + ex.Message);
 
-                }
             }
         }
     }

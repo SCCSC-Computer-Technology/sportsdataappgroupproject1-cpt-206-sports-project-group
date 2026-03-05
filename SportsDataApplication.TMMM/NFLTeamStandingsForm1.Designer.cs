@@ -49,7 +49,7 @@
             this.toolTipBack = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipTextSearch = new System.Windows.Forms.ToolTip(this.components);
-            this.btnFavorite = new System.Windows.Forms.Button();
+            this.btnFav = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNFLStandings)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -210,22 +210,24 @@
             this.cbConfDiv.Size = new System.Drawing.Size(198, 21);
             this.cbConfDiv.TabIndex = 0;
             // 
-            // btnFavorite
+            // btnFav
             // 
-            this.btnFavorite.Location = new System.Drawing.Point(105, 364);
-            this.btnFavorite.Name = "btnFavorite";
-            this.btnFavorite.Size = new System.Drawing.Size(75, 23);
-            this.btnFavorite.TabIndex = 15;
-            this.btnFavorite.Text = "&Favorite";
-            this.btnFavorite.UseVisualStyleBackColor = true;
-            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            this.btnFav.Location = new System.Drawing.Point(330, 363);
+            this.btnFav.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFav.Name = "btnFav";
+            this.btnFav.Size = new System.Drawing.Size(69, 25);
+            this.btnFav.TabIndex = 15;
+            this.btnFav.Text = "&Favorite";
+            this.toolTipBack.SetToolTip(this.btnFav, "Navigates to the previous form");
+            this.btnFav.UseVisualStyleBackColor = true;
+            this.btnFav.Click += new System.EventHandler(this.btnFav_Click);
             // 
             // NFLTeamStandingsForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 407);
-            this.Controls.Add(this.btnFavorite);
+            this.Controls.Add(this.btnFav);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
@@ -268,6 +270,6 @@
         private System.Windows.Forms.ToolTip toolTipDisplay;
         private System.Windows.Forms.ToolTip toolTipBack;
         private System.Windows.Forms.ToolTip toolTipExit;
-        private System.Windows.Forms.Button btnFavorite;
+        private System.Windows.Forms.Button btnFav;
     }
 }

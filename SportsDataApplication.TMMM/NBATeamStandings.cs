@@ -1,5 +1,4 @@
-﻿using SportsDataApplication.TMMM.Sign_InDataSetTableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -86,7 +85,7 @@ namespace SportsDataApplication.TMMM
             }
 
         }
-
+              
         private void btnHelp_Click(object sender, EventArgs e)
         {
             // Open help form and display relevant information about NBA team standings
@@ -160,7 +159,7 @@ namespace SportsDataApplication.TMMM
                     case "Western Conference 25-26":
                         dataTable = "[NBA Western Conference 25-26]";
                         break;
-
+                    
                 }
 
                 if (!string.IsNullOrEmpty(dataTable))
@@ -189,7 +188,7 @@ namespace SportsDataApplication.TMMM
             // Determine which file to load based on user selection
             string dataTable = " ";
             // Safeguard against null selection
-
+           
 
             // Map user selection to the corresponding data table
             switch (userSelection)
@@ -206,7 +205,7 @@ namespace SportsDataApplication.TMMM
                 case "Western Conference 25-26":
                     dataTable = "[NBA Western Conference 25-26]";
                     break;
-
+                
             }
 
             // Load the selected data into the data grid view
@@ -214,36 +213,31 @@ namespace SportsDataApplication.TMMM
             {
                 UpdateDataGridView(dataTable);
             }
+        
+    }
 
-        }
-
-        private void btnFavorite_Click(object sender, EventArgs e)
+        private void btnFav_Click(object sender, EventArgs e)
         {
-            // Get the search keyword from the text box and trim any leading/trailing whitespace
-            var adapter = new userFavsTableAdapter();
-            var table = adapter.GetDataByFavoriteData(Session.Username.ToString());
-            if (table.Rows.Count > 0)
+            string keyword = CurrentUser.FavoriteNBATeam; // Assuming you have a property in your CurrentUser class for the favorite NBA team
+            if (string.IsNullOrEmpty(keyword)) return;
+
+            // Create a DataTable to hold the search results with appropriate columns
+            DataTable searchResults = new DataTable();
+            searchResults.Columns.Add("Source");
+            searchResults.Columns.Add("Team/Player");
+            searchResults.Columns.Add("Details");
+
+            try
             {
-                string keyword = table.Rows[0]["favNBATeam"].ToString();
-                if (string.IsNullOrEmpty(keyword)) return;
+                //connection string to the database, make sure this matches the name in your app.config file
+                string connName = "SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString";
+                string connString = ConfigurationManager.ConnectionStrings[connName].ConnectionString;
 
-                // Create a DataTable to hold the search results with appropriate columns
-                DataTable searchResults = new DataTable();
-                searchResults.Columns.Add("Source");
-                searchResults.Columns.Add("Team/Player");
-                searchResults.Columns.Add("Details");
-
-                try
+                using (SqlConnection connection = new SqlConnection(connString))
                 {
-                    //connection string to the database, make sure this matches the name in your app.config file
-                    string connName = "SportsDataApplication.TMMM.Properties.Settings.SportsProjectDBConnectionString";
-                    string connString = ConfigurationManager.ConnectionStrings[connName].ConnectionString;
-
-                    using (SqlConnection connection = new SqlConnection(connString))
-                    {
-                        connection.Open();
-                        // Construct a SQL query that searches for the keyword in the TeamName column across all four tables, using UNION ALL to combine results
-                        string query = @"
+                    connection.Open();
+                    // Construct a SQL query that searches for the keyword in the TeamName column across all four tables, using UNION ALL to combine results
+                    string query = @"
                     SELECT 'NBA Eastern 24-25' AS Source, [Eastern Conference] AS [Team/Player], CONCAT('W: ', Win, ', L: ', Loss) AS Details 
                     FROM [NBA Eastern Conference 24-25] WHERE [Eastern Conference] LIKE @Keyword
                     UNION ALL
@@ -256,29 +250,28 @@ namespace SportsDataApplication.TMMM
                     SELECT 'NBA Western 25-26' AS Source, TEAM AS [Team/Player], CONCAT('W: ', WIN, ', L: ', LOSS) AS Details 
                     FROM [NBA Western Conference 25-26] WHERE TEAM LIKE @Keyword";
 
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            // Wildcards (%) are added here to the parameter value
-                            command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Wildcards (%) are added here to the parameter value
+                        command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
 
-                            using (SqlDataReader reader = command.ExecuteReader())
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
                             {
-                                while (reader.Read())
-                                {
-                                    searchResults.Rows.Add(reader["Source"], reader["Team/Player"], reader["Details"]);
-                                }
+                                searchResults.Rows.Add(reader["Source"], reader["Team/Player"], reader["Details"]);
                             }
                         }
                     }
+                }
 
-                    // Bind the results to your DataGridView
-                    dgvNBAStandings.DataSource = searchResults;
-                }
-                catch (Exception ex)
-                {
-                    // This will catch the 'Login failed' or 'Permission denied' errors if the DB is locked
-                    MessageBox.Show("Could not access the database.\n\nDetails: " + ex.Message);
-                }
+                // Bind the results to your DataGridView
+                dgvNBAStandings.DataSource = searchResults;
+            }
+            catch (Exception ex)
+            {
+                // This will catch the 'Login failed' or 'Permission denied' errors if the DB is locked
+                MessageBox.Show("Could not access the database.\n\nDetails: " + ex.Message);
             }
         }
     }

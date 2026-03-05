@@ -50,7 +50,7 @@
             this.toolTipExit = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipTextSearch = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnFavorite = new System.Windows.Forms.Button();
+            this.btnFav = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNBAStandings)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -209,15 +209,17 @@
             this.cbConfDiv.Size = new System.Drawing.Size(198, 21);
             this.cbConfDiv.TabIndex = 0;
             // 
-            // btnFavorite
+            // btnFav
             // 
-            this.btnFavorite.Location = new System.Drawing.Point(84, 381);
-            this.btnFavorite.Name = "btnFavorite";
-            this.btnFavorite.Size = new System.Drawing.Size(75, 23);
-            this.btnFavorite.TabIndex = 16;
-            this.btnFavorite.Text = "&Favorite";
-            this.btnFavorite.UseVisualStyleBackColor = true;
-            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            this.btnFav.Location = new System.Drawing.Point(337, 379);
+            this.btnFav.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFav.Name = "btnFav";
+            this.btnFav.Size = new System.Drawing.Size(69, 25);
+            this.btnFav.TabIndex = 16;
+            this.btnFav.Text = "&Favorite";
+            this.toolTipBack.SetToolTip(this.btnFav, "Navigates to the previous form");
+            this.btnFav.UseVisualStyleBackColor = true;
+            this.btnFav.Click += new System.EventHandler(this.btnFav_Click);
             // 
             // NBATeamStandings
             // 
@@ -226,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(581, 414);
-            this.Controls.Add(this.btnFavorite);
+            this.Controls.Add(this.btnFav);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
@@ -271,6 +273,6 @@
         private System.Windows.Forms.ToolTip toolTipExit;
         private System.Windows.Forms.ToolTip toolTipTextSearch;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button btnFavorite;
+        private System.Windows.Forms.Button btnFav;
     }
 }
