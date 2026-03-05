@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportsDataApplication.TMMM.Sign_InDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -159,6 +160,40 @@ namespace SportsDataApplication.TMMM
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnFavoritePlayer_Click(object sender, EventArgs e)
+        {
+            var adapter = new userFavsTableAdapter();
+            var table = adapter.GetDataByFavoriteData(Session.Username.ToString());
+            if (table.Rows.Count >0)
+            {
+                string playerName = table.Rows[0]["favNBAPlayer"].ToString();
+                if (playerName != string.Empty)
+                {
+                    sportsProjectDBDataSet.nba_playerstats_2024.Clear();
+                    nba_playerstats_2024TableAdapter.FillBySearchPlayer(sportsProjectDBDataSet.nba_playerstats_2024, playerName);
+                }
+                else
+                {
+                    MessageBox.Show("Please go enter a favorite nba player on the favorites form and save it.");
+                }
+            }
+        }
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            // Create the form and pass the "key" for the help info
+            HelpForm helpForm = new HelpForm("NBAPlayerStat");
+
+            // Show the form as a modal dialog (prevents clicking the main form until closed)
+            helpForm.ShowDialog();
+            
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

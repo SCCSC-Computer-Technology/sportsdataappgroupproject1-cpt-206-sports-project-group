@@ -67,6 +67,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefreshTable = new System.Windows.Forms.Button();
             this.toolTipNBAUpcomingAndMatch = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFavorite = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nBA_Upcoming_GamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
@@ -391,7 +392,7 @@
             this.btnHelp.Location = new System.Drawing.Point(17, 547);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(71, 28);
+            this.btnHelp.Size = new System.Drawing.Size(75, 23);
             this.btnHelp.TabIndex = 15;
             this.btnHelp.Text = "Help (?)";
             this.toolTipNBAUpcomingAndMatch.SetToolTip(this.btnHelp, "Opens the help form");
@@ -457,6 +458,17 @@
             this.btnRefreshTable.UseVisualStyleBackColor = true;
             this.btnRefreshTable.Click += new System.EventHandler(this.btnRefreshTable_Click);
             // 
+            // btnFavorite
+            // 
+            this.btnFavorite.Location = new System.Drawing.Point(93, 547);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.Size = new System.Drawing.Size(75, 23);
+            this.btnFavorite.TabIndex = 20;
+            this.btnFavorite.Text = "&Favorite";
+            this.toolTipNBAUpcomingAndMatch.SetToolTip(this.btnFavorite, "Displays favorite team in upcoming matches and match results");
+            this.btnFavorite.UseVisualStyleBackColor = true;
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            // 
             // NBA_UpcomingGames_MatchResults
             // 
             this.AcceptButton = this.btnSearch;
@@ -464,6 +476,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(586, 588);
+            this.Controls.Add(this.btnFavorite);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.nBA_Match_Results_DataDataGridView);
@@ -531,5 +544,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRefreshTable;
         private System.Windows.Forms.ToolTip toolTipNBAUpcomingAndMatch;
+        private System.Windows.Forms.Button btnFavorite;
     }
 }

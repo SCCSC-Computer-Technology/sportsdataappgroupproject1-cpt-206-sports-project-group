@@ -73,6 +73,9 @@
             this.nba_playerstats_2024TableAdapter = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.nba_playerstats_2024TableAdapter();
             this.tableAdapterManager = new SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager();
             this.toolTipNBAPlayerStats = new System.Windows.Forms.ToolTip(this.components);
+            this.btnFavoritePlayer = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nba_playerstats_2024BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsProjectDBDataSet)).BeginInit();
@@ -81,7 +84,7 @@
             // btnBack
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Location = new System.Drawing.Point(522, 328);
+            this.btnBack.Location = new System.Drawing.Point(509, 296);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(69, 28);
@@ -95,7 +98,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 51);
+            this.label1.Location = new System.Drawing.Point(25, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 15);
@@ -104,7 +107,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(183, 291);
+            this.btnSearch.Location = new System.Drawing.Point(183, 325);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(94, 23);
@@ -116,7 +119,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 294);
+            this.textBox1.Location = new System.Drawing.Point(29, 328);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 20);
@@ -160,12 +163,12 @@
             this.dataGridViewTextBoxColumn30,
             this.dataGridViewTextBoxColumn31});
             this.nba_playerstats_2024DataGridView.DataSource = this.nba_playerstats_2024BindingSource;
-            this.nba_playerstats_2024DataGridView.Location = new System.Drawing.Point(28, 68);
+            this.nba_playerstats_2024DataGridView.Location = new System.Drawing.Point(28, 47);
             this.nba_playerstats_2024DataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.nba_playerstats_2024DataGridView.Name = "nba_playerstats_2024DataGridView";
             this.nba_playerstats_2024DataGridView.RowHeadersWidth = 51;
             this.nba_playerstats_2024DataGridView.RowTemplate.Height = 24;
-            this.nba_playerstats_2024DataGridView.Size = new System.Drawing.Size(546, 179);
+            this.nba_playerstats_2024DataGridView.Size = new System.Drawing.Size(546, 226);
             this.nba_playerstats_2024DataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -429,7 +432,7 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(283, 252);
+            this.btnSort.Location = new System.Drawing.Point(282, 278);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 2;
@@ -451,7 +454,7 @@
             "Steals",
             "Blocks",
             "Points Made"});
-            this.comboBoxSort.Location = new System.Drawing.Point(29, 252);
+            this.comboBoxSort.Location = new System.Drawing.Point(28, 280);
             this.comboBoxSort.Name = "comboBoxSort";
             this.comboBoxSort.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSort.TabIndex = 0;
@@ -463,7 +466,7 @@
             this.comboBoxSortType.Items.AddRange(new object[] {
             "ASC",
             "DESC"});
-            this.comboBoxSortType.Location = new System.Drawing.Point(156, 252);
+            this.comboBoxSortType.Location = new System.Drawing.Point(155, 280);
             this.comboBoxSortType.Name = "comboBoxSortType";
             this.comboBoxSortType.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSortType.TabIndex = 1;
@@ -512,13 +515,50 @@
             this.tableAdapterManager.Scoring_StatsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SportsDataApplication.TMMM.SportsProjectDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // btnFavoritePlayer
+            // 
+            this.btnFavoritePlayer.Location = new System.Drawing.Point(429, 302);
+            this.btnFavoritePlayer.Name = "btnFavoritePlayer";
+            this.btnFavoritePlayer.Size = new System.Drawing.Size(75, 23);
+            this.btnFavoritePlayer.TabIndex = 8;
+            this.btnFavoritePlayer.Text = "&Favorite Player";
+            this.toolTipNBAPlayerStats.SetToolTip(this.btnFavoritePlayer, "Shows favorite NBA player stats");
+            this.btnFavoritePlayer.UseVisualStyleBackColor = true;
+            this.btnFavoritePlayer.Click += new System.EventHandler(this.btnFavoritePlayer_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(509, 328);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(69, 28);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "E&xit";
+            this.toolTipNBAPlayerStats.SetToolTip(this.btnExit, "Goes back to choose database form");
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Location = new System.Drawing.Point(435, 331);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(69, 25);
+            this.btnHelp.TabIndex = 8;
+            this.btnHelp.Text = "Help (?)";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // NBAPlayerStats
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
-            this.ClientSize = new System.Drawing.Size(606, 372);
+            this.ClientSize = new System.Drawing.Size(595, 372);
+            this.Controls.Add(this.btnFavoritePlayer);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.comboBoxSortType);
             this.Controls.Add(this.comboBoxSort);
             this.Controls.Add(this.btnSort);
@@ -586,5 +626,8 @@
         private System.Windows.Forms.ComboBox comboBoxSort;
         private System.Windows.Forms.ComboBox comboBoxSortType;
         private System.Windows.Forms.ToolTip toolTipNBAPlayerStats;
+        private System.Windows.Forms.Button btnFavoritePlayer;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnExit;
     }
 }
